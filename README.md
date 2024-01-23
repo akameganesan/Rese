@@ -47,9 +47,13 @@
 
 ## テーブル設計
 <--- 作成したテーブルの設計の画像 --->
+<img width="670" alt="image" src="https://github.com/akameganesan/Rese/assets/144240848/cf19c65f-0913-4de6-8e53-910ebff5011e">
+
 
 ## ER図
 <--- 作成したER図の画像 --->
+<img width="389" alt="image" src="https://github.com/akameganesan/Rese/assets/144240848/40c77c50-de55-4f7e-a9bf-f97460d2f5ef">
+
 
 # 環境構築
 他の人でもプロジェクトを実行できるようコマンドや編集ファイルを記載できる
