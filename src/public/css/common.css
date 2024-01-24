@@ -1,5 +1,5 @@
 .header {
-    background: #000;
+    background: #fbfeff;
 }
 
 .header__inner {
@@ -15,7 +15,7 @@
 }
 
 .header__logo {
-    color: #fff;
+    color: #1a4dda;
     text-decoration: none;
     font-weight: bold;
     font-size: 24px;
@@ -42,4 +42,50 @@
     color: #fff;
     font-size: 16px;
     cursor: pointer;
+}
+
+
+
+
+
+
+/*追加部分*/
+
+/*
+.contact__btn {
+    width: 300px;
+    display: block;
+    padding: 25px 0 25px;
+    margin: 0 auto;
+    background: linear-gradient(90deg, #ff1f90, #b31566);
+    border-radius: 50px;
+    text-align: center;
+    box-shadow: 0 4px 0 #840052;
+    color: #fff;
+    font-size: 18px;
+    border-bottom: 6px solid #840052;
+    transition: 0.4s;
+    position: relative;
+}
+*/
+
+
+.contact__btn {
+    width: 300px;
+    display: block;
+    padding: 25px 0 25px;
+    margin: 0 auto;
+    background: linear-gradient(90deg, #ff1f90, #b31566);
+    border-radius: 50px;
+    text-align: center;
+    box-shadow: 0 4px 0 #840052;
+    color: #fff;
+    font-size: 18px;
+    border-bottom: 6px solid #840052;
+    transition: 0.4s;
+    position: relative;
+}
+
+.example2 {
+    display: block;
 }

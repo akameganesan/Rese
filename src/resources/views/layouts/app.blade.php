@@ -15,10 +15,7 @@
     <header class="header">
         <div class="header__inner">
             <div class="header-utilities">
-                <form class="form" action="/logout" method="post">
-                    @csrf
-                    <button class="header-nav__button"></button>
-                </form>
+                <a href="/menu" class="contact__btn">-<span class="example2">-</span></a>
                 <a class="header__logo" href="/">
                     Rese
                 </a>

@@ -25,3 +25,6 @@ Route::get('/', function () {
 Route::middleware('auth')->group(function () {
     Route::get('/', [AuthController::class, 'index']);
 });
+
+Route::get('/menu', [AuthController::class, 'menu']);
+Route::post('/menu', [AuthController::class, 'menu']);

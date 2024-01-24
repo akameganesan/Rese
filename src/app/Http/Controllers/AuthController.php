@@ -12,4 +12,9 @@ class AuthController extends Controller
     {
         return view('index');
     }
+
+    public function menu()
+    {
+        return view('menu');
+    }
 }
