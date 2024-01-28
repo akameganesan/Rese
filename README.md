@@ -47,13 +47,15 @@
 
 ## テーブル設計
 <--- 作成したテーブルの設計の画像 --->
-<img width="164" alt="image" src="https://github.com/akameganesan/Rese/assets/144240848/4f92fb70-200b-4fc9-b4a1-409ea5a02c19">
+![image](https://github.com/akameganesan/Rese/assets/144240848/bb03013a-1c60-4025-bf40-b814c652e758)
+
 
 
 
 ## ER図
 <--- 作成したER図の画像 --->
-<img width="405" alt="image" src="https://github.com/akameganesan/Rese/assets/144240848/0950033e-52fe-4a63-a442-348ccd30f128">
+![image](https://github.com/akameganesan/Rese/assets/144240848/1a96594a-a7ae-4d0b-b847-4b0ca86e24f3)
+
 
 
 
