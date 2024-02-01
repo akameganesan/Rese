@@ -15,8 +15,8 @@
     <header class="header">
         <div class="header__inner">
             <div class="header-utilities">
-                <a href="/menu" class="contact__btn">--<span class="example2">---</span><span
-                        class="example3">-</span></a>
+                <a href="/menu" class="contact__btn"><span class="example1">━</span><span class="example2">━</span><span
+                        class="example3">━</span></a>
                 <a class="header__logo" href="/">
                     Rese
                 </a>

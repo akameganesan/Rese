@@ -3,15 +3,18 @@
 }
 
 .header__inner {
-    margin: 0 auto;
+    /*margin: 0 auto;*/
+    /*margin: 0 auto;*/
+
     padding: 20px 15px;
     max-width: 1230px;
+    padding-left: -500px;
 }
 
 .header-utilities {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    /*align-items: center;*/
+    /*justify-content: space-between;*/
 }
 
 .header__logo {
@@ -19,6 +22,10 @@
     text-decoration: none;
     font-weight: bold;
     font-size: 24px;
+    margin-left: -270px;
+    /*margin-right: 20px;*/
+    padding-left: 300px;
+    padding-top: 10px;
 }
 
 .header-utilities nav {
@@ -74,25 +81,47 @@
     width: 50px;
         display: block;
         padding: 8px 0 8px;
-        margin: 0 auto;
+        /*margin: 0 auto;*/
         background: linear-gradient(90deg, #1a7dfd, #3060fd);
         border-radius: 10px;
-        text-align: center;
+        /*text-align: center;*/
         box-shadow: 4px 4px 2px #b4b4b4;
         color: #fff;
         font-size: 7px;
         /*border-bottom: 3px solid #840052;*/
         transition: 0.4s;
-        position: relative;
+        /*position: relative;*/
         text-decoration: none;
+        margin-left: 400px;
+}
+
+.example1 {
+    display: block;
+    font-size: 15px;
+    margin-top: -1px;
+    margin-bottom: -10px;
+    margin-left: 10px;
+    border: -6px;
+    padding: -10px;
+
 }
 
 .example2 {
     display: block;
-    font-size: 8px;
+    font-size: 25px;
+    margin: -20px;
+    margin-left: 10px;
+    border: -10px;
+    padding: -10px;
+
 }
 
 .example3 {
     display: block;
-    font-size: 7px;
+    font-size: 10px;
+    margin-top: -10px;
+    margin-bottom: 2px;
+    margin-left: 10px;
+        border: -6px;
+        padding: -6px;
 }
