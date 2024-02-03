@@ -17,7 +17,7 @@
             <div class="header-utilities">
                 <a href="/menu" class="contact__btn"><span class="example1">━</span><span class="example2">━</span><span
                         class="example3">━</span></a>
-                <a class="header__logo" href="/">
+                <a class="header__logo" href="/menu">
                     Rese
                 </a>
                 <!--<nav>

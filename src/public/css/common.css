@@ -1,5 +1,5 @@
 .header {
-    background: #fbfeff;
+    background: #e6e6e6;
 }
 
 .header__inner {
@@ -124,4 +124,10 @@
     margin-left: 10px;
         border: -6px;
         padding: -6px;
+}
+
+
+
+.header-2 {
+    background: #ffffff;
 }

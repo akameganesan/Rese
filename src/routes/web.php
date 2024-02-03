@@ -28,3 +28,7 @@ Route::middleware('auth')->group(function () {
 
 Route::get('/menu', [AuthController::class, 'menu']);
 Route::post('/menu', [AuthController::class, 'menu']);
+
+
+//Route::get('/register', [AuthController::class, 'menu']);
+//Route::post('/register', [AuthController::class, 'menu']);
