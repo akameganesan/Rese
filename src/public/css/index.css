@@ -67,3 +67,177 @@
     padding: 12px;
     width: 20%;
 }
+
+
+
+/*ここから過去の演習のcss*/
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+a {
+    color: #707070;
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    color: #707070;
+    line-height: 1.7;
+}
+
+.flex__item {
+    display: flex;
+    justify-content: space-between;
+        flex-wrap: wrap;
+}
+
+.flex__item2 {
+    display: flex;
+    /*justify-content: space-between;*/
+    flex-wrap: wrap;
+    /*justify-content: left;*/
+}
+
+/*.container {
+    max-width: 960px;
+    margin: 0 auto;
+}*/
+
+.container {
+    max-width: 1350px;
+    margin: 0 auto;
+    background: #e6e6e6;
+}
+
+.small-container {
+    max-width: 760px;
+    margin: 80px auto 0;
+}
+
+.common__ttl {
+    font-size: 24px;
+    font-weight: bold;
+    position: relative;
+}
+
+.common__sub-ttl {
+    font-size: 16px;
+    font-family: "Indie Flower", cursive;
+    color: #b31566;
+}
+
+
+
+/*---------------------blog--------------------- */
+#blog {
+    margin-top: 80px;
+    background: #f5f5f5;
+    padding: 40px 0;
+}
+
+.blog-wrap {
+    /*margin-top: 30px;*/
+    /*margin-bottom: 30px;*/
+}
+
+/*
+.blog-wrap__item {
+    width: 30%;
+    position: relative;
+    display: block;
+}
+*/
+
+.blog-wrap__item {
+    width: 320px;
+    position: relative;
+    display: block;
+    margin-bottom: 30px;
+
+}
+
+.blog-wrap__item-content {
+    background: #fff;
+    border-radius: 0 0 15px 15px;
+    padding: 20px;
+    margin-top: -7px;
+}
+
+.blog-wrap__item-eyecatch {
+    border-radius: 15px 15px 0 0;
+}
+
+.blog-wrap__item-cat {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #b31566;
+    color: #fff;
+    border-radius: 15px 0 0 0;
+    padding: 5px 20px;
+}
+
+.blog-wrap__item-content-tag {
+    font-size: 14px;
+    margin-top: 30px;
+}
+
+.blog__link {
+    display: block;
+    margin: 30px auto 0;
+    width: 200px;
+    text-align: center;
+    padding: 15px 0;
+    background: #fff;
+    border: 2px solid #b31566;
+    border-radius: 30px;
+    color: #b31566;
+    transition: 0.4s;
+}
+
+.blog__link:hover {
+    background-color: #b31566;
+    color: #fff;
+    transition: 0.4s;
+}
+
+/*ここから下が自前*/
+
+.background {
+    background: #e6e6e6;
+    /*height: 1100px;*/
+}
+
+
+.register__shadow {
+
+
+    border-radius: 10px;
+    /*text-align: center;*/
+    box-shadow: 4px 4px 2px #949494;
+
+    transition: 0.4s;
+
+    text-decoration: none;
+
+}
+
+
+.register__shadow2 {
+
+
+    border-radius: 0px 15px 0px 0px;
+    /*text-align: center;*/
+    box-shadow: 4px 4px 2px #949494;
+
+    transition: 0.4s;
+
+    text-decoration: none;
+
+}

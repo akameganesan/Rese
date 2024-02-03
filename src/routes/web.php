@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\ShopController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,3 +33,6 @@ Route::post('/menu', [AuthController::class, 'menu']);
 
 //Route::get('/register', [AuthController::class, 'menu']);
 //Route::post('/register', [AuthController::class, 'menu']);
+
+Route::get('/index', [ShopController::class, 'index']);
+Route::post('/index', [ShopController::class, 'index']);
