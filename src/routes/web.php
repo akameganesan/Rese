@@ -23,16 +23,30 @@ Route::get('/', function () {
 //Route::get('/', [AuthController::class, 'index']);
 
 
-Route::middleware('auth')->group(function () {
-    Route::get('/', [AuthController::class, 'index']);
-});
+//Route::middleware('auth')->group(function () {
+//    Route::get('/', [AuthController::class, 'index']);
+//});
+
+
+Route::get('/', [AuthController::class, 'index']);
+
+
+
 
 Route::get('/menu', [AuthController::class, 'menu']);
 Route::post('/menu', [AuthController::class, 'menu']);
 
 
-//Route::get('/register', [AuthController::class, 'menu']);
-//Route::post('/register', [AuthController::class, 'menu']);
 
-Route::get('/index', [ShopController::class, 'index']);
-Route::post('/index', [ShopController::class, 'index']);
+Route::get('/register', [AuthController::class, 'register']);
+//Route::post('/register', [AuthController::class, 'register']);
+
+Route::get('/login', [AuthController::class, 'login']);
+//Route::post('/login', [AuthController::class, 'login']);
+
+
+Route::get('/menu', [AuthController::class, 'menu']);
+Route::post('/menu', [AuthController::class, 'menu']);
+
+//Route::get('/index', [ShopController::class, 'index']);
+//Route::post('/index', [ShopController::class, 'index']);

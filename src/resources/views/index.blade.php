@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.app2')
 
 @section('css')
 <link rel="stylesheet" href="{{ asset('css/index.css') }}">
@@ -300,6 +300,12 @@
         <a href="" class="blog__link">一覧ページへ</a>
     </div>
 </div>
+<form action="/logout" method="post">
+    @csrf
+    <!--<li class="li__li"><a class="a__under" href="/logout">ログアウト</a></li>-->
+    <div>
+        <button>ログアウト</button>
+</form>
 
 
 @endsection
