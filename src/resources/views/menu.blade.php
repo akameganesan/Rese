@@ -27,14 +27,19 @@
         <a href="/">HOME</a>
         <form class="form" action="/logout" method="post">
             @csrf
-            <a href="">Logout</a>
+            <a href="/login">Logout</a>
         </form>
-        <a href="">Mypage</a>
+        <a href="/mypage">Mypage</a>
         @else
-        <a href="/mypage">HOME</a>
+        <a href="/">HOME</a>
         <a href="/register">Registration</a>
         <a href="/login">Login</a>
         @endif
+        <form action="/logout" method="post">
+            @csrf
+            <button>ログアウト</button>
+        </form>
+
     </main>
 </body>
 
