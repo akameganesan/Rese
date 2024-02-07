@@ -184,9 +184,37 @@ body {
 }
 
 .blog-wrap__item-content-tag {
-    font-size: 14px;
-    margin-top: 30px;
+    /*font-size: 14px;*/
+
+    font-size: 15px;
+
+
+    /*margin-top: 30px;*/
+
+    margin-top: -40px;
+    margin-left: -50px;
+    color: #000;
+
+
 }
+
+.blog-wrap__item-content-tag2 {
+    /*font-size: 14px;*/
+
+    font-size: 15px;
+
+
+    /*margin-top: 30px;*/
+
+    margin-top: -40px;
+    margin-left: 10px;
+    color: #000;
+
+
+}
+
+
+
 
 .blog__link {
     display: block;
@@ -208,6 +236,11 @@ body {
 }
 
 /*ここから下が自前*/
+
+
+
+
+
 
 .background {
     background: #e6e6e6;
@@ -240,4 +273,107 @@ body {
 
     text-decoration: none;
 
+}
+
+
+.blog-wrap__item-content-ttl{
+    font-size: 30px;
+    color: #000;
+    margin-top: -5px;
+}
+
+
+
+.form__button {
+    /*margin-top: 20px;*/
+    margin-top: -10px;
+
+}
+
+/*.form__button-submit {
+    padding: 10px;
+    width: 30%;
+    height: 50px;
+    border: none;
+    border-radius: 3px;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+}*/
+
+.form__button-submit {
+    padding: 10px;
+    /*width: 40%;*/
+    width: 100px;
+    height: 40px;
+    border: none;
+    border-radius: 8px;
+    background: #264dfa;
+    color: #fff;
+    cursor: pointer;
+    /*margin-left: 200px;*/
+    margin-left: 0px;
+    font-size: 16px;
+    /*margin-top: -10px;*/
+}
+
+
+
+
+.heart {
+    /*width: 100px;*/
+    width: 40px;
+    /* 正方形を作る */
+    /*height: 100px;*/
+    height: 40px;
+    /* 正方形を作る */
+    position: relative;
+    /* 基準位置とする */
+}
+
+.heart::before,
+.heart::after {
+    content: "";
+    /* 疑似要素に必須 */
+    width: 50%;
+    /* ハートの丸い部分の大きさにかかわる */
+    height: 80%;
+    /* ハートの高さにかかわる */
+    background: #E0548E;
+    /* ハートの色 */
+    border-radius: 25px 25px 0 0;
+    /* ハートの半円を生成 */
+    display: block;
+    /* ブロック要素にする */
+    position: absolute;
+    /* 相対位置に指定 */
+}
+
+.heart::before {
+    transform: rotate(-45deg);
+    /* 左に回転 */
+    left: 14%;
+    /* 左からの位置を指定 */
+}
+
+.heart::after {
+    transform: rotate(45deg);
+    /* 右に回転 */
+    right: 14%;
+    /* 右からの位置を指定 */
+}
+
+
+
+
+.heart__margin{
+    margin-left: 200px;
+    margin-top: -35px;
+    margin-bottom: 10px;
+}
+
+
+.heart__size{
+    width: 80%;
+    height: 80%;
 }

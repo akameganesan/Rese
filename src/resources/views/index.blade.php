@@ -5,6 +5,9 @@
 @endsection
 
 @section('content')
+
+
+
 <div class="background">
 
     <div class="container">
@@ -12,43 +15,86 @@
 
             <!--<div class="register__shadow">-->
 
-
+            @foreach($shops as $shop)
             <a class="blog-wrap__item" href="">
                 <div class="register__shadow2">
-                    <img src="https://coachtech-matter.s3-ap-northeast-1.amazonaws.com/image/sushi.jpg" alt=""
-                        class="blog-wrap__item-eyecatch">
+                    <img src="{{$shop->img_url}}" alt="" class="blog-wrap__item-eyecatch">
                     <!--<span class="blog-wrap__item-cat">Blog</span>-->
                 </div>
 
                 <div class="register__shadow">
                     <div class="blog-wrap__item-content">
-                        <h3 class="blog-wrap__item-content-ttl">仙人</h3>
+                        <h3 class="blog-wrap__item-content-ttl">{{$shop->name}}</td>
+                        </h3>
                         <ul class="flex__item2">
-                            <li class="blog-wrap__item-content-tag">#東京都</li>
-                            <li class="blog-wrap__item-content-tag">#寿司</li>
+
+
+
+                            @if($shop->area_id == 1)
+                            <li class="blog-wrap__item-content-tag">#東京</li>
+                            @elseif($shop->area_id == 2)
+                            <li class="blog-wrap__item-content-tag">#大阪府</li>
+                            @elseif($shop->area_id == 3)
+                            <li class="blog-wrap__item-content-tag">#福岡県</li>
+                            @endif
+
+                            @if($shop->genre_id == 1)
+                            <li class="blog-wrap__item-content-tag2">#寿司</li>
+                            @elseif($shop->genre_id == 2)
+                            <li class="blog-wrap__item-content-tag2">#焼肉</li>
+                            @elseif($shop->genre_id == 3)
+                            <li class="blog-wrap__item-content-tag2">#ラーメン</li>
+                            @elseif($shop->genre_id == 4)
+                            <li class="blog-wrap__item-content-tag2">#イタリアン</li>
+                            @elseif($shop->genre_id == 5)
+                            <li class="blog-wrap__item-content-tag2">#居酒屋</li>
+                            @endif
+
+
                         </ul>
+                        <div class="flex__item2">
+                            <div class="form__button">
+                                <button class="form__button-submit" type="submit">詳しく見る</button>
+                            </div>
+                        </div>
+
+                        @if (Auth::check())
+
+                        <div class="heart__margin">
+                            <div class="heart"></div>
+                        </div>
+                        @endif
                     </div>
                 </div>
-
             </a>
-            <!--</div>-->
+
+            @endforeach
+
+
+
+
+
+
+
+
+
 
 
             <!--ここから下は形だけ-->
 
 
-            <a class="blog-wrap__item" href="">
-                <img src="https://coachtech-matter.s3-ap-northeast-1.amazonaws.com/image/yakiniku.jpg" alt=""
-                    class="blog-wrap__item-eyecatch">
-                <span class="blog-wrap__item-cat">Blog</span>
+            <!--           <a class=" blog-wrap__item" href="">
+                                <img src="https://coachtech-matter.s3-ap-northeast-1.amazonaws.com/image/yakiniku.jpg"
+                                    alt="" class="blog-wrap__item-eyecatch">
+                                <span class="blog-wrap__item-cat">Blog</span>
 
-                <div class="blog-wrap__item-content">
-                    <h3 class="blog-wrap__item-content-ttl">牛助</h3>
-                    <ul class="flex__item">
-                        <li class="blog-wrap__item-content-tag">2021/01/01</li>
-                        <li class="blog-wrap__item-content-tag">#COACHTECH</li>
-                    </ul>
-                </div>
+                                <div class="blog-wrap__item-content">
+                                    <h3 class="blog-wrap__item-content-ttl">牛助</h3>
+                                    <ul class="flex__item">
+                                        <li class="blog-wrap__item-content-tag">2021/01/01</li>
+                                        <li class="blog-wrap__item-content-tag">#COACHTECH</li>
+                                    </ul>
+                                </div>
             </a>
             <a class="blog-wrap__item" href="">
                 <img src="https://coachtech-matter.s3-ap-northeast-1.amazonaws.com/image/izakaya.jpg" alt=""
@@ -291,11 +337,7 @@
                     </ul>
                 </div>
             </a>
-
-
-
-
-
+            
         </div>
         <a href="" class="blog__link">一覧ページへ</a>
     </div>
@@ -303,63 +345,9 @@
 <form action="/logout" method="post">
     @csrf
     <!--<li class="li__li"><a class="a__under" href="/logout">ログアウト</a></li>-->
-    <div>
-        <button>ログアウト</button>
-</form>
-
-
-@endsection
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--<!DOCTYPE html>
-<html lang="ja">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rese</title>
-    <link rel="stylesheet" href="{{ asset('css/sanitize.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/common.css') }}">
-    @yield('css')
-</head>
-
-<body>
-    <header class="header">
-        <div class="header__inner">
-            <div class="header-utilities">
-                <a href="/menu" class="contact__btn"><span class="example1">━</span><span class="example2">━</span><span
-                        class="example3">━</span></a>
-                <form class="form" action="/logout" method="post">
-                    @csrf
-                    <button class="header-nav__button">ログアウト</button>
+            <div>
+                <button>ログアウト</button>
                 </form>
-            </div>
-        </div>
-    </header>
 
-    <main>
-        <form class="form" action="/logout" method="post">
-            @csrf
-            <button class="header-nav__button">ログアウト</button>
-        </form>
-    </main>
-</body>
 
-</html>-->
+                @endsection

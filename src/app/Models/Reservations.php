@@ -4,6 +4,12 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Http\Request;
+use App\Models\Shops;
+use App\Models\Areas;
+use App\Models\Favorites;
+use App\Models\Genres;
+use App\Models\User;
 
 class Reservations extends Model
 {
@@ -17,4 +23,11 @@ class Reservations extends Model
     {
         return $this->belongsTo('App\Models\Reservations');
     }
+
+    protected $fillable = [
+        'user_id',
+        'shop_id',
+        'start_at',
+        'member_num'
+    ];
 }
