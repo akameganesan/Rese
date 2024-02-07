@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ShopController;
+use App\Http\Controllers\FavoriteController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,9 +16,9 @@ use App\Http\Controllers\ShopController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Route::get('/', function () {
+//    return view('welcome');
+//});
 
 
 //Route::get('/', [AuthController::class, 'index']);
@@ -28,9 +29,9 @@ Route::get('/', function () {
 //});
 
 
-Route::get('/', [AuthController::class, 'index']);
+Route::get('/', [ShopController::class, 'index']);
 
-
+Route::post('/create', [FavoriteController::class, 'create']);
 
 
 Route::get('/menu', [AuthController::class, 'menu']);

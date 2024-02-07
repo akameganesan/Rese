@@ -21,7 +21,6 @@
                     Rese
                 </a>
 
-
                 <nav>
 
 
@@ -29,62 +28,70 @@
                     <ul class="header-nav">
 
 
+                        <div class="header__z-index">
+
+                            <div class="flex__item_3">
 
 
-                        <div class="flex__item_3">
+                                <div class="gnavi__wrap">
 
 
-                            <div class="gnavi__wrap">
+                                    <div class="register__shadow">
+
+                                        <ul class="gnavi__lists">
 
 
-                                <div class="register__shadow">
+                                            <div calss="pulldown__shadow">
+                                                <li class="gnavi__list">
+                                                    <a href="#">All areas</a>
 
-                                    <ul class="gnavi__lists">
 
 
-                                        <div calss="pulldown__shadow">
+                                                    <ul class="dropdown__lists">
+                                                        <li class="dropdown__list"><a href="#">東京都</a></li>
+                                                        <li class="dropdown__list"><a href="#">大阪府</a></li>
+                                                        <li class="dropdown__list"><a href="#">福岡県</a></li>
+                                                    </ul>
+
+                                                </li>
+                                            </div>
+
                                             <li class="gnavi__list">
-                                                <a href="#">All areas</a>
+                                                <a href="#">All genres</a>
                                                 <ul class="dropdown__lists">
-                                                    <li class="dropdown__list"><a href="#">メニュー1</a></li>
-                                                    <li class="dropdown__list"><a href="#">メニュー1</a></li>
-                                                    <li class="dropdown__list"><a href="#">メニュー1</a></li>
+                                                    <li class="dropdown__list"><a href="#">寿司</a></li>
+                                                    <li class="dropdown__list"><a href="#">焼肉</a></li>
+                                                    <li class="dropdown__list"><a href="#">ラーメン</a></li>
+                                                    <li class="dropdown__list"><a href="#">イタリアン</a></li>
+                                                    <li class="dropdown__list"><a href="#">居酒屋</a></li>
                                                 </ul>
                                             </li>
-                                        </div>
 
-                                        <li class="gnavi__list">
-                                            <a href="#">All genres</a>
-                                            <ul class="dropdown__lists">
-                                                <li class="dropdown__list"><a href="#">メニュー1</a></li>
-                                                <li class="dropdown__list"><a href="#">メニュー1</a></li>
-                                                <li class="dropdown__list"><a href="#">メニュー1</a></li>
-                                            </ul>
-                                        </li>
+                                            <li class="gnavi__list">
+                                                <form class="form" action="/search" method="post">
+                                                    @csrf
+                                                    <div class="search_box">
+                                                        <input type="text" placeholder="Search...">
+                                                    </div>
+                                                </form>
+                                            </li>
 
-                                        <li class="gnavi__list">
-                                            <form class="form" action="/search" method="post">
-                                                @csrf
-                                                <div class="search_box">
-                                                    <input type="text" placeholder="ここにキーワード">
-                                                </div>
-                                            </form>
-                                        </li>
-
-                                    </ul>
+                                        </ul>
 
 
 
-                                    <!-- 以下省略 -->
+                                        <!-- 以下省略 -->
 
+                                    </div>
                                 </div>
-                            </div>
 
+                            </div>
                         </div>
 
                     </ul>
 
                 </nav>
+
             </div>
         </div>
 
