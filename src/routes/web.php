@@ -51,3 +51,13 @@ Route::post('/menu', [AuthController::class, 'menu']);
 
 //Route::get('/index', [ShopController::class, 'index']);
 //Route::post('/index', [ShopController::class, 'index']);
+
+
+
+Route::get('/create3', [FavoriteController::class, 'create3']);
+Route::post('/create3', [FavoriteController::class, 'create3']);
+
+
+
+Route::post('/add', [FavoriteController::class, 'create']);
+//Route::get('/', [FavoriteController::class, 'index']);

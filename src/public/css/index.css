@@ -377,3 +377,76 @@ body {
     width: 80%;
     height: 80%;
 }
+
+
+
+
+/*↓ハート改造*/
+
+
+
+
+.heart1 {
+    /*width: 100px;*/
+    width: 40px;
+    /* 正方形を作る */
+    /*height: 100px;*/
+    height: 40px;
+    /* 正方形を作る */
+    position: relative;
+    /* 基準位置とする */
+}
+
+.heart1::before,
+.heart1::after {
+    content: "";
+    /* 疑似要素に必須 */
+    width: 50%;
+    /* ハートの丸い部分の大きさにかかわる */
+    height: 80%;
+    /* ハートの高さにかかわる */
+    background: #c2c2c2;
+    /* ハートの色 */
+    border-radius: 25px 25px 0 0;
+    /* ハートの半円を生成 */
+    display: block;
+    /* ブロック要素にする */
+    position: absolute;
+    /* 相対位置に指定 */
+}
+
+.heart1::before {
+    transform: rotate(-45deg);
+    /* 左に回転 */
+    left: 14%;
+    /* 左からの位置を指定 */
+}
+
+.heart1::after {
+    transform: rotate(45deg);
+    /* 右に回転 */
+    right: 14%;
+    /* 右からの位置を指定 */
+}
+
+
+
+
+.heart1__margin {
+    margin-left: 200px;
+    margin-top: -35px;
+    margin-bottom: 10px;
+}
+
+
+.heart1__size {
+    width: 80%;
+    height: 80%;
+}
+
+
+.button__none {
+    border: none;
+    outline: none;
+    background: transparent;
+}
