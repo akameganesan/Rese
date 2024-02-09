@@ -8,6 +8,7 @@
 
 
 
+
 <div class="background">
 
     <div class="container">
@@ -60,15 +61,49 @@
 
                         @if (Auth::check())
 
-                        <div class="heart__margin">
-                            <div class="heart"></div>
-                        </div>
+                        @foreach($fav as $fa)
+
+                        @if($fa->shops_id == $shop->id)
+                        <form action="/create3" type="text" name="shoID" method="post">
+                            @csrf
+                            <!--<input type="hidden" name="shID" value="3" size="10">-->
+                            <input type="hidden" name="shID1" value="{{$shop->id}}" size="10">
+                            <div class="heart__margin">
+                                <!--<div class="heart"></div>-->
+                                <div class="button_none">
+                                    <button class="heart" type="submit"></button>
+                                </div>
+                                <!--<a class="heart"></a>-->
+
+                            </div>
+                        </form>
+                        @else
+
+                        <form action="/create3" type="text" name="shoID" method="post">
+                            @csrf
+                            <!--<input type="hidden" name="shID" value="3" size="10">-->
+                            <input type="hidden" name="shID1" value="{{$shop->id}}" size="10">
+                            <div class="heart__margin">
+                                <!--<div class="heart"></div>-->
+                                <div class="button_none">
+                                    <button class="heart1" type="submit"></button>
+                                </div>
+                                <!--<a class="heart1"></a>-->
+                            </div>
+                        </form>
+
+                        @endif
+
+                        @endforeach
                         @endif
                     </div>
                 </div>
             </a>
 
             @endforeach
+        </div>
+    </div>
+</div>
 
 
 
@@ -78,12 +113,10 @@
 
 
 
+<!--ここから下は形だけ-->
 
 
-            <!--ここから下は形だけ-->
-
-
-            <!--           <a class=" blog-wrap__item" href="">
+<!--           <a class=" blog-wrap__item" href="">
                                 <img src="https://coachtech-matter.s3-ap-northeast-1.amazonaws.com/image/yakiniku.jpg"
                                     alt="" class="blog-wrap__item-eyecatch">
                                 <span class="blog-wrap__item-cat">Blog</span>
@@ -325,7 +358,7 @@
             </a>
 
             <a class="blog-wrap__item" href="">
-                <img src="https://coachtech-matter.s3-ap-northeast-1.amazonaws.com/image/sushi.jpg" alt=""
+                <img src="https://coachtech-matter.s3-ap-northeast-1amazonaws.com/image/sushi.jpg" alt=""
                     class="blog-wrap__item-eyecatch">
                 <span class="blog-wrap__item-cat">Blog</span>
 
@@ -340,14 +373,14 @@
             
         </div>
         <a href="" class="blog__link">一覧ページへ</a>
-    </div>
-</div>
+    </ div>
+</div>-->
 <form action="/logout" method="post">
     @csrf
-    <!--<li class="li__li"><a class="a__under" href="/logout">ログアウト</a></li>-->
-            <div>
-                <button>ログアウト</button>
-                </form>
+    <li class="li__li"><a class="a__under" href="/logout">ログアウト</a></li>
+    <div>
+        <button>ログアウト</button>
+</form>
 
 
-                @endsection
+@endsection

@@ -20,32 +20,16 @@
                 <a class="header__logo" href="/menu">
                     Rese
                 </a>
-
                 <nav>
-
-
-
                     <ul class="header-nav">
-
-
                         <div class="header__z-index">
-
                             <div class="flex__item_3">
-
-
                                 <div class="gnavi__wrap">
-
-
                                     <div class="register__shadow">
-
                                         <ul class="gnavi__lists">
-
-
                                             <div calss="pulldown__shadow">
                                                 <li class="gnavi__list">
                                                     <a href="#">All areas</a>
-
-
 
                                                     <ul class="dropdown__lists">
                                                         <li class="dropdown__list"><a href="#">東京都</a></li>
@@ -77,28 +61,15 @@
                                             </li>
 
                                         </ul>
-
-
-
                                         <!-- 以下省略 -->
-
                                     </div>
                                 </div>
-
                             </div>
                         </div>
-
                     </ul>
-
                 </nav>
-
             </div>
         </div>
-
-
-
-
-
     </header>
 
     <main>

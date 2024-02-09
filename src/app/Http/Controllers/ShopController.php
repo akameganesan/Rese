@@ -11,6 +11,7 @@ use App\Models\Reservations;
 use App\Models\User;
 
 
+
 class ShopController extends Controller
 {
     //
@@ -32,8 +33,10 @@ class ShopController extends Controller
 
 
         $shops = Shops::all();
+        //$user = Auth::id();
+        $fav = Favorites::all();
 
-        return view('index', compact('shops'));
+        return view('index', compact('shops', 'fav'));
 
 
 

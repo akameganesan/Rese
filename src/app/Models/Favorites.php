@@ -27,7 +27,9 @@ class Favorites extends Model
 
     protected $fillable = [
         'user_id',
-        'shop_id',
+        'shops_id',
+        'created_at',
+        'updated_at',
     ];
 
 }
