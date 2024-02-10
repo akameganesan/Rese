@@ -9,6 +9,7 @@ use App\Models\Favorites;
 use App\Models\Genres;
 use App\Models\Reservations;
 use App\Models\User;
+use Illuminate\Support\Facades\DB;
 
 
 
@@ -17,7 +18,7 @@ class ShopController extends Controller
     //
     public function index()
     {
-        $shops = Shops::all();
+        //$shops = Shops::all();
         //$shops = Shops::with('areas')->get();
         //$sh = Shops::find(1)->shop_areas;
         //$shops = Shops::with('areas', 'genres')->where('id', '2')->first();
@@ -35,6 +36,15 @@ class ShopController extends Controller
         $shops = Shops::all();
         //$user = Auth::id();
         $fav = Favorites::all();
+
+        //$shops = DB::table('Shops')
+        //   ->select('shops.id', 'shops.name', 'Favorites.shops_id ')
+        //   ->join('Favorites', 'shops.id', '=', 'Favorites.shops_id')->get();
+        //->select('first_table.*', 'second_table.some_column as new_column')
+
+        //$shops = Shops::join('favorites', 'shops.id', '=', 'favorites.shops_id')->get();
+        //$shops = Favorites::join('shops', 'shops.id', '=', 'favorites.shops_id')->get();
+
 
         return view('index', compact('shops', 'fav'));
 
