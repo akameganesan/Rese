@@ -49,7 +49,60 @@ class ShopController extends Controller
         return view('index', compact('shops', 'fav'));
 
 
+    }
+
+    public function area(Request $request)
+    {
+
+        $keyword = $request->area;
+        $key = $keyword;
+        //$keyword = 1;
+        //$sshops = Shops::all();
+        //$shops = $query->where('area_id', 'like', '%' . $keyword . '%')->get();
+        $shops = Shops::all()->where("area_id", "=", $key);
+
+        //$shops = Shops::all();
+
+        //$fav = Favorites::all();
+
+        $fav = Favorites::all();
+
+        //return view('menu', compact('shops', 'keyword'));
+        return view('index', compact('shops', 'keyword', 'fav'));
 
 
     }
+
+    public function genre(Request $request)
+    {
+
+        $keyword = $request->genre;
+        $key = $keyword;
+        //$keyword = 1;
+        //$sshops = Shops::all();
+        //$shops = $query->where('area_id', 'like', '%' . $keyword . '%')->get();
+        $shops = Shops::all()->where("genre_id", "=", $key);
+
+        //$shops = Shops::all();
+
+        //$fav = Favorites::all();
+
+        $fav = Favorites::all();
+
+        //return view('menu', compact('shops', 'keyword'));
+        return view('index', compact('shops', 'keyword', 'fav'));
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
 }

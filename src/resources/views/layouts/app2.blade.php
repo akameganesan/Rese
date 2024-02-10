@@ -32,9 +32,27 @@
                                                     <a href="#">All areas</a>
 
                                                     <ul class="dropdown__lists">
-                                                        <li class="dropdown__list"><a href="#">東京都</a></li>
-                                                        <li class="dropdown__list"><a href="#">大阪府</a></li>
-                                                        <li class="dropdown__list"><a href="#">福岡県</a></li>
+                                                        <!--<li class="dropdown__list"><a href="#" value="1">東京都</a>-->
+                                                        <form action="area" type="number" name="area" method="post">
+                                                            @csrf
+                                                            <li class="dropdown__list"><input name="area" type="hidden"
+                                                                    value="1"><button type="submit">東京</button>
+                                                            </li>
+                                                        </form>
+                                                        <!--<li class="dropdown__list"><a href="#" value="2">大阪府</a>-->
+                                                        <form action="area" type="number" name="area" method="post">
+                                                            @csrf
+                                                            <li class="dropdown__list"><input name="area" type="hidden"
+                                                                    value="2"><button type="submit">大阪</button>
+                                                            </li>
+                                                        </form>
+                                                        <!--<li class="dropdown__list"><a href="#" value="3">福岡県</a>-->
+                                                        <form action="area" type="number" name="area" method="post">
+                                                            @csrf
+                                                            <li class="dropdown__list"><input name="area" type="hidden"
+                                                                    value="3"><button type="submit">福岡</button>
+                                                            </li>
+                                                        </form>
                                                     </ul>
 
                                                 </li>
@@ -43,12 +61,47 @@
                                             <li class="gnavi__list">
                                                 <a href="#">All genres</a>
                                                 <ul class="dropdown__lists">
+                                                    <!--<li class="dropdown__list"><a href="#" value="1">東京都</a>-->
+                                                    <form action="genre" type="number" name="genre" method="post">
+                                                        @csrf
+                                                        <li class="dropdown__list"><input name="genre" type="hidden"
+                                                                value="1"><button type="submit">寿司</button>
+                                                        </li>
+                                                    </form>
+                                                    <!--<li class="dropdown__list"><a href="#" value="2">大阪府</a>-->
+                                                    <form action="genre" type="number" name="genre" method="post">
+                                                        @csrf
+                                                        <li class="dropdown__list"><input name="genre" type="hidden"
+                                                                value="2"><button type="submit">焼肉</button>
+                                                        </li>
+                                                    </form>
+                                                    <!--<li class="dropdown__list"><a href="#" value="3">福岡県</a>-->
+                                                    <form action="genre" type="number" name="genre" method="post">
+                                                        @csrf
+                                                        <li class="dropdown__list"><input name="genre" type="hidden"
+                                                                value="3"><button type="submit">ラーメン</button>
+                                                        </li>
+                                                    </form>
+                                                    <form action="genre" type="number" name="genre" method="post">
+                                                        @csrf
+                                                        <li class="dropdown__list"><input name="genre" type="hidden"
+                                                                value="4"><button type="submit">イタリアン</button>
+                                                        </li>
+                                                    </form>
+                                                    <form action="genre" type="number" name="genre" method="post">
+                                                        @csrf
+                                                        <li class="dropdown__list"><input name="genre" type="hidden"
+                                                                value="5"><button type="submit">居酒屋</button>
+                                                        </li>
+                                                    </form>
+                                                </ul>
+                                                <!--<ul class="dropdown__lists">
                                                     <li class="dropdown__list"><a href="#">寿司</a></li>
                                                     <li class="dropdown__list"><a href="#">焼肉</a></li>
                                                     <li class="dropdown__list"><a href="#">ラーメン</a></li>
                                                     <li class="dropdown__list"><a href="#">イタリアン</a></li>
                                                     <li class="dropdown__list"><a href="#">居酒屋</a></li>
-                                                </ul>
+                                                </ul>-->
                                             </li>
 
                                             <li class="gnavi__list">
@@ -70,6 +123,7 @@
                 </nav>
             </div>
         </div>
+
     </header>
 
     <main>

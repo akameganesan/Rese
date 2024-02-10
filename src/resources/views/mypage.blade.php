@@ -12,6 +12,7 @@
 
 <h1>お子に入り店舗追加</h1>
 
+{{$keyword}}
 
 
 @endsection

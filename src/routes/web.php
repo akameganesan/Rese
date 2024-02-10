@@ -61,3 +61,8 @@ Route::post('/create3', [FavoriteController::class, 'create3']);
 
 Route::post('/add', [FavoriteController::class, 'create']);
 //Route::get('/', [FavoriteController::class, 'index']);
+
+
+Route::post('/area', [ShopController::class, 'area']);
+
+Route::post('/genre', [ShopController::class, 'genre']);
