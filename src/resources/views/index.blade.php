@@ -43,11 +43,16 @@
                             <li class="blog-wrap__item-content-tag2">#居酒屋</li>
                             @endif
                         </ul>
-                        <div class="flex__item2">
-                            <div class="form__button">
-                                <button class="form__button-submit" type="submit">詳しく見る</button>
+
+                        <form action="/detail" type="text" name="shoID" method="post">
+                            @csrf
+                            <div class="flex__item2">
+                                <input type="hidden" name="shoID" value="2" size="10">
+                                <div class="form__button">
+                                    <button class="form__button-submit" type="submit">詳しく見る</button>
+                                </div>
                             </div>
-                        </div>
+                        </form>
 
 
 

@@ -163,6 +163,52 @@ class ShopController extends Controller
     }
 
 
+    public function detail(Request $request)
+    {
+
+        //$keyword = $request->search;
+        //$key = $keyword;
+        //$keyword = 1;
+        //$sshops = Shops::all();
+        //$shops = $query->where('area_id', 'like', '%' . $keyword . '%')->get();
+        //$shops = Shops::all()->where("genre_id", "=", $key);
+        //$shops = Shops::all()->where('name', 'like', '%' . $keyword . '%')->get();
+
+        //$shops = Shops::all();
+
+        //$fav = Favorites::all();
+
+
+
+        //$query = Shops::query();
+        //$shops = $query->where('name', 'like', '%' q. $key . '%')->get();
+
+
+
+
+
+        //$fav = Favorites::all();
+
+        //return view('menu', compact('shops', 'keyword'));
+        //return view('index', compact('shops', 'keyword', 'fav'));
+
+
+        //shoID
+        $keyword = $request->shoID;
+        $shops = Shops::all()->where("id", "=", $keyword)->first();
+
+
+
+
+
+
+        return view('description', compact('keyword', 'shops'));
+
+
+    }
+
+
+
 
 
 
