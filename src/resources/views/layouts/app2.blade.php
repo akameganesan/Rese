@@ -105,11 +105,13 @@
                                             </li>
 
                                             <li class="gnavi__list">
-                                                <form class="form" action="/search" method="post">
+                                                <form class="form" type="text" name="search" action="search"
+                                                    method="post">
                                                     @csrf
                                                     <div class="search_box">
-                                                        <input type="text" placeholder="Search...">
+                                                        <input type="text" name="search" placeholder="Search...">
                                                     </div>
+
                                                 </form>
                                             </li>
 
