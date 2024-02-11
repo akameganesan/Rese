@@ -77,3 +77,7 @@ Route::post('/remove', [FavoriteController::class, 'remove']);
 Route::get('/index2', [ShopController::class, 'index2']);
 Route::post('/index2', [ShopController::class, 'index2']);
 
+
+Route::get('/detail', [ShopController::class, 'detail']);
+Route::post('/detail', [ShopController::class, 'detail']);
+
