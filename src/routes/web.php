@@ -66,3 +66,14 @@ Route::post('/add', [FavoriteController::class, 'create']);
 Route::post('/area', [ShopController::class, 'area']);
 
 Route::post('/genre', [ShopController::class, 'genre']);
+
+Route::post('/search', [ShopController::class, 'search']);
+
+
+Route::get('/remove', [FavoriteController::class, 'remove']);
+Route::post('/remove', [FavoriteController::class, 'remove']);
+
+
+Route::get('/index2', [ShopController::class, 'index2']);
+Route::post('/index2', [ShopController::class, 'index2']);
+
