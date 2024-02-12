@@ -37,6 +37,9 @@ Route::post('/create', [FavoriteController::class, 'create']);
 Route::get('/menu', [AuthController::class, 'menu']);
 Route::post('/menu', [AuthController::class, 'menu']);
 
+Route::get('/registered', [AuthController::class, 'registered']);
+Route::post('/registered', [AuthController::class, 'registered']);
+
 
 
 Route::get('/register', [AuthController::class, 'register']);
