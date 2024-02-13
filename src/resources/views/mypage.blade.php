@@ -15,4 +15,31 @@
 
 
 
+@if(empty($day))
+入っていません
+@else
+<h2>day {{$day}}</h2>
+@endif
+
+
+
+
+
+@if(empty($time))
+入っていません
+@else
+<h2>TIME {{$time}}</h2>
+@endif
+
+
+
+
+
+@if(empty($num))
+入っていません
+@else
+<h2>Number {{$num}}</h2>
+@endif
+
+
 @endsection

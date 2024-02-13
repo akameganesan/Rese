@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ShopController;
 use App\Http\Controllers\FavoriteController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -83,4 +84,14 @@ Route::post('/index2', [ShopController::class, 'index2']);
 
 Route::get('/detail', [ShopController::class, 'detail']);
 Route::post('/detail', [ShopController::class, 'detail']);
+
+
+Route::get('/day', [UserController::class, 'day']);
+Route::post('/day', [UserController::class, 'day']);
+
+Route::get('/time', [UserController::class, 'time']);
+Route::post('/time', [UserController::class, 'time']);
+
+Route::get('/num', [UserController::class, 'num']);
+Route::post('/num', [UserController::class, 'num']);
 

@@ -11,7 +11,7 @@
 
     <div class="container1">
 
-        {{$keyword}}
+
 
         <div class="header__inner">
             <div class="header-utilities">
@@ -73,25 +73,57 @@
     <div class="container2">
         <div class="box">
             <div class="title__res">予約</div>
+            <form method='post' action='day'>
+                @csrf
+                <div class="day__size">
+                    <input type="date" name="day">
+                </div>
+                <button type="submit">送信</button>
+            </form>
+            <form method='post' action='time'>
+                @csrf
+                <div class="day__size">
+                    <input type="time" name="time">
+                </div>
+                <button type="submit">送信</button>
+            </form>
             <div class="day__size">
-                <input type="date" name="birthday">
-            </div>
-            <div class="day__size">
-                <input type="time" name="birthday">
-            </div>
-            <div class="day__size">
-                <form method='POST' action='/test'>
-                    <select name='age'>
+                <form method='post' action='num'>
+                    @csrf
+                    <select name='num'>
                         <option value='1'>１人</option>
                         <option value='2'>２人</option>
                         <option value='3'>３人</option>
                     </select>
-                    <!--<input type='submit' value='送信' />-->
+                    <button type="submit">送信</button>
                 </form>
             </div>
+            <div class="box2">
+                <div class="confirm">
+                    @if(empty($day))
+                    @else
+                    <h2>Date {{$day}}</h2>
+                    @endif
+                    @if(empty($time))
+                    @else
+                    <h2>Time {{$time}}</h2>
+                    @endif
+                    @if(empty($num))
+                    @else
+                    <h2>Number {{$num}}</h2>
+                    @endif
+                </div>
+            </div>
+
+
         </div>
         <div class="box1">
+
         </div>
+
+
+
+
 
     </div>
 

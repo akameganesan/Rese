@@ -616,6 +616,21 @@ body {
     margin-top: -50px;
 }
 
+.box2 {
+    background: rgb(117, 216, 255);
+    background-color: rgb(140, 219, 255);
+    color: #000000;
+    /*margin-right: 20px;*/
+    font-size: 32px;
+    width: 500px;
+    height: 200px;
+    /*border-radius: 0px 0px 15px 15px;*/
+    margin-left: 100px;
+    margin-top: 100px;
+    z-index: 100;
+}
+
+
 .title__res{
     color: white;
     font-size: 40px;
@@ -669,12 +684,14 @@ body {
 .container1{
     width: 50%;
     background: #e6e6e6;
+    height: 3500px;
 
 }
 
 .container2{
         width: 50%px;
         background: #e6e6e6;
+        height: 3500px;
 
 
 }
@@ -684,4 +701,16 @@ body {
     height: 70px;
     margin-left: 50px;
 }
+
+
+.confirm{
+    background: rgb(117, 216, 255);
+    color: white;
+    font-size: 30px;
+}
+
+
+
+
+
 
