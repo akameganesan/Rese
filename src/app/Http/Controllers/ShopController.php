@@ -103,7 +103,7 @@ class ShopController extends Controller
         $fav = Favorites::all();
 
         //return view('menu', compact('shops', 'keyword'));
-        return view('index', compact('shops', 'keyword', 'fav'));
+        return view('mypage', compact('shops', 'keyword', 'fav'));
 
 
     }
