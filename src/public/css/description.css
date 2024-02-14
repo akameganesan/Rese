@@ -613,7 +613,9 @@ body {
     width: 800px;
     height: 100px;
     border-radius: 0px 0px 15px 15px;
-    margin-top: -50px;
+    margin-top: 200px;
+    z-index: 100;
+    margin-bottom: 0px;
 }
 
 .box2 {
@@ -622,12 +624,12 @@ body {
     color: #000000;
     /*margin-right: 20px;*/
     font-size: 32px;
-    width: 500px;
-    height: 200px;
+    width: 600px;
+    height: 300px;
     /*border-radius: 0px 0px 15px 15px;*/
     margin-left: 100px;
-    margin-top: 100px;
-    z-index: 100;
+    margin-top: -600px;
+    z-index: 1000;
 }
 
 
@@ -684,14 +686,14 @@ body {
 .container1{
     width: 50%;
     background: #e6e6e6;
-    height: 3500px;
+    height: 1500px;
 
 }
 
 .container2{
         width: 50%px;
         background: #e6e6e6;
-        height: 3500px;
+        height: 1500px;
 
 
 }
@@ -711,6 +713,28 @@ body {
 
 
 
+.button_xy{
+    margin-top: -30px;
+    margin-left: 50px;
+}
 
+.day__size1 {
+    width: 100px;
+    height: 70px;
+    margin-left: 50px;
+    margin-top: -5px;
+}
 
+.day__size2 {
+    width: 100px;
+    height: 70px;
+    margin-left: 50px;
+    margin-top: 20px;
+}
 
+.day__size3 {
+    width: 100px;
+    height: 70px;
+    margin-left: 50px;
+    margin-top: -50px;
+}
