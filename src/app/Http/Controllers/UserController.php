@@ -159,4 +159,66 @@ class UserController extends Controller
 
         return view('mypage', compact('num', 'shops', 'fav'));
     }
+
+
+    public function res(Request $request)
+    {
+
+        //$keyword = $request->search;
+        //$key = $keyword;
+        //$keyword = 1;
+        //$sshops = Shops::all();
+        //$shops = $query->where('area_id', 'like', '%' . $keyword . '%')->get();
+        //$shops = Shops::all()->where("genre_id", "=", $key);
+        //$shops = Shops::all()->where('name', 'like', '%' . $keyword . '%')->get();
+
+        //$shops = Shops::all();
+
+        //$fav = Favorites::all();
+
+
+
+        //$query = Shops::query();
+        //$shops = $query->where('name', 'like', '%' q. $key . '%')->get();
+
+
+
+
+
+        //$fav = Favorites::all();
+
+        //return view('menu', compact('shops', 'keyword'));
+        //return view('index', compact('shops', 'keyword', 'fav'));
+
+        $shopId = $request->shoID;
+
+        //shoID
+        $day = $request->day;
+        $time = $request->time;
+        $num = $request->num;
+        //$shops = Shops::all()->where("id", "=", $keyword)->first();
+
+        //$a = new Carbon('day');
+
+        //$shops = Shops::all();
+
+        //$shops = Shops::all()->where("id", "=", $shopId)->first();
+        $shops = Shops::all()->where("id", "=", $shopId)->first();
+
+        //$user = Auth::id();
+        $fav = Favorites::all();
+
+        //$posts = DB::table('shops')
+        // ->join('User', '', '=', 'users.id')
+        //->select('posts.*', 'users.name')
+        //  ->get();
+
+
+        return view('description', compact('day', 'time', 'num', 'shops', 'fav', 'shopId'));
+    }
+
+
+
+
+
 }

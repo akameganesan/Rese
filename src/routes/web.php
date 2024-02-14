@@ -95,3 +95,6 @@ Route::post('/time', [UserController::class, 'time']);
 Route::get('/num', [UserController::class, 'num']);
 Route::post('/num', [UserController::class, 'num']);
 
+Route::get('/res', [UserController::class, 'res']);
+Route::post('/res', [UserController::class, 'res']);
+
