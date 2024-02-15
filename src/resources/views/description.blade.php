@@ -6,25 +6,16 @@
 
 @section('content')
 <!--詳細ページ建設予定地-->
-
 <div class="flex__item4">
-
     <div class="container1">
-
-
-
         <div class="header__inner">
             <div class="header-utilities">
                 <a href="/" class="contact__btn2">X</a>
                 <a class="header__logo" href="/">
 
-
-                    {{$shops->name}}
-
+                   {{$shops->name}}
                 </a>
-
                 @if (Auth::check())
-
                 @endif
                 </ul>
                 </nav>
@@ -34,7 +25,6 @@
             <!--<img src="{{$shops->img_url}}" alt="" class="blog-wrap__item-eyecatch">-->
             <img src="{{$shops->img_url}}" alt="">
         </div>
-
         <ul class="flex__item3">
             @if($shops->area_id == 1)
             <li class="blog-wrap__item-content-tag">#東京</li>
@@ -43,7 +33,7 @@
             @elseif($shops->area_id == 3)
             <li class="blog-wrap__item-content-tag">#福岡県</li>
             @endif
-
+           
             @if($shops->genre_id == 1)
             <li class="blog-wrap__item-content-tag2">#寿司</li>
             @elseif($shops->genre_id == 2)
@@ -56,12 +46,9 @@
             <li class="blog-wrap__item-content-tag2">#居酒屋</li>
             @endif
         </ul>
-
-
         <p class="p_font-size1">{{$shops->description}}</p>
 
     </div>
-
 
     <div class="container2">
         <div class="box">
@@ -100,7 +87,6 @@
             </form>
         </div>
 
-
         <div class="box2">
             <div class="confirm">
                 @if(empty($shops->name))
@@ -122,22 +108,10 @@
                 @else
                 <h2>Number {{$num}}</h2>
                 @endif
-
             </div>
         </div>
         <div class="box1">
-
         </div>
-
     </div>
-
-
-
-
-
-
 </div>
-
-
-
 @endsection
