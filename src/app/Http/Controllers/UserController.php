@@ -412,8 +412,35 @@ class UserController extends Controller
 
 
 
+        Reservations::create([
+            "user_id" => $user_id,
+            "shop_id" => $shop_id,
+            "start_at" => $resTime,
+            "member_num" => $num,
+            "created_at" => now(),
+            "updated_at" => now(),
+
+        ]);
+
+        return view('done');
 
 
+
+
+    }
+    public function done2(Request $request)
+    {
+
+        //<input type="hidden" type="text" name="shoID1" value="{{$shops->user_id}}">
+        //        <input type="hidden" type="text" name="shoID2" value="{{$shops->id}}">
+        //       <input type="hidden" type="text" name="shoID3" value="{{$resTime}}">
+        //       <input type="hidden" type="text" name="shoID4" value="{{$num}}">
+
+        $user_id = Auth::id();
+        $shop_id = $request->shoID2;
+        $resTime = $request->shoID3;
+        $num = $request->shoID4;
+        //$shop_id = $request->shoID2;
 
 
 
