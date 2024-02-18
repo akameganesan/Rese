@@ -10,6 +10,7 @@ use App\Models\Genres;
 use App\Models\Reservations;
 use App\Models\User;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 
 
 
@@ -192,6 +193,12 @@ class ShopController extends Controller
         //return view('menu', compact('shops', 'keyword'));
         //return view('index', compact('shops', 'keyword', 'fav'));
 
+        $shopId = $request->shoID;
+
+        //shoID
+        $day = $request->day;
+        $time = $request->time;
+        $num = $request->num;
 
         //shoID
         $keyword = $request->shoID;

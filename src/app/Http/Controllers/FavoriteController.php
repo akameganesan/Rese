@@ -89,10 +89,11 @@ class FavoriteController extends Controller
         $shopId = $request->shID1;
         $form = $request->all();
         //Favorites::create($form);
-        $user = Auth::id();
+        //$user = Auth::id();
+        $user_id = Auth::id();
 
         Favorites::create([
-            "user_id" => $user,
+            "user_id" => $user_id,
             "shops_id" => $shopId,
             "created_at" => now(),
             "updated_at" => now(),

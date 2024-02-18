@@ -98,3 +98,17 @@ Route::post('/num', [UserController::class, 'num']);
 Route::get('/res', [UserController::class, 'res']);
 Route::post('/res', [UserController::class, 'res']);
 
+
+Route::get('/reservation', [UserController::class, 'reservation']);
+Route::post('/reservation', [UserController::class, 'reservation']);
+
+Route::get('/test', [UserController::class, 'test']);
+Route::post('test', [UserController::class, 'test']);
+
+Route::get('/reg', [UserController::class, 'reg']);
+Route::post('/reg', [UserController::class, 'reg']);
+
+
+Route::get('/done', [UserController::class, 'done']);
+Route::post('/done', [UserController::class, 'done']);
+
