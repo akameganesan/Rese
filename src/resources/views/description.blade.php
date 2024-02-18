@@ -13,7 +13,7 @@
                 <a href="/" class="contact__btn2">X</a>
                 <a class="header__logo" href="/">
 
-                   {{$shops->name}}
+                    {{$shops->name}}
                 </a>
                 @if (Auth::check())
                 @endif
@@ -33,7 +33,7 @@
             @elseif($shops->area_id == 3)
             <li class="blog-wrap__item-content-tag">#福岡県</li>
             @endif
-           
+
             @if($shops->genre_id == 1)
             <li class="blog-wrap__item-content-tag2">#寿司</li>
             @elseif($shops->genre_id == 2)
@@ -111,6 +111,26 @@
             </div>
         </div>
         <div class="box1">
+
+
+
+            @if(empty($a))
+
+
+            @else
+            @if($a == 1)
+            <form method='post' action='done'>
+                @csrf
+                <input type="hidden" type="text" name="shoID1" value="{{$shops->user_id}}">
+                <input type="hidden" type="text" name="shoID2" value="{{$shops->id}}">
+                <input type="hidden" type="text" name="shoID3" value="{{$resTime}}">
+                <input type="hidden" type="text" name="shoID4" value="{{$num}}">
+                <div class="button_xy">
+                    <button type="submit">送信</button>
+                </div>
+            </form>
+            @endif
+            @endif
         </div>
     </div>
 </div>
