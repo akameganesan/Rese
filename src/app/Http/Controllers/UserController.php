@@ -16,9 +16,31 @@ use Illuminate\Support\Facades\Auth;
 class UserController extends Controller
 {
     //
-    public function mypage()
+    public function mypage(Request $request)
     {
-        return view('mypage');
+
+
+
+        $shops = Shops::all();
+
+
+        //$fav = Favorites::all();
+        //$reserv = Reservations::all();
+
+        //$fav = Favorites::where('id', 'active')->get();
+        $fav = Favorites::leftJoin('shops', 'shops.id', '=', 'favorites.shops_id')->get();
+        $reserv = Reservations::leftJoin('shops', 'shops.id', '=', 'reservations.shop_id')->get();
+
+        //$formattedDateTime = $now->format('Y-m-d H:i:s');
+        //$formattedDate = $now->format('Y-m-d');
+        //$formattedTime = $now->format('H:i:s');
+
+        //$Date = $reserv->start_at;
+        //$day = $Date->format('Y-m-d');
+        //$time = $Date->format('H:i');
+
+
+        return view('mypage', compact('reserv', 'fav', 'shops'));
     }
 
     public function day(Request $request)
@@ -453,6 +475,17 @@ class UserController extends Controller
             "updated_at" => now(),
 
         ]);
+
+        return view('done');
+
+
+
+
+    }
+
+    public function comp(Request $request)
+    {
+
 
         return view('done');
 

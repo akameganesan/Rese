@@ -31,6 +31,7 @@ use App\Http\Controllers\UserController;
 
 
 Route::get('/', [ShopController::class, 'index']);
+Route::post('/', [ShopController::class, 'index']);
 
 Route::post('/create', [FavoriteController::class, 'create']);
 
@@ -111,4 +112,9 @@ Route::post('/reg', [UserController::class, 'reg']);
 
 Route::get('/done', [UserController::class, 'done']);
 Route::post('/done', [UserController::class, 'done']);
+
+
+Route::get('/mypage', [UserController::class, 'mypage']);
+Route::post('/mypage', [UserController::class, 'mypage']);
+
 
