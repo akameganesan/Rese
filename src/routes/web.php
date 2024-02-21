@@ -118,3 +118,8 @@ Route::get('/mypage', [UserController::class, 'mypage']);
 Route::post('/mypage', [UserController::class, 'mypage']);
 
 
+Route::get('/delete', [UserController::class, 'delete']);
+Route::post('/delete', [UserController::class, 'delete']);
+
+
+

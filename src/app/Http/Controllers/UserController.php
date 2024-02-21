@@ -31,11 +31,43 @@ class UserController extends Controller
         $fav = Favorites::leftJoin('shops', 'shops.id', '=', 'favorites.shops_id')->get();
         $reserv = Reservations::leftJoin('shops', 'shops.id', '=', 'reservations.shop_id')->get();
 
+        $res = Reservations::leftJoin('shops', 'shops.id', '=', 'reservations.shop_id')->get();
+
+        $ress = Reservations::leftJoin('shops', 'shops.id', '=', 'reservations.shop_id')->get();
+
+
+
+        // 特定の日付を作成
+        //$date = Carbon::create($res->start_at);
+
+        // 日付のフォーマットを変更
+        //$formattedDate = $date->format('Y-m-d');
+
+
+
+
+
+        //$dateTime = $res->start_at;
+        //$date = $dateTime->format('Y-m-d'); // 日付の取得
+        //$time = $dateTime->format('H:i:s'); // 時間の取得
+
+
+
+
+
+
+        //$day = $res->where("id", "=", 'reservations.shop_id')->get();
+
+        //$date = $day->start_at;
+
+
+        // $time = $request->time->where("id", "=", $shop_id)->get();
+        //$shops = Shops::all()->where("id", "=", $keyword)->first();
+
         //$formattedDateTime = $now->format('Y-m-d H:i:s');
         //$formattedDate = $now->format('Y-m-d');
         //$formattedTime = $now->format('H:i:s');
 
-        //$Date = $reserv->start_at;
         //$day = $Date->format('Y-m-d');
         //$time = $Date->format('H:i');
 
@@ -353,20 +385,20 @@ class UserController extends Controller
         //$resTime = date('Y-m-d H:i:s', (int) strtotime($date . $time));
 
 
-        $shop_id = $request->shoID;
+        //$shop_id = $request->shoID;
         //$day = $request->day;
         //$time1 = $request->time;
-        $num = $request->num;
+        //$num = $request->num;
         //$num = $request->num;
 
-        $shops = Shops::all()->where("id", "=", $shop_id)->first();
-        $fav = Favorites::all();
+        //$shops = Shops::all()->where("id", "=", $shop_id)->first();
+        //$fav = Favorites::all();
 
 
         //$shops = Shops::all();
         //$user = Auth::id();
-        $day = $request->day;
-        $time = $request->time;
+        //$day = $request->day;
+        //$time = $request->time;
         //$num = $request->num;
         //$fav = Favorites::all();
 
@@ -377,12 +409,12 @@ class UserController extends Controller
         //$user = Auth::id();
         //$fav = Favorites::all();
 
-        $user_id = Auth::id();
+        //$user_id = Auth::id();
 
-        $date = $day; // 日付
+        //$date = $day; // 日付
         // 時間
 
-        $resTime = date('Y-m-d H:i:s', (int) strtotime($date . $time));
+        //$resTime = date('Y-m-d H:i:s', (int) strtotime($date . $time));
 
 
         //$dateWithTime = Carbon::create($day, $time);
@@ -407,10 +439,16 @@ class UserController extends Controller
         //]);
 
 
+        $rid = $request->shoID1;
+
+
+        $a = 1;
+
+
 
         //return view('test', compact('day', 'time', 'num', 'shops', 'fav', 'shopId', 'shopID'));
         //return view('reservation', compact('resTime'));
-        return view('test', compact('day', 'time', 'num', 'shops', 'resTime', 'shop_id'));
+        return view('test', compact('a', 'rid'));
         //return view('test', compact('resTime'));
 
 
@@ -492,6 +530,58 @@ class UserController extends Controller
 
 
 
+    }
+
+    // 削除機能
+    public function delete(Request $request)
+    {
+        $rid = $request->shoID1;
+
+
+
+
+
+
+        //////////////////////////////////////
+
+        $shops = Shops::all();
+
+
+        //$fav = Favorites::all();
+        //$reserv = Reservations::all();
+
+        //$fav = Favorites::where('id', 'active')->get();
+        //$fav = Favorites::leftJoin('shops', 'shops.id', '=', 'favorites.shops_id')->get();
+        //$reserv = Reservations::leftJoin('shops', 'shops.id', '=', 'reservations.shop_id')->get();
+
+        $res = Reservations::leftJoin('shops', 'shops.id', '=', 'reservations.shop_id')->get();
+
+        $ress = Reservations::leftJoin('shops', 'shops.id', '=', 'reservations.shop_id')->get();
+
+
+
+
+        //$keyword = $request->shoID1;
+        //$key = $keyword;
+
+
+
+
+        //$key = $keyword;
+
+
+        $del = Reservations::all()->where("shop_id", "=", $rid)->first()->delete();
+
+        $reserv = Reservations::leftJoin('shops', 'shops.id', '=', 'reservations.shop_id')->get();
+
+        $fav = Favorites::leftJoin('shops', 'shops.id', '=', 'favorites.shops_id')->get();
+
+
+
+
+
+        return view('mypage', compact('reserv', 'fav', 'shops'));
+        //return redirect('index2', compact('keyword', 'key'));
     }
 
 }

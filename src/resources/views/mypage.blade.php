@@ -12,7 +12,7 @@
         <div class="container">
             <div class="flex__item4">
                 <div class="container1">
-                    <div class="title__res">予約状況</div>
+                    <div class="title__res2">予約状況</div>
 
 
 
@@ -37,19 +37,36 @@
                                 @if(empty($re->start_at))
                                 <h2>Date </h2>
                                 @else
+                                @php
+                                $date = \Carbon\Carbon::create($re->start_at);
+                                $formattedDate = $date->format('Y-m-d');
+                                $formattedTime = $date->format('H:i');
+                                @endphp
 
-                                <h2>Date {{$re->start_at}}</h2>
+                                <h2>Date {{$formattedDate}}</h2>
                                 @endif
                                 @if(empty($re->start_at))
                                 <h2>Time </h2>
                                 @else
-                                <h2>Time {{$re->start_at}}</h2>
+                                <h2>Time {{$formattedTime}}</h2>
                                 @endif
                                 @if(empty($re->member_num))
                                 <h2>Number </h2>
                                 @else
                                 <h2>Number {{$re->member_num}}</h2>
                                 @endif
+
+
+                                <form action="/delete" type="text" name="shoID" method="post">
+                                    @csrf
+                                    <div class="flex__item2">
+                                        <input type="hidden" name="shoID1" value="{{$re->shop_id}}" size="10">
+                                        <div class="form__button">
+                                            <button class="form__button-submit" type="submit">X</button>
+                                        </div>
+                                    </div>
+                                </form>
+
                             </div>
 
                         </div>
@@ -104,12 +121,14 @@
                                         <form action="/detail" type="text" name="shoID" method="post">
                                             @csrf
                                             <div class="flex__item2">
-                                                <input type="hidden" name="shoID" value="{{$fa->id}}" size="10">
+                                                <input type="hidden" name="shoID1" value="{{$fa->id}}" size="10">
                                                 <div class="form__button">
                                                     <button class="form__button-submit" type="submit">詳しく見る</button>
                                                 </div>
                                             </div>
                                         </form>
+
+
 
                                         @if (Auth::check())
 
