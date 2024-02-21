@@ -1,36 +1,95 @@
-<!DOCTYPE html>
-<html lang="ja">
+@extends('layouts.app2')
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rese</title>
-    <link rel="stylesheet" href="{{ asset('css/sanitize.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/common.css') }}">
-    @yield('css')
-</head>
+@section('css')
+<link rel="stylesheet" href="{{ asset('css/index.css') }}">
+@endsection
 
-<body>
-    <header class="header">
-        <div class="header__inner">
-            <div class="header-utilities">
-                <a href="/menu" class="contact__btn"><span class="example1">━</span><span class="example2">━</span><span
-                        class="example3">━</span></a>
-                <form class="form" action="/logout" method="post">
-                    @csrf
-                    <button class="header-nav__button">ログアウト</button>
-                </form>
-            </div>
+@section('content')
+
+
+
+
+<div class="background">
+
+    <div class="container">
+        <div class="flex__item blog-wrap">
+            @foreach($shops as $shop)
+            <a class="blog-wrap__item" href="">
+                <div class="register__shadow2">
+                    <img src="{{$shop->img_url}}" alt="" class="blog-wrap__item-eyecatch">
+                </div>
+                <div class="register__shadow">
+                    <div class="blog-wrap__item-content">
+                        <h3 class="blog-wrap__item-content-ttl">{{$shop->name}}</td>
+                        </h3>
+                        <ul class="flex__item2">
+                            @if($shop->area_id == 1)
+                            <li class="blog-wrap__item-content-tag">#東京</li>
+                            @elseif($shop->area_id == 2)
+                            <li class="blog-wrap__item-content-tag">#大阪府</li>
+                            @elseif($shop->area_id == 3)
+                            <li class="blog-wrap__item-content-tag">#福岡県</li>
+                            @endif
+
+                            @if($shop->genre_id == 1)
+                            <li class="blog-wrap__item-content-tag2">#寿司</li>
+                            @elseif($shop->genre_id == 2)
+                            <li class="blog-wrap__item-content-tag2">#焼肉</li>
+                            @elseif($shop->genre_id == 3)
+                            <li class="blog-wrap__item-content-tag2">#ラーメン</li>
+                            @elseif($shop->genre_id == 4)
+                            <li class="blog-wrap__item-content-tag2">#イタリアン</li>
+                            @elseif($shop->genre_id == 5)
+                            <li class="blog-wrap__item-content-tag2">#居酒屋</li>
+                            @endif
+                        </ul>
+
+                        <form action="/detail" type="text" name="shoID" method="post">
+                            @csrf
+                            <div class="flex__item2">
+                                <input type="hidden" name="shoID" value="{{$shop->id}}" size="10">
+                                <div class="form__button">
+                                    <button class="form__button-submit" type="submit">詳しく見る</button>
+                                </div>
+                            </div>
+                        </form>
+
+                        @if (Auth::check())
+
+                        <form action="/create3" type="text" name="shoID" method="post">
+                            @csrf
+                            <input type="hidden" name="shID1" value="{{$shop->id}}" size="10">
+                            <div class="heart__margin">
+                                <div class="button_none">
+                                    <button class="heart1" type="submit"></button>
+                                </div>
+                            </div>
+                        </form>
+
+                        @foreach($fav as $fa)
+
+                        @if($fa->shops_id == $shop->id)
+                        <form action="/remove" type="text" name="shoID" method="post">
+                            @csrf
+                            <input type="hidden" name="shID1" value="{{$shop->id}}" size="10">
+                            <div class="heart__margin">
+                                <div class="button_none">
+                                    <button class="heart" type="submit"></button>
+                                </div>
+                            </div>
+                        </form>
+                        @else
+                        @endif
+                        @endforeach
+                        @endif
+                    </div>
+                </div>
+            </a>
+            @endforeach
         </div>
-    </header>
+    </div>
+</div>
 
-    <main>
-        <form class="form" action="/logout" method="post">
-            @csrf
-            <button class="header-nav__button">ログアウト</button>
-        </form>
-    </main>
-</body>
 
-</html>
+
+@endsection

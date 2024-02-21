@@ -34,8 +34,12 @@
 
 .header-nav {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    /*align-items: center;*/
+    /*align-items: left;*/
+    /*justify-content: space-between;*/
+    /*justify-content: space-between;*/
+    /*justify-content: right;*/
+    margin-right: 500px;
 }
 
 .header-nav__link {
@@ -51,6 +55,11 @@
     cursor: pointer;
 }
 
+.flex__item {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
 
 
 
@@ -79,6 +88,7 @@
 
 .contact__btn {
     width: 50px;
+    height: 50px;
         display: block;
         padding: 8px 0 8px;
         /*margin: 0 auto;*/
@@ -130,4 +140,231 @@
 
 .header-2 {
     background: #ffffff;
+}
+
+
+
+
+/*
+.gnavi__wrap {
+    width: 1200px;
+    margin: 0 auto;
+}
+*/
+
+
+.gnavi__wrap {
+    width: 700px;
+    margin: 0 auto;
+}
+
+
+
+
+.gnavi__lists {
+    display: flex;
+}
+
+.gnavi__list {
+    /*width: 20%;*/
+    width: 200px;
+    height: 60px;
+    background-color: #eff6fc;
+    position: relative;
+    transition: all .3s;
+    border-radius: 10px 0 0 10px;
+}
+
+
+
+.gnavi__list2 {
+    /*width: 20%;*/
+    width: 200px;
+    height: 60px;
+    background-color: #eff6fc;
+    position: relative;
+    transition: all .3s;
+    border-radius: 0 0 0 0;
+}
+
+.gnavi__list:hover {
+    /*background-color: #0071BB;*/
+    background-color: #eff6fc;
+}
+
+.gnavi__list:not(:first-child)::before {
+    content: "";
+    width: 1px;
+    height: 100%;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all .3s;
+}
+
+.gnavi__list:hover::before {
+    /*background-color: #0071BB;*/
+    background-color: #eff6fc;
+}
+
+.gnavi__list a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    /*color: #1b4059;*/
+    color: #000000;
+    font-size: 15px;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+    transition: all .3s;
+}
+
+.gnavi__list:hover a {
+    color: #000000;
+}
+
+
+
+
+.dropdown__lists {
+    display: none;
+    /*デフォルトでは非表示の状態にしておく*/
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background: #eff6fc;
+    color: #000;
+}
+
+.gnavi__list:hover .dropdown__lists {
+    display: block;
+    /*Gナビメニューにホバーしたら表示*/
+}
+
+.dropdown__list {
+    /*background-color: #004d80;*/
+    background: #eff6fc;
+    color: #000;
+    height: 60px;
+    transition: all .3s;
+    position: relative;
+}
+
+.dropdown__list:not(:first-child)::before {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: #3492d1;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.dropdown__list:hover {
+    /*background-color: #003558;*/
+    background: #e6e6e6;
+}
+
+.dropdown__list a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*color: #fff;*/
+    color: #050505;
+    text-decoration: none;
+    position: relative;
+}
+
+.dropdown__list a::before {
+    content: '';
+    display: block;
+    width: 6px;
+    height: 6px;
+    border-top: 2px solid #fff;
+    border-left: 2px solid #fff;
+    transform: rotate(135deg);
+    position: absolute;
+    right: 15px;
+    top: calc(50% - 5px);
+}
+
+.flex__item_3 {
+    display: flex;
+    /*justify-content: space-between;*/
+    /*justify-content:right;*/
+    margin-left: 600px;
+    flex-wrap: wrap;
+}
+
+
+
+
+.search_box {
+    display: inline-block;
+    /* なくても大丈夫だけど、念の為 */
+    position: relative;
+    /* 基準値とする */
+}
+
+.search_box::before {
+    content: "";
+    /* 疑似要素に必須 */
+    width: 16px;
+    /* アイコンの横幅 */
+    height: 16px;
+    /* アイコンの高さ */
+    /*background: url(./icon.png) no-repeat center center / auto 100%;*/
+    background: url(/img/検索用の虫眼鏡アイコン素材1採用.svg) no-repeat center center / auto 100%;
+
+    /* 背景にアイコン画像を配置 */
+    display: inline-block;
+    /* 高さを持たせるためにインラインブロック要素にする */
+    position: absolute;
+    /* 相対位置に指定 */
+    /*top: 4px;*/
+    top: 20px;
+    /* アイコンの位置。微調整してね */
+    left: 5px;
+    /* アイコンの位置。微調整してね */
+}
+
+.search_box input {
+    padding: 3px 0 3px 2em;
+    /* アイコンを設置するため左の余白を多めに指定*/
+    width: 300px;
+    height: 60px;
+    border: #ffffff;
+    border-radius:0 10px 10px 0;
+
+}
+
+.register__shadow {
+
+
+    border-radius: 0 10px 10px 0;
+    /*text-align: center;*/
+    box-shadow: 4px 4px 2px #949494;
+
+    transition: 0.4s;
+
+    text-decoration: none;
+
+}
+
+.pulldown__shadow {
+
+
+    border-radius: 10px 0 0 10px;
+    /*text-align: center;*/
+
+}
+
+.header__z-index{
+    z-index: 1000;
+
 }
