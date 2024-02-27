@@ -97,6 +97,9 @@
     cursor: pointer;
     /*margin-left: 200px;*/
     margin-left: 180px;
+    display: block;
+    margin: auto;
+    margin-top: 50px;
 }
 
 .register__link {
@@ -111,7 +114,7 @@
     max-width: 560px;
     /*width: 460px;*/
     margin: 0 auto;
-    padding: 6px 6px 6px 6px;
+    /*padding: 6px 6px 6px 6px;*/
     border-radius: 6px;
 
 }
@@ -134,10 +137,11 @@
     max-width: 560px;
     /*width: 460px;*/
     margin: 0 auto;
-    padding: 6px 6px 6px 6px;
+    /*padding: 6px 6px 6px 6px;*/
     /*height: 700px;*/
     border-radius: 6px 6px 6px 6px;
     background: #d6d6d6;
+    /*margin-top: 500px;*/
 }
 
 .background {
@@ -191,7 +195,7 @@
     background: #ffffff;
     padding: 40px 50px;
     border-radius: 6px 6px 6px 6px;
-    border: 1px solid #808080;
+    /*border: 1px solid #808080;*/
 }
 
 
@@ -267,4 +271,29 @@
     /*margin-left: -150px;*/
     margin-left: 10px;
 
+}
+
+
+
+
+.flex1 {
+    display: flex;
+    flex-direction: row;
+    /*background-color: #d6d6d6;*/
+    background: #e6e6e6;
+}
+
+.box1 {
+    background-color: rgb(255, 255, 255);
+    margin-right: 20px;
+    font-size: 20px;
+    width: 700px;
+    height: 450px;
+    text-align: center;
+    border-radius: 6px 6px 6px 6px;
+    box-shadow: 4px 4px 2px #949494;
+}
+
+.h2_top {
+    margin-top: 100px;
 }

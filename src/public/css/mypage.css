@@ -292,7 +292,20 @@ body {
 
 .form__button {
     /*margin-top: 20px;*/
-    margin-top: -10px;
+    /*margin-top: -10px;*/
+    margin-left: 500px;
+   /*margin-top: -200px;*/
+    top: 200px;
+
+}
+
+
+.form__button1 {
+    /*margin-top: 20px;*/
+    /*margin-top: -10px;*/
+    margin-left: 50px;
+    /*margin-top: -200px;*/
+    top: 50px;
 
 }
 
@@ -604,13 +617,14 @@ body {
 .box {
     background-color: rgb(32, 118, 248);
     margin-left: 100px;
-    font-size: 32px;
+    font-size: 24px;
     width: 900px;
-    height: 600px;
+    height: 550px;
     border-radius: 15px 15px 0px 0px;
     margin-top: 50px;
     margin-bottom: 100px;
     color: white;
+    padding-left: 50px;
 
 }
 
@@ -644,16 +658,25 @@ body {
 
 .title__res {
     color: rgb(255, 255, 255);
-    font-size: 40px;
-    margin-left: 40px;
-    /*margin-top: 1000px;*/
+    font-size: 30px;
+    margin-left: 140px;
+    margin-top: 100px;
 }
 
 .title__res2 {
     color: rgb(0, 0, 0);
     font-size: 40px;
-    margin-left: 40px;
+    margin-left: 400px;
+    /*margin-top: 200px;*/
+    width: 200px;
     /*margin-top: 1000px;*/
+}
+
+.title__res3 {
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    margin-left: 140px;
+    margin-top: 20px;
 }
 
 
@@ -685,6 +708,13 @@ body {
     /*justify-content: left;*/
 }
 
+.flex__item5 {
+    display: flex;
+    /*justify-content: space-between;*/
+    flex-wrap: wrap;
+    /*justify-content: left;*/
+}
+
 
 .p_font-size1 {
     color: #000;
@@ -700,18 +730,18 @@ body {
 }
 
 .container1 {
-    width: 500px;
+    width: 800px;
     background: #e6e6e6;
     height: 1500px;
 
 }
 
 .container2 {
-    width: 1500px;
+    width: 3000px;
     background: #e6e6e6;
     height: 1500px;
-    margin-top: -1500px;
-    margin-left: 1600px;
+    margin-top: -1480px;
+    margin-left:1650px;
     z-index: -10000;
 
 }
@@ -729,6 +759,12 @@ body {
     font-size: 30px;
 }
 
+.confirm2 {
+    background: #e6e6e6;
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    margin-left: 1000px;
+}
 
 
 .button_xy {
@@ -1217,3 +1253,77 @@ body {
     margin-top: 100px;
     z-index: 100 ;
 }
+
+
+
+.button__margin1{
+    margin-left: 50px;
+    margin-bottom: 50px;
+
+}
+
+
+
+
+
+
+
+
+
+/*こっからlogin、かぶったものがある場合は無効かする作業*/
+
+.size__icon{
+    width: 50px;
+    height: 50px;
+    background: rgb(32, 118, 248);
+    background-color: rgb(32, 118, 248);
+    color: #ffffff;
+}
+
+
+
+
+
+.icon_1 {
+    /*font-size: 32px;*/
+    width: 35px;
+display: flex;
+display: block;
+z-index: 1000000000000000000;
+margin-left: 500px;
+
+}
+
+.icon__flex {
+    display: flex;
+    display: block;
+    z-index: 1000;
+}
+
+.icon__left {
+    /*left: 300px;*/
+    /*margin-left: -110px;*/
+    margin-left: 0px;
+    margin-top: 0px;
+
+}
+
+.text__left {
+    /*left: 300px;*/
+    /*margin-left: -150px;*/
+    margin-left: 10px;
+
+}
+
+.box__move{
+    margin-left: 300px;
+
+}
+
+.container__color {
+
+    background: #e6e6e6;
+    z-index: -1000000000000000;
+}
+
+

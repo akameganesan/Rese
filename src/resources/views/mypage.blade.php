@@ -7,6 +7,63 @@
 
 @section('content')
 <!--詳細ページ建設予定地-->
+
+<!--img class="size__icon" src="{{ asset('img/時計の無料アイコン (1).svg') }}" alt=""-->
+<!--<img class="size__icon" src="{{ asset('img/時計の無料アイコン (1).svg') }}" alt="">-->
+
+<!--
+<div class="icon__flex">
+    <div class="icon__left">
+        <img class="icon_1" src="{{ asset('img/時計無料アイコン.svg') }}" alt="">
+    </div>
+</div>
+
+<div class="icon__flex">
+    <div class="icon__left">
+        <img class="icon_1" src="{{ asset('img/カギアイコン.svg') }}" alt="">
+    </div>
+</div>
+
+
+<div class="icon__flex">
+    <div class="icon__left">
+        <img class="icon_1" src="{{ asset('img/ハートのマーク グレー.svg') }}" alt="">
+    </div>
+</div>
+
+
+<div class="icon__flex">
+    <div class="icon__left">
+        <img class="icon_1" src="{{ asset('img/検索用の虫眼鏡アイコン素材1採用.svg') }}" alt="">
+    </div>
+</div>
+
+
+<div class="icon__flex">
+    <div class="icon__left">
+        <img class="icon_1" src="{{ asset('img/ハートのマークピンク.svg') }}" alt="">
+    </div>
+</div>
+
+<div class="icon__flex">
+    <div class="icon__left">
+        <img class="icon_1" src="{{ asset('img/太いバツのアイコン.svg') }}" alt="">
+    </div>
+</div>
+
+<div class="icon__flex">
+    <div class="icon__left">
+        <img class="icon_1" src="{{ asset('img/人物アイコン.svg') }}" alt="">
+    </div>
+</div>
+-->
+
+
+
+
+
+
+
 <div class="flex__item4">
     <div class="background">
         <div class="container">
@@ -23,39 +80,19 @@
                     //$time = $Date->format('H:i');
                     @endphp
 
-                    <div class="box">
+                    <!--<div class="box">-->
 
-                        <div class="confirm">
+                    <div class="confirm">
+                        <div class="box__move">
                             <div class="box">
-                                <div class="title__res">予約状況</div>
+                                <div class="icon__flex">
+                                    <div class="icon__left">
+                                        <img class="size__icon" src="{{ asset('img/時計の無料アイコン (1).svg') }}" alt="">
+                                    </div>
+                                </div>
 
-                                @if(empty($re->name))
-                                @else
-                                <h2>Shop {{$re->name}}</h2>
-                                @endif
-
-                                @if(empty($re->start_at))
-                                <h2>Date </h2>
-                                @else
-                                @php
-                                $date = \Carbon\Carbon::create($re->start_at);
-                                $formattedDate = $date->format('Y-m-d');
-                                $formattedTime = $date->format('H:i');
-                                @endphp
-
-                                <h2>Date {{$formattedDate}}</h2>
-                                @endif
-                                @if(empty($re->start_at))
-                                <h2>Time </h2>
-                                @else
-                                <h2>Time {{$formattedTime}}</h2>
-                                @endif
-                                @if(empty($re->member_num))
-                                <h2>Number </h2>
-                                @else
-                                <h2>Number {{$re->member_num}}</h2>
-                                @endif
-
+                                <div class="title__res3">予約1
+                                </div>
 
                                 <form action="/delete" type="text" name="shoID" method="post">
                                     @csrf
@@ -67,10 +104,61 @@
                                     </div>
                                 </form>
 
-                            </div>
 
+
+
+
+
+
+
+                                @if(empty($re->name))
+                                @else
+                                <h2>Shop　　　　{{$re->name}}</h2>
+                                @endif
+
+                                @if(empty($re->start_at))
+                                <h2>Date </h2>
+                                @else
+                                @php
+                                $date = \Carbon\Carbon::create($re->start_at);
+                                $formattedDate = $date->format('Y-m-d');
+                                $formattedTime = $date->format('H:i');
+                                @endphp
+
+                                <h2>Date　　　　{{$formattedDate}}</h2>
+                                @endif
+                                @if(empty($re->start_at))
+                                <h2>Time </h2>
+                                @else
+                                <h2>Time　　　　{{$formattedTime}}</h2>
+                                @endif
+                                @if(empty($re->member_num))
+                                <h2>Number </h2>
+                                @else
+                                <h2>Number　　　　{{$re->member_num}}</h2>
+                                @endif
+
+                                <!--<div class="icon__flex">
+                                <div class="icon__left">
+                                    <img class="icon_1" src="{{ asset('img/時計無料アイコン.svg') }}" alt="">
+                                </div>
+                            </div>-->
+
+
+                                <!--<form action="/delete" type="text" name="shoID" method="post">
+                                @csrf
+                                <div class="flex__item2">
+                                    <input type="hidden" name="shoID1" value="{{$re->shop_id}}" size="10">
+                                    <div class="form__button">
+                                        <button class="form__button-submit" type="submit">X</button>
+                                    </div>
+                                </div>
+                            </form>-->
+
+                            </div>
                         </div>
                     </div>
+                    <!--</div>-->
                     @endforeach
 
 
@@ -122,7 +210,7 @@
                                             @csrf
                                             <div class="flex__item2">
                                                 <input type="hidden" name="shoID1" value="{{$fa->id}}" size="10">
-                                                <div class="form__button">
+                                                <div class="form__button1">
                                                     <button class="form__button-submit" type="submit">詳しく見る</button>
                                                 </div>
                                             </div>
@@ -168,6 +256,8 @@
                 </div>
             </div>
         </div>
+    </div>
+</div>
 
 
-        @endsection
+@endsection

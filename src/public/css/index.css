@@ -450,3 +450,18 @@ body {
     outline: none;
     background: transparent;
 }
+
+
+.transparent-button {
+    background-color: transparent;
+    /* 背景色を透明にする */
+    border: none;
+    /* 枠線を非表示にする */
+    padding: 0;
+    /* パディングをリセットする（任意） */
+    font-size: 16px;
+    /* テキストのフォントサイズを設定（任意） */
+    color: #000;
+    /* テキストの色を設定 */
+    /* 必要に応じて他のスタイルを追加 */
+}

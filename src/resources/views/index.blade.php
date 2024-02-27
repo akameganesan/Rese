@@ -61,9 +61,12 @@
                             @csrf
                             <input type="hidden" name="shID1" value="{{$shop->id}}" size="10">
                             <div class="heart__margin">
-                                <div class="button_none">
+                                <div class="transparent-button">
                                     <button class="heart1" type="submit"></button>
                                 </div>
+                                <!--<div class="button_none">
+                                    <button class="heart1" type="submit"></button>
+                                </div>-->
                             </div>
                         </form>
 
@@ -74,7 +77,10 @@
                             @csrf
                             <input type="hidden" name="shID1" value="{{$shop->id}}" size="10">
                             <div class="heart__margin">
-                                <div class="button_none">
+                                <!--<div class="button_none">
+                                    <button class="heart" type="submit"></button>
+                                </div>-->
+                                <div class="transparent-button">
                                     <button class="heart" type="submit"></button>
                                 </div>
                             </div>
