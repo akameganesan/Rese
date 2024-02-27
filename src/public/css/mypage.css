@@ -726,6 +726,13 @@ body {
     line-height: 1.1;
     font-family: Georgia, 'Times New Roman', Times, serif;
 
+}
+
+.new_container1 {
+    width: 3000px;
+    background: #e6e6e6;
+    height: 3000px;
+        z-index: 0;
 
 }
 
@@ -742,7 +749,7 @@ body {
     height: 1500px;
     margin-top: -1480px;
     margin-left:1650px;
-    z-index: -10000;
+    z-index: 0
 
 }
 
@@ -764,6 +771,7 @@ body {
     color: rgb(255, 255, 255);
     font-size: 30px;
     margin-left: 1000px;
+    width: 1000px;
 }
 
 
@@ -1323,7 +1331,10 @@ margin-left: 500px;
 .container__color {
 
     background: #e6e6e6;
-    z-index: -1000000000000000;
+    z-index: -10000;
 }
 
 
+.saizensen{
+    z-index: 10000;
+}
