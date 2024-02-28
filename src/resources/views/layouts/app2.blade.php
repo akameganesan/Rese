@@ -30,7 +30,6 @@
                                             <div calss="pulldown__shadow">
                                                 <li class="gnavi__list">
                                                     <a href="#">All areas</a>
-
                                                     <ul class="dropdown__lists">
                                                         <!--<li class="dropdown__list"><a href="#" value="1">東京都</a>-->
                                                         <form action="area" type="number" name="area" method="post">
@@ -102,16 +101,8 @@
                                                                 type="submit">居酒屋</button>
                                                         </li>
                                                     </form>
-                                                </ul>
-                                                <!--<ul class="dropdown__lists">
-                                                    <li class="dropdown__list"><a href="#">寿司</a></li>
-                                                    <li class="dropdown__list"><a href="#">焼肉</a></li>
-                                                    <li class="dropdown__list"><a href="#">ラーメン</a></li>
-                                                    <li class="dropdown__list"><a href="#">イタリアン</a></li>
-                                                    <li class="dropdown__list"><a href="#">居酒屋</a></li>
-                                                </ul>-->
+                                                </ul>                                            
                                             </li>
-
                                             <li class="gnavi__list">
                                                 <form class="form" type="text" name="search" action="search"
                                                     method="post">
@@ -119,10 +110,8 @@
                                                     <div class="search_box">
                                                         <input type="text" name="search" placeholder="Search...">
                                                     </div>
-
                                                 </form>
                                             </li>
-
                                         </ul>
                                         <!-- 以下省略 -->
                                     </div>

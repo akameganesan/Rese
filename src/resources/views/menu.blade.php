@@ -40,18 +40,6 @@
         <div class="p__atsumi3"></div>
         <a class="a__size2" href="/login">Login</a>
         @endif
-        <!--<form action="/logout" method="post">
-            @csrf
-            <button>ログアウト</button>
-        </form>-->
-
-
-
-        <!--<a class="heart"><a>-->
-        <div class="transparent-button2">
-            <button class="heart"></button>
-        </div>
-
     </main>
 </body>
 

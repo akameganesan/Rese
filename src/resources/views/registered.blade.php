@@ -31,11 +31,6 @@
 </div>
 <!--</div>-->
 
-<div class="flex1">
-    <div class="box1">①</div>
-    <div class="box1">②</div>
-    <div class="box1">③</div>
-</div>
 
 
 

@@ -123,12 +123,6 @@
                                         </form>
 
 
-
-
-
-
-
-
                                         @if(empty($re->name))
                                         @else
                                         <h2>Shop　　　　{{$re->name}}</h2>
@@ -253,7 +247,7 @@
                                                                     method="post">
                                                                     @csrf
                                                                     <div class="flex__item2">
-                                                                        <input type="hidden" name="shoID1"
+                                                                        <input type="hidden" name="shoID"
                                                                             value="{{$fa->id}}" size="10">
                                                                         <div class="form__button1">
                                                                             <button class="form__button-submit"
@@ -285,7 +279,7 @@
                                                                 <form action="/remove" type="text" name="shoID"
                                                                     method="post">
                                                                     @csrf
-                                                                    <input type="hidden" name="shID1"
+                                                                    <input type="hidden" name="shoID"
                                                                         value="{{$shop->id}}" size="10">
                                                                     <div class="heart__margin">
                                                                         <div class="button_none">

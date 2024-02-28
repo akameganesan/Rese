@@ -47,9 +47,7 @@
             @endif
         </ul>
         <p class="p_font-size1">{{$shops->description}}</p>
-
     </div>
-
     <div class="container2">
         <div class="box">
             <div class="title__res5">予約</div>
@@ -58,11 +56,9 @@
                 <div class="day__size2">
                     <input type="date" name="day">
                 </div>
-
                 <div class="day__size1">
                     <input type="time" name="time">
                 </div>
-
                 <div class="day__size1">
                     <select name='num'>
                         <option value='1'>１人</option>
@@ -83,10 +79,8 @@
                 <div class="button_xy">
                     <button class="contact__btn6" type="submit">内容確認</button>
                 </div>
-
             </form>
         </div>
-
         <div class="box2">
             <div class="confirm1">
                 @if(empty($shops->name))
@@ -111,12 +105,7 @@
             </div>
         </div>
         <div class="box1">
-
-
-
             @if(empty($a))
-
-
             @else
             @if($a == 1)
             <form method='post' action='done'>
