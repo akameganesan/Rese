@@ -52,7 +52,7 @@
 
     <div class="container2">
         <div class="box">
-            <div class="title__res">予約</div>
+            <div class="title__res5">予約</div>
             <form method='post' action='res'>
                 @csrf
                 <div class="day__size2">
@@ -81,32 +81,32 @@
                     <input type="hidden" type="text" name="shoID" value="{{$shops->id}}">
                 </div>
                 <div class="button_xy">
-                    <button type="submit">送信</button>
+                    <button class="contact__btn6" type="submit">内容確認</button>
                 </div>
 
             </form>
         </div>
 
         <div class="box2">
-            <div class="confirm">
+            <div class="confirm1">
                 @if(empty($shops->name))
                 @else
-                <h2>Shop {{$shops->name}}</h2>
+                <h2>Shop　　{{$shops->name}}</h2>
                 @endif
                 @if(empty($day))
                 <h2>Date </h2>
                 @else
-                <h2>Date {{$day}}</h2>
+                <h2>Date　　{{$day}}</h2>
                 @endif
                 @if(empty($time))
                 <h2>Time </h2>
                 @else
-                <h2>Time {{$time}}</h2>
+                <h2>Time　　{{$time}}</h2>
                 @endif
                 @if(empty($num))
                 <h2>Number </h2>
                 @else
-                <h2>Number {{$num}}</h2>
+                <h2>Number　　{{$num}}</h2>
                 @endif
             </div>
         </div>
@@ -125,8 +125,10 @@
                 <input type="hidden" type="text" name="shoID2" value="{{$shops->id}}">
                 <input type="hidden" type="text" name="shoID3" value="{{$resTime}}">
                 <input type="hidden" type="text" name="shoID4" value="{{$num}}">
-                <div class="button_xy">
-                    <button type="submit">送信</button>
+                <div class="button_xy1">
+                    <div class="button_xy">
+                        <button class="contact__btn7" type="submit">予約する</button>
+                    </div>
                 </div>
             </form>
             @endif

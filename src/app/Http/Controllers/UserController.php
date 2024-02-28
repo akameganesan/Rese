@@ -36,6 +36,9 @@ class UserController extends Controller
         $ress = Reservations::leftJoin('shops', 'shops.id', '=', 'reservations.shop_id')->get();
 
 
+        $user_id = Auth::id();
+
+        $user = User::all()->where("id", "=", $user_id)->first();
 
         // 特定の日付を作成
         //$date = Carbon::create($res->start_at);
@@ -72,7 +75,7 @@ class UserController extends Controller
         //$time = $Date->format('H:i');
 
 
-        return view('mypage', compact('reserv', 'fav', 'shops'));
+        return view('mypage', compact('reserv', 'fav', 'shops', 'user'));
     }
 
     public function day(Request $request)
@@ -576,11 +579,14 @@ class UserController extends Controller
 
         $fav = Favorites::leftJoin('shops', 'shops.id', '=', 'favorites.shops_id')->get();
 
+        $user_id = Auth::id();
+
+        $user = User::all()->where("id", "=", $user_id)->first();
 
 
 
 
-        return view('mypage', compact('reserv', 'fav', 'shops'));
+        return view('mypage', compact('reserv', 'fav', 'shops', 'user'));
         //return redirect('index2', compact('keyword', 'key'));
     }
 

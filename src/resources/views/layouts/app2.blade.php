@@ -36,21 +36,24 @@
                                                         <form action="area" type="number" name="area" method="post">
                                                             @csrf
                                                             <li class="dropdown__list"><input name="area" type="hidden"
-                                                                    value="1"><button type="submit">東京</button>
+                                                                    value="1"><button class="contact__btn5"
+                                                                    type="submit">東京</button>
                                                             </li>
                                                         </form>
                                                         <!--<li class="dropdown__list"><a href="#" value="2">大阪府</a>-->
                                                         <form action="area" type="number" name="area" method="post">
                                                             @csrf
                                                             <li class="dropdown__list"><input name="area" type="hidden"
-                                                                    value="2"><button type="submit">大阪</button>
+                                                                    value="2"><button class="contact__btn5"
+                                                                    type="submit">大阪</button>
                                                             </li>
                                                         </form>
                                                         <!--<li class="dropdown__list"><a href="#" value="3">福岡県</a>-->
                                                         <form action="area" type="number" name="area" method="post">
                                                             @csrf
                                                             <li class="dropdown__list"><input name="area" type="hidden"
-                                                                    value="3"><button type="submit">福岡</button>
+                                                                    value="3"><button class="contact__btn5"
+                                                                    type="submit">福岡</button>
                                                             </li>
                                                         </form>
                                                     </ul>
@@ -65,33 +68,38 @@
                                                     <form action="genre" type="number" name="genre" method="post">
                                                         @csrf
                                                         <li class="dropdown__list"><input name="genre" type="hidden"
-                                                                value="1"><button type="submit">寿司</button>
+                                                                value="1"><button class="contact__btn5"
+                                                                type="submit">寿司</button>
                                                         </li>
                                                     </form>
                                                     <!--<li class="dropdown__list"><a href="#" value="2">大阪府</a>-->
                                                     <form action="genre" type="number" name="genre" method="post">
                                                         @csrf
                                                         <li class="dropdown__list"><input name="genre" type="hidden"
-                                                                value="2"><button type="submit">焼肉</button>
+                                                                value="2"><button class="contact__btn5"
+                                                                type="submit">焼肉</button>
                                                         </li>
                                                     </form>
                                                     <!--<li class="dropdown__list"><a href="#" value="3">福岡県</a>-->
                                                     <form action="genre" type="number" name="genre" method="post">
                                                         @csrf
                                                         <li class="dropdown__list"><input name="genre" type="hidden"
-                                                                value="3"><button type="submit">ラーメン</button>
+                                                                value="3"><button class="contact__btn5"
+                                                                type="submit">ラーメン</button>
                                                         </li>
                                                     </form>
                                                     <form action="genre" type="number" name="genre" method="post">
                                                         @csrf
                                                         <li class="dropdown__list"><input name="genre" type="hidden"
-                                                                value="4"><button type="submit">イタリアン</button>
+                                                                value="4"><button class="contact__btn5"
+                                                                type="submit">イタリアン</button>
                                                         </li>
                                                     </form>
                                                     <form action="genre" type="number" name="genre" method="post">
                                                         @csrf
                                                         <li class="dropdown__list"><input name="genre" type="hidden"
-                                                                value="5"><button type="submit">居酒屋</button>
+                                                                value="5"><button class="contact__btn5"
+                                                                type="submit">居酒屋</button>
                                                         </li>
                                                     </form>
                                                 </ul>

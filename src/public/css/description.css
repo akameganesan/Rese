@@ -567,6 +567,7 @@ body {
 .img__size1{
     width: 800px;
     z-index: 50000;
+    margin-left: 350px;
 }
 
 .p__flex1{
@@ -598,7 +599,7 @@ body {
 .box {
     background-color: rgb(32, 118, 248);
         color: #ffffff;
-        margin-right: 20px;
+        margin-right: 120px;
         font-size: 32px;
         width: 800px;
         height: 900px;
@@ -620,9 +621,9 @@ body {
 }
 
 .box2 {
-background: rgb(117, 216, 255);
-    background-color: rgb(140, 219, 255);
-    color: #000000;
+background: rgb(42, 110, 255);
+    background-color: rgb(13, 96, 252);
+    color: #ffffff;
     /*margin-right: 20px;*/
     font-size: 32px;
     width: 600px;
@@ -661,6 +662,7 @@ background: rgb(117, 216, 255);
     flex-wrap: wrap;
     /*justify-content: left;*/
     margin-top: 100px;
+    margin-left: 300px;
 }
 
 .flex__item4 {
@@ -668,6 +670,7 @@ background: rgb(117, 216, 255);
     /*justify-content: space-between;*/
     flex-wrap: wrap;
     /*justify-content: left;*/
+    background: #e6e6e6;
 }
 
 
@@ -680,6 +683,7 @@ background: rgb(117, 216, 255);
     padding-top: 0px;
     line-height: 1.1;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-left: 300px;
     
 
 }
@@ -712,11 +716,22 @@ background: rgb(117, 216, 255);
     font-size: 30px;
 }
 
+.confirm1 {
+    background: rgb(13, 90, 235);
+    color: white;
+    font-size: 30px;
+}
+
 
 
 .button_xy{
     margin-top: -30px;
     margin-left: 50px;
+}
+
+.button_xy1 {
+    /*margin-top: -30px;*/
+    margin-left: -50px;
 }
 
 .day__size1 {
@@ -738,4 +753,62 @@ background: rgb(117, 216, 255);
     height: 70px;
     margin-left: 50px;
     margin-top: -50px;
+}
+
+
+.contact__btn6 {
+    width: 100px;
+    display: block;
+    padding: 25px 0 25px;
+    margin: 0 auto;
+    /*background: linear-gradient(90deg, #ff1f90, #b31566);*/
+    background: #0414f3;
+    /*border-radius: 50px;*/
+    text-align: center;
+    /*box-shadow: 0 4px 0 #840052;*/
+    color: #ffffff;
+    font-size: 18px;
+    /*border-bottom: 6px solid #840052;
+    transition: 0.4s;
+    position: relative;*/
+    margin-top: -100px;
+    margin-left: 90px;
+}
+
+
+.contact__btn7 {
+    width: 600px;
+    display: block;
+    padding: 25px 0 25px;
+    margin: 0 auto;
+    /*background: linear-gradient(90deg, #ff1f90, #b31566);*/
+   /* background: #0414f3;*/
+    /*border-radius: 50px;*/
+    text-align: center;
+    /*box-shadow: 0 4px 0 #840052;*/
+    color: #ffffff;
+    font-size: 18px;
+    /*border-bottom: 6px solid #840052;
+    transition: 0.4s;
+    position: relative;*/
+    margin-top: 100px;
+    margin-left: 90px;
+    background-color: rgb(23, 65, 250);
+    background: rgb(23, 65, 250);
+    /* 枠線を消す */
+        border: none;
+        /* クリックした際に枠線をnone消す */
+        outline: none;
+        /* 影を消す */
+        box-shadow: none;
+       
+}
+
+
+.title__res5{
+        color: #ffffff;
+        font-size: 40px;
+            margin-left: 40px;
+
+
 }
