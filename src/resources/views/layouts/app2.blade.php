@@ -30,28 +30,59 @@
                                             <div calss="pulldown__shadow">
                                                 <li class="gnavi__list">
                                                     <a href="#">All areas</a>
-
                                                     <ul class="dropdown__lists">
                                                         <!--<li class="dropdown__list"><a href="#" value="1">東京都</a>-->
+                                                        
+                                                            
+                                                            <li>  <a class="a_size" href="/">All areas</a>
+                                                            </li>
+                                                        
                                                         <form action="area" type="number" name="area" method="post">
                                                             @csrf
+                                                             @if(empty($key))
                                                             <li class="dropdown__list"><input name="area" type="hidden"
-                                                                    value="1"><button type="submit">東京</button>
+                                                                    value="1"><button class="contact__btn5"
+                                                                    type="submit">東京</button>
                                                             </li>
+                                                            @else
+                                                            <input type="hidden" name="genre" value="{{$key}}" size="10">
+                                                            <li class="dropdown__list"><input name="area" type="hidden"
+                                                                    value="1"><button class="contact__btn5"
+                                                                    type="submit">東京</button>
+                                                            </li>
+                                                            @endif
                                                         </form>
                                                         <!--<li class="dropdown__list"><a href="#" value="2">大阪府</a>-->
                                                         <form action="area" type="number" name="area" method="post">
                                                             @csrf
+                                                             @if(empty($key))
                                                             <li class="dropdown__list"><input name="area" type="hidden"
-                                                                    value="2"><button type="submit">大阪</button>
+                                                                    value="2"><button class="contact__btn5"
+                                                                    type="submit">大阪</button>
                                                             </li>
+                                                             @else
+                                                             <input type="hidden" name="genre" value="{{$key}}" size="10">
+                                                             <li class="dropdown__list"><input name="area" type="hidden"
+                                                                    value="2"><button class="contact__btn5"
+                                                                    type="submit">大阪</button>
+                                                            </li>
+                                                            @endif
                                                         </form>
                                                         <!--<li class="dropdown__list"><a href="#" value="3">福岡県</a>-->
                                                         <form action="area" type="number" name="area" method="post">
                                                             @csrf
+                                                             @if(empty($key))
                                                             <li class="dropdown__list"><input name="area" type="hidden"
-                                                                    value="3"><button type="submit">福岡</button>
+                                                                    value="3"><button class="contact__btn5"
+                                                                    type="submit">福岡</button>
                                                             </li>
+                                                             @else
+                                                             <input type="hidden" name="genre" value="{{$key}}" size="10">
+                                                              <li class="dropdown__list"><input name="area" type="hidden"
+                                                                    value="3"><button class="contact__btn5"
+                                                                    type="submit">福岡</button>
+                                                            </li>
+                                                            @endif
                                                         </form>
                                                     </ul>
 
@@ -62,48 +93,87 @@
                                                 <a href="#">All genres</a>
                                                 <ul class="dropdown__lists">
                                                     <!--<li class="dropdown__list"><a href="#" value="1">東京都</a>-->
+                                                    <li>  <a class="a_size" href="/">All genres</a>
+                                                    </li>
                                                     <form action="genre" type="number" name="genre" method="post">
                                                         @csrf
-                                                        <li class="dropdown__list"><input name="genre" type="hidden"
-                                                                value="1"><button type="submit">寿司</button>
-                                                        </li>
+                                                            @if(empty($keyword))
+                                                            <li class="dropdown__list"><input name="genre" type="hidden"
+                                                                value="1"><button class="contact__btn5"
+                                                                type="submit">寿司</button>
+                                                                </li>
+                                                            @else
+                                                                <input type="hidden" name="area" value="{{$keyword}}" size="10">
+                                                                <li class="dropdown__list"><input name="genre" type="hidden"
+                                                                value="1"><button class="contact__btn5"
+                                                                type="submit">寿司</button>
+                                                                </li>
+                                                                @endif
+                                                            </form>
+                                                         <!--<li class="dropdown__list"><a href="#" value="2">大阪府</a>-->
+                                                    <form action="genre" type="number" name="genre" method="post">
+                                                         @csrf
+                                                            @if(empty($keyword))
+                                                                <li class="dropdown__list"><input name="genre" type="hidden"
+                                                                    value="2"><button class="contact__btn5"
+                                                                    type="submit">焼肉</button>
+                                                                </li>
+                                                            @else
+                                                                <input type="hidden" name="area" value="{{$keyword}}" size="10">
+                                                                <li class="dropdown__list"><input name="genre" type="hidden"
+                                                                    value="2"><button class="contact__btn5"
+                                                                    type="submit">焼肉</button>
+                                                                </li>
+                                                            @endif    
                                                     </form>
-                                                    <!--<li class="dropdown__list"><a href="#" value="2">大阪府</a>-->
+                                                            <!--<li class="dropdown__list"><a href="#" value="3">福岡県</a>-->
                                                     <form action="genre" type="number" name="genre" method="post">
                                                         @csrf
-                                                        <li class="dropdown__list"><input name="genre" type="hidden"
-                                                                value="2"><button type="submit">焼肉</button>
-                                                        </li>
-                                                    </form>
-                                                    <!--<li class="dropdown__list"><a href="#" value="3">福岡県</a>-->
-                                                    <form action="genre" type="number" name="genre" method="post">
-                                                        @csrf
-                                                        <li class="dropdown__list"><input name="genre" type="hidden"
-                                                                value="3"><button type="submit">ラーメン</button>
-                                                        </li>
-                                                    </form>
-                                                    <form action="genre" type="number" name="genre" method="post">
-                                                        @csrf
-                                                        <li class="dropdown__list"><input name="genre" type="hidden"
-                                                                value="4"><button type="submit">イタリアン</button>
-                                                        </li>
+                                                            @if(empty($keyword))
+                                                                <li class="dropdown__list"><input name="genre" type="hidden"
+                                                                value="3"><button class="contact__btn5"
+                                                                type="submit">ラーメン</button>
+                                                                </li>
+                                                            @else
+                                                                <input type="hidden" name="area" value="{{$keyword}}" size="10">
+                                                                <li class="dropdown__list"><input name="genre" type="hidden"
+                                                                value="3"><button class="contact__btn5"
+                                                                type="submit">ラーメン</button>
+                                                                </li>
+                                                            @endif
                                                     </form>
                                                     <form action="genre" type="number" name="genre" method="post">
                                                         @csrf
-                                                        <li class="dropdown__list"><input name="genre" type="hidden"
-                                                                value="5"><button type="submit">居酒屋</button>
-                                                        </li>
+                                                            @if(empty($keyword))
+                                                                <li class="dropdown__list"><input name="genre" type="hidden"
+                                                                    value="4"><button class="contact__btn5"
+                                                                        type="submit">イタリアン</button>
+                                                                </li>
+                                                            @else
+                                                                <input type="hidden" name="area" value="{{$keyword}}" size="10">
+                                                                <li class="dropdown__list"><input name="genre" type="hidden"
+                                                                    value="4"><button class="contact__btn5"
+                                                                        type="submit">イタリアン</button>
+                                                                </li>
+                                                            @endif
                                                     </form>
-                                                </ul>
-                                                <!--<ul class="dropdown__lists">
-                                                    <li class="dropdown__list"><a href="#">寿司</a></li>
-                                                    <li class="dropdown__list"><a href="#">焼肉</a></li>
-                                                    <li class="dropdown__list"><a href="#">ラーメン</a></li>
-                                                    <li class="dropdown__list"><a href="#">イタリアン</a></li>
-                                                    <li class="dropdown__list"><a href="#">居酒屋</a></li>
-                                                </ul>-->
+                                                    <form action="genre" type="number" name="genre" method="post">
+                                                        @csrf
+                                                            @if(empty($keyword))
+                                                                <li class="dropdown__list"><input name="genre" type="hidden"
+                                                                value="5"><button class="contact__btn5"
+                                                                type="submit">居酒屋</button>
+                                                                </li>
+                                                            @else
+                                                                <input type="hidden" name="area" value="{{$keyword}}" size="10">
+                                                                <li class="dropdown__list"><input name="genre" type="hidden"
+                                                                value="5"><button class="contact__btn5"
+                                                                type="submit">居酒屋</button>
+                                                                </li>
+                                                            @endif
+                                                    </form>
+                                                </ul>                                            
                                             </li>
-
                                             <li class="gnavi__list">
                                                 <form class="form" type="text" name="search" action="search"
                                                     method="post">
@@ -111,10 +181,8 @@
                                                     <div class="search_box">
                                                         <input type="text" name="search" placeholder="Search...">
                                                     </div>
-
                                                 </form>
                                             </li>
-
                                         </ul>
                                         <!-- 以下省略 -->
                                     </div>

@@ -2,3 +2,1926 @@
     color: black
 
 }
+
+.attendance__alert--success {
+    padding: 10px 30px;
+    border-color: #badbcc;
+    background-color: #d1e7dd;
+    color: #0f5132;
+}
+
+.attendance__alert--danger {
+    padding: 10px 0;
+    border-color: #f5c2c7;
+    background-color: #f8d7da;
+    color: #842029;
+}
+
+.attendance__alert--danger ul {
+    margin: 0;
+}
+
+.attendance__panel {
+    margin: 0 auto;
+    width: 70%;
+}
+
+.attendance__button {
+    width: 100%;
+    text-align: center;
+}
+
+.attendance__button-submit {
+    padding: 5px;
+    width: 30%;
+    height: 50px;
+    border: none;
+    border-radius: 3px;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+}
+
+.attendance__content {
+    margin: 0 auto;
+    padding: 30px 15px;
+    max-width: 1230px;
+}
+
+.attendance-table {
+    margin: 30px auto;
+    width: 70%;
+    text-align: center;
+}
+
+.attendance-table__inner {
+    width: 100%;
+}
+
+.attendance-table__row {
+    border-bottom: 1px solid #ddd;
+}
+
+.attendance-table__header {
+    padding: 12px;
+    width: 20%;
+    font-weight: bold;
+}
+
+.attendance-table__item {
+    padding: 12px;
+    width: 20%;
+}
+
+
+
+/*ここから過去の演習のcss*/
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+a {
+    color: #707070;
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    color: #707070;
+    line-height: 1.7;
+}
+
+.flex__item {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.flex__item2 {
+    display: flex;
+    /*justify-content: space-between;*/
+    flex-wrap: wrap;
+    /*justify-content: left;*/
+}
+
+/*.container {
+    max-width: 960px;
+    margin: 0 auto;
+}*/
+
+.container {
+    max-width: 1350px;
+    height: 4000px;
+    /*margin: 0 auto;*/
+    /*background: #e6e6e6;*/
+    /*z-index: -111;*/
+}
+
+.container7 {
+    width: 700px;
+    /*margin: 0 auto;*/
+    background: #e6e6e6;
+    z-index: -100;
+}
+
+.small-container {
+    max-width: 760px;
+    margin: 80px auto 0;
+}
+
+.common__ttl {
+    font-size: 24px;
+    font-weight: bold;
+    position: relative;
+}
+
+.common__sub-ttl {
+    font-size: 16px;
+    font-family: "Indie Flower", cursive;
+    color: #b31566;
+}
+
+
+
+/*---------------------blog--------------------- */
+#blog {
+    margin-top: 80px;
+    background: #f5f5f5;
+    padding: 40px 0;
+}
+
+.blog-wrap {
+    /*margin-top: 30px;*/
+    /*margin-bottom: 30px;*/
+    z-index: 100;
+}
+
+/*
+.blog-wrap__item {
+    width: 30%;
+    position: relative;
+    display: block;
+}
+*/
+
+.blog-wrap__item {
+    width: 320px;
+    position: relative;
+    display: block;
+    margin-bottom: 30px;
+
+
+}
+
+.blog-wrap__item-content {
+    background: #fff;
+    border-radius: 0 0 15px 15px;
+    padding: 20px;
+    margin-top: -7px;
+}
+
+.blog-wrap__item-eyecatch {
+    border-radius: 15px 15px 0 0;
+}
+
+.blog-wrap__item-cat {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #b31566;
+    color: #fff;
+    border-radius: 15px 0 0 0;
+    padding: 5px 20px;
+}
+
+.blog-wrap__item-content-tag {
+    /*font-size: 14px;*/
+
+    font-size: 15px;
+
+
+    /*margin-top: 30px;*/
+
+    margin-top: -40px;
+    margin-left: -50px;
+    color: #000;
+
+
+}
+
+.blog-wrap__item-content-tag2 {
+    /*font-size: 14px;*/
+
+    font-size: 15px;
+
+
+    /*margin-top: 30px;*/
+
+    margin-top: -40px;
+    margin-left: 10px;
+    color: #000;
+
+
+}
+
+
+
+
+.blog__link {
+    display: block;
+    margin: 30px auto 0;
+    width: 200px;
+    text-align: center;
+    padding: 15px 0;
+    background: #fff;
+    border: 2px solid #b31566;
+    border-radius: 30px;
+    color: #b31566;
+    transition: 0.4s;
+}
+
+.blog__link:hover {
+    background-color: #b31566;
+    color: #fff;
+    transition: 0.4s;
+}
+
+/*ここから下が自前*/
+
+
+
+
+
+
+
+
+.register__shadow {
+
+
+    border-radius: 10px;
+    /*text-align: center;*/
+    box-shadow: 4px 4px 2px #949494;
+
+    transition: 0.4s;
+
+    text-decoration: none;
+
+}
+
+
+.register__shadow2 {
+
+
+    border-radius: 0px 15px 0px 0px;
+    /*text-align: center;*/
+    box-shadow: 4px 4px 2px #949494;
+
+    transition: 0.4s;
+
+    text-decoration: none;
+
+}
+
+
+.blog-wrap__item-content-ttl {
+    font-size: 30px;
+    color: #000;
+    margin-top: -5px;
+}
+
+
+
+.form__button {
+    /*margin-top: 20px;*/
+    /*margin-top: -10px;*/
+    /*margin-left: 500px;*/
+   /*margin-top: -200px;*/
+    top: 200px;
+
+}
+
+
+.form__button1 {
+    /*margin-top: 20px;*/
+    /*margin-top: -10px;*/
+    margin-left: 50px;
+    /*margin-top: -200px;*/
+    top: 50px;
+
+}
+
+/*.form__button-submit {
+    padding: 10px;
+    width: 30%;
+    height: 50px;
+    border: none;
+    border-radius: 3px;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+}*/
+
+.form__button-submit {
+    padding: 10px;
+    /*width: 40%;*/
+    width: 100px;
+    height: 40px;
+    border: none;
+    border-radius: 8px;
+    background: #264dfa;
+    color: #fff;
+    cursor: pointer;
+    /*margin-left: 200px;*/
+    margin-left: 0px;
+    font-size: 16px;
+    /*margin-top: -10px;*/
+}
+
+
+
+
+
+.heart {
+    /*width: 100px;*/
+    width: 40px;
+    /* 正方形を作る */
+    /*height: 100px;*/
+    height: 40px;
+    /* 正方形を作る */
+    position: relative;
+    /* 基準位置とする */
+}
+
+.heart::before,
+.heart::after {
+    content: "";
+    /* 疑似要素に必須 */
+    width: 50%;
+    /* ハートの丸い部分の大きさにかかわる */
+    height: 80%;
+    /* ハートの高さにかかわる */
+    background: #E0548E;
+    /* ハートの色 */
+    border-radius: 25px 25px 0 0;
+    /* ハートの半円を生成 */
+    display: block;
+    /* ブロック要素にする */
+    position: absolute;
+    /* 相対位置に指定 */
+}
+
+.heart::before {
+    transform: rotate(-45deg);
+    /* 左に回転 */
+    left: 14%;
+    /* 左からの位置を指定 */
+}
+
+.heart::after {
+    transform: rotate(45deg);
+    /* 右に回転 */
+    right: 14%;
+    /* 右からの位置を指定 */
+}
+
+
+
+
+.heart__margin {
+    margin-left: 200px;
+    margin-top: -35px;
+    margin-bottom: 10px;
+}
+
+
+.heart__size {
+    width: 80%;
+    height: 80%;
+}
+
+
+
+
+/*↓ハート改造*/
+
+
+
+
+.heart1 {
+    /*width: 100px;*/
+    width: 40px;
+    /* 正方形を作る */
+    /*height: 100px;*/
+    height: 40px;
+    /* 正方形を作る */
+    position: relative;
+    /* 基準位置とする */
+}
+
+.heart1::before,
+.heart1::after {
+    content: "";
+    /* 疑似要素に必須 */
+    width: 50%;
+    /* ハートの丸い部分の大きさにかかわる */
+    height: 80%;
+    /* ハートの高さにかかわる */
+    background: #c2c2c2;
+    /* ハートの色 */
+    border-radius: 25px 25px 0 0;
+    /* ハートの半円を生成 */
+    display: block;
+    /* ブロック要素にする */
+    position: absolute;
+    /* 相対位置に指定 */
+}
+
+.heart1::before {
+    transform: rotate(-45deg);
+    /* 左に回転 */
+    left: 14%;
+    /* 左からの位置を指定 */
+}
+
+.heart1::after {
+    transform: rotate(45deg);
+    /* 右に回転 */
+    right: 14%;
+    /* 右からの位置を指定 */
+}
+
+
+
+
+.heart1__margin {
+    margin-left: 200px;
+    margin-top: -35px;
+    margin-bottom: 10px;
+}
+
+
+.heart1__size {
+    width: 80%;
+    height: 80%;
+}
+
+
+.button__none {
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+
+.contact__btn2 {
+    width: 50px;
+    height: 50px;
+    display: block;
+    padding: 8px 0 8px;
+    /*margin: 0 auto;*/
+    /*background: linear-gradient(90deg, #ffffff, #3060fd);*/
+    border-radius: 10px;
+    /*text-align: center;*/
+    box-shadow: 4px 4px 2px #b4b4b4;
+    color: #000000;
+    /*font-size: 7px;*/
+    font-size: 35px;
+    text-align: center;
+    line-height: 35px;
+    /*border-bottom: 3px solid #840052;*/
+    transition: 0.4s;
+    /*position: relative;*/
+    text-decoration: none;
+    margin-left: 400px;
+}
+
+
+.header__inner {
+    /*margin: 0 auto;*/
+    /*margin: 0 auto;*/
+
+    padding: 20px 15px;
+    max-width: 1230px;
+    padding-left: -500px;
+}
+
+.header-utilities {
+    display: flex;
+    /*align-items: center;*/
+    /*justify-content: space-between;*/
+}
+
+
+.header__logo {
+    color: #000000;
+    text-decoration: none;
+    font-weight: bold;
+    /*font-size: 24px;*/
+    font-size: 45px;
+    margin-left: -270px;
+    /*margin-right: 20px;*/
+    padding-left: 300px;
+    padding-top: 10px;
+}
+
+
+
+.blog-wrap__item {
+    width: 320px;
+    position: relative;
+    display: block;
+    margin-bottom: 30px;
+
+}
+
+.blog-wrap__item-content {
+    background: #fff;
+    border-radius: 0 0 15px 15px;
+    padding: 20px;
+    margin-top: -7px;
+}
+
+.blog-wrap__item-eyecatch {
+    border-radius: 15px 15px 0 0;
+}
+
+.blog-wrap__item-cat {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #b31566;
+    color: #fff;
+    border-radius: 15px 0 0 0;
+    padding: 5px 20px;
+}
+
+.blog-wrap__item-content-tag {
+    /*font-size: 14px;*/
+
+    font-size: 15px;
+
+
+    /*margin-top: 30px;*/
+
+    margin-top: -40px;
+    margin-left: -50px;
+    color: #000;
+
+
+}
+
+.blog-wrap__item-content-tag2 {
+    /*font-size: 14px;*/
+    font-size: 15px;
+    /*margin-top: 30px;*/
+    margin-top: -40px;
+    margin-left: 10px;
+    color: #000;
+}
+
+.img__size1 {
+    width: 800px;
+    z-index: 50000;
+}
+
+.p__flex1 {
+    display: flex;
+    /*flex-direction: row;*/
+    height: 50px;
+}
+
+.p__margin1 {
+    margin-left: 100px;
+}
+
+.area_genre {
+    /*background-color: red;*/
+    margin-right: 100px;
+    font-size: 30px;
+    width: 100px;
+    height: 30px;
+}
+
+
+
+.flex {
+    display: flex;
+    flex-direction: row;
+    background-color: yellow;
+}
+
+.box {
+    background-color: rgb(32, 118, 248);
+    margin-left: 100px;
+    font-size: 24px;
+    width: 900px;
+    height: 550px;
+    border-radius: 15px 15px 0px 0px;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    color: white;
+    padding-left: 50px;
+
+}
+
+.box1 {
+    background-color: rgb(23, 65, 250);
+    color: #ffffff;
+    margin-right: 20px;
+    font-size: 32px;
+    width: 800px;
+    height: 100px;
+    border-radius: 0px 0px 15px 15px;
+    margin-top: 200px;
+    z-index: 100;
+    margin-bottom: 0px;
+}
+
+.box2 {
+    background: rgb(117, 216, 255);
+    background-color: rgb(140, 219, 255);
+    color: #000000;
+    /*margin-right: 20px;*/
+    font-size: 32px;
+    width: 600px;
+    height: 300px;
+    /*border-radius: 0px 0px 15px 15px;*/
+    margin-left: 100px;
+    margin-top: -600px;
+    z-index: 1000;
+}
+
+
+.title__res {
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    margin-left: 140px;
+    margin-top: 150px;
+}
+
+.title__res2 {
+    color: rgb(0, 0, 0);
+    font-size: 40px;
+    margin-left: 400px;
+    /*margin-top: 200px;*/
+    width: 2000px;
+    /*margin-top: 1000px;*/
+    /*margin-top: 100px;*/
+    padding-top: 50px;
+}
+
+.title__res3 {
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    margin-left: 140px;
+    margin-top: -70px;
+}
+
+
+.flex__item3 {
+    display: flex;
+    /*justify-content: space-between;*/
+    flex-wrap: wrap;
+    /*justify-content: left;*/
+    margin-top: 100px;
+}
+
+.flex__item4 {
+    display: flex;
+    /*justify-content: space-between;*/
+    flex-wrap: wrap;
+    /*justify-content: left;*/
+}
+
+.flex__item5 {
+    display: flex;
+    /*justify-content: space-between;*/
+    flex-wrap: wrap;
+    /*justify-content: left;*/
+}
+
+
+.p_font-size1 {
+    color: #000;
+    font-size: 22px;
+    font-weight: 30px;
+    width: 900px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    line-height: 1.1;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+
+.new_container1 {
+    width: 2850px;
+    background: #e6e6e6;
+    height: 3000px;
+        z-index: 0;
+
+}
+
+.container1 {
+    width: 800px;
+    background: #e6e6e6;
+    height: 1500px;
+    z-index: -112;
+
+}
+
+.container2 {
+    width: 400px;
+    background: #e6e6e6;
+    height: 1000px;
+    margin-top: -1480px;
+    margin-left:1650px;
+    z-index: 112;
+
+}
+
+.day__size {
+    width: 100px;
+    height: 70px;
+    margin-left: 50px;
+}
+
+
+.confirm {
+    background: #e6e6e6;
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    margin-top: -250px;
+    margin-bottom: 100px;
+
+}
+
+.confirm2 {
+    background: #e6e6e6;
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    margin-left: 1000px;
+    width: 1000px;
+}
+
+
+.button_xy {
+    margin-top: -30px;
+    margin-left: 50px;
+}
+
+.day__size1 {
+    width: 100px;
+    height: 70px;
+    margin-left: 50px;
+    margin-top: -5px;
+}
+
+.day__size2 {
+    width: 100px;
+    height: 70px;
+    margin-left: 50px;
+    margin-top: 20px;
+}
+
+.day__size3 {
+    width: 100px;
+    height: 70px;
+    margin-left: 50px;
+    margin-top: -50px;
+}
+
+
+.attendance__alert--success {
+    padding: 10px 30px;
+    border-color: #badbcc;
+    background-color: #d1e7dd;
+    color: #0f5132;
+}
+
+.attendance__alert--danger {
+    padding: 10px 0;
+    border-color: #f5c2c7;
+    background-color: #f8d7da;
+    color: #842029;
+}
+
+.attendance__alert--danger ul {
+    margin: 0;
+}
+
+.attendance__panel {
+    margin: 0 auto;
+    width: 70%;
+}
+
+.attendance__button {
+    width: 100%;
+    text-align: center;
+}
+
+.attendance__button-submit {
+    padding: 5px;
+    width: 30%;
+    height: 50px;
+    border: none;
+    border-radius: 3px;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+}
+
+.attendance__content {
+    margin: 0 auto;
+    padding: 30px 15px;
+    max-width: 1230px;
+}
+
+.attendance-table {
+    margin: 30px auto;
+    width: 70%;
+    text-align: center;
+}
+
+.attendance-table__inner {
+    width: 100%;
+}
+
+.attendance-table__row {
+    border-bottom: 1px solid #ddd;
+}
+
+.attendance-table__header {
+    padding: 12px;
+    width: 20%;
+    font-weight: bold;
+}
+
+.attendance-table__item {
+    padding: 12px;
+    width: 20%;
+}
+
+
+
+/*ここから過去の演習のcss*/
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+a {
+    color: #707070;
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    color: #707070;
+    line-height: 1.7;
+}
+
+
+/*.container {
+    max-width: 960px;
+    margin: 0 auto;
+}*/
+
+
+
+.small-container {
+    max-width: 760px;
+    margin: 80px auto 0;
+}
+
+.common__ttl {
+    font-size: 24px;
+    font-weight: bold;
+    position: relative;
+}
+
+.common__sub-ttl {
+    font-size: 16px;
+    font-family: "Indie Flower", cursive;
+    color: #b31566;
+}
+
+
+
+/*---------------------blog--------------------- */
+#blog {
+    margin-top: 80px;
+    background: #f5f5f5;
+    padding: 40px 0;
+}
+
+.blog-wrap {
+    /*margin-top: 30px;*/
+    /*margin-bottom: 30px;*/
+}
+
+/*
+.blog-wrap__item {
+    width: 30%;
+    position: relative;
+    display: block;
+}
+*/
+
+.blog-wrap__item {
+    width: 320px;
+    position: relative;
+    display: block;
+    margin-bottom: 30px;
+
+}
+
+.blog-wrap__item-content {
+    background: #fff;
+    border-radius: 0 0 15px 15px;
+    padding: 20px;
+    margin-top: -7px;
+}
+
+.blog-wrap__item-eyecatch {
+    border-radius: 15px 15px 0 0;
+}
+
+.blog-wrap__item-cat {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #b31566;
+    color: #fff;
+    border-radius: 15px 0 0 0;
+    padding: 5px 20px;
+}
+
+.blog-wrap__item-content-tag {
+    /*font-size: 14px;*/
+
+    font-size: 15px;
+
+
+    /*margin-top: 30px;*/
+
+    margin-top: -40px;
+    margin-left: -50px;
+    color: #000;
+
+
+}
+
+.blog-wrap__item-content-tag2 {
+    /*font-size: 14px;*/
+
+    font-size: 15px;
+
+
+    /*margin-top: 30px;*/
+
+    margin-top: -40px;
+    margin-left: 10px;
+    color: #000;
+
+
+}
+
+
+
+
+.blog__link {
+    display: block;
+    margin: 30px auto 0;
+    width: 200px;
+    text-align: center;
+    padding: 15px 0;
+    background: #fff;
+    border: 2px solid #b31566;
+    border-radius: 30px;
+    color: #b31566;
+    transition: 0.4s;
+}
+
+.blog__link:hover {
+    background-color: #b31566;
+    color: #fff;
+    transition: 0.4s;
+}
+
+/*ここから下が自前*/
+
+
+
+
+
+
+
+
+.register__shadow {
+
+
+    border-radius: 10px;
+    /*text-align: center;*/
+    box-shadow: 4px 4px 2px #949494;
+
+    transition: 0.4s;
+
+    text-decoration: none;
+
+}
+
+
+.register__shadow2 {
+
+
+    border-radius: 0px 15px 0px 0px;
+    /*text-align: center;*/
+    box-shadow: 4px 4px 2px #949494;
+
+    transition: 0.4s;
+
+    text-decoration: none;
+
+}
+
+
+.blog-wrap__item-content-ttl {
+    font-size: 30px;
+    color: #000;
+    margin-top: -5px;
+}
+
+
+
+.form__button {
+    /*margin-top: 20px;*/
+    margin-top: -10px;
+
+}
+
+/*.form__button-submit {
+    padding: 10px;
+    width: 30%;
+    height: 50px;
+    border: none;
+    border-radius: 3px;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+}*/
+
+.form__button-submit {
+    padding: 10px;
+    /*width: 40%;*/
+    width: 100px;
+    height: 40px;
+    border: none;
+    border-radius: 8px;
+    background: rgb(32, 118, 248);
+    color: #fff;
+    cursor: pointer;
+    /*margin-left: 200px;*/
+    margin-left: 0px;
+    font-size: 15px;
+    /*margin-top: -10px;*/
+    border: none;
+    border-radius: 9px 9px 9px 9px;
+
+}
+
+.form__button-submit2 {
+    padding: 10px;
+    /*width: 40%;*/
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    /*border: none;*/
+    background: rgb(32, 118, 248);
+    color: #fff;
+    cursor: pointer;
+    /*margin-left: 200px;*/
+    margin-left: 0px;
+    font-size: 10px;
+    font-family: 10;
+    /*margin-top: -10px;*/
+    
+}
+
+
+
+.form__button-submit5 {
+    padding: 10px;
+    /*width: 40%;*/
+    width: 100px;
+    height: 40px;
+    border: none;
+    border-radius: 8px;
+    background: rgb(32, 118, 248);
+    color: #fff;
+    cursor: pointer;
+    margin-left: 200px;
+    margin-top: -300ppx;
+    font-size: 15px;
+    /*margin-top: -10px;*/
+    border: none;
+    border-radius: 9px 9px 9px 9px;
+
+}
+
+
+
+.heart {
+    /*width: 100px;*/
+    width: 40px;
+    /* 正方形を作る */
+    /*height: 100px;*/
+    height: 40px;
+    /* 正方形を作る */
+    position: relative;
+    /* 基準位置とする */
+}
+
+.heart::before,
+.heart::after {
+    content: "";
+    /* 疑似要素に必須 */
+    width: 50%;
+    /* ハートの丸い部分の大きさにかかわる */
+    height: 80%;
+    /* ハートの高さにかかわる */
+    background: #E0548E;
+    /* ハートの色 */
+    border-radius: 25px 25px 0 0;
+    /* ハートの半円を生成 */
+    display: block;
+    /* ブロック要素にする */
+    position: absolute;
+    /* 相対位置に指定 */
+}
+
+.heart::before {
+    transform: rotate(-45deg);
+    /* 左に回転 */
+    left: 14%;
+    /* 左からの位置を指定 */
+}
+
+.heart::after {
+    transform: rotate(45deg);
+    /* 右に回転 */
+    right: 14%;
+    /* 右からの位置を指定 */
+}
+
+
+
+
+.heart__margin {
+    margin-left: 200px;
+    margin-top: -35px;
+    margin-bottom: 10px;
+}
+
+
+.heart__size {
+    width: 80%;
+    height: 80%;
+}
+
+
+
+
+/*↓ハート改造*/
+
+
+
+
+.heart1 {
+    /*width: 100px;*/
+    width: 40px;
+    /* 正方形を作る */
+    /*height: 100px;*/
+    height: 40px;
+    /* 正方形を作る */
+    position: relative;
+    /* 基準位置とする */
+}
+
+.heart1::before,
+.heart1::after {
+    content: "";
+    /* 疑似要素に必須 */
+    width: 50%;
+    /* ハートの丸い部分の大きさにかかわる */
+    height: 80%;
+    /* ハートの高さにかかわる */
+    background: #c2c2c2;
+    /* ハートの色 */
+    border-radius: 25px 25px 0 0;
+    /* ハートの半円を生成 */
+    display: block;
+    /* ブロック要素にする */
+    position: absolute;
+    /* 相対位置に指定 */
+}
+
+.heart1::before {
+    transform: rotate(-45deg);
+    /* 左に回転 */
+    left: 14%;
+    /* 左からの位置を指定 */
+}
+
+.heart1::after {
+    transform: rotate(45deg);
+    /* 右に回転 */
+    right: 14%;
+    /* 右からの位置を指定 */
+}
+
+
+
+
+.heart1__margin {
+    margin-left: 200px;
+    margin-top: -35px;
+    margin-bottom: 10px;
+}
+
+
+.heart1__size {
+    width: 80%;
+    height: 80%;
+}
+
+
+.button__none {
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+/*
+.card__margin{
+    margin-left: -200px;
+    width: 1000px;
+    margin-top: 100px;
+    z-index: 100 ;
+}
+*/
+
+.card__margin {
+    margin-left: -200px;
+    width: 200px;
+    margin-top: 100px;
+    z-index: 100;
+    display:flex;
+}
+
+.card__margin1 {
+    margin-left: 20px;
+    /*width: 200px;*/
+    margin-top: 50px;
+    z-index: 100;
+    display: flex;
+}
+
+
+.button__margin1{
+    margin-left: 50px;
+    margin-bottom: 50px;
+
+}
+
+
+
+
+
+
+
+
+
+/*こっからlogin、かぶったものがある場合は無効かする作業*/
+
+.size__icon{
+    width: 50px;
+    height: 100px;
+    background: rgb(255, 255, 255);
+    /*background-color: rgb(255, 255, 255);*/
+    background-color: rgb(32, 118, 248);
+    color: #ffffff;
+}
+
+
+
+
+
+.icon_1 {
+    /*font-size: 32px;*/
+    width: 35px;
+display: flex;
+display: block;
+z-index: 1000000000000000000;
+margin-left: 500px;
+
+}
+
+.icon__flex {
+    display: flex;
+    display: block;
+    z-index: 1000;
+}
+
+.icon__left {
+    /*left: 300px;*/
+    /*margin-left: -110px;*/
+    margin-left: 0px;
+    margin-top: 100px;
+
+}
+
+.text__left {
+    /*left: 300px;*/
+    /*margin-left: -150px;*/
+    margin-left: 10px;
+
+}
+
+.box__move{
+    margin-left: 300px;
+    margin-top: 250px;
+    margin-bottom: 300px;
+
+}
+
+.container__color {
+    margin-top: -100px;
+    background: #e6e6e6;
+    z-index: -10000;
+}
+
+
+.saizensen{
+    z-index: 10000;
+}
+
+
+.display_block{
+    display: block;
+}
+
+.display_flex {
+    display: flex;
+}
+
+
+
+
+.item3 {
+    width: 25%;
+    /* 4列 */
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.text__move{
+    margin-left: 1500px;
+    font-size: 40px;
+    font-weight: 10px;
+    color: #000;
+    margin-bottom: 0px;
+}
+
+.text__move1 {
+    width: 500px;
+    margin-left: 1500px;
+    font-size: 40px;
+    font-weight: 10px;
+    color: #000;
+}
+
+
+
+.heart {
+    /*width: 100px;*/
+    width: 40px;
+    /* 正方形を作る */
+    /*height: 100px;*/
+    height: 40px;
+    /* 正方形を作る */
+    position: relative;
+    /* 基準位置とする */
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+.heart::before,
+.heart::after {
+    content: "";
+    /* 疑似要素に必須 */
+    width: 50%;
+    /* ハートの丸い部分の大きさにかかわる */
+    height: 80%;
+    /* ハートの高さにかかわる */
+    background: #E0548E;
+    /* ハートの色 */
+    border-radius: 25px 25px 0 0;
+    /* ハートの半円を生成 */
+    display: block;
+    /* ブロック要素にする */
+    position: absolute;
+    /* 相対位置に指定 */
+}
+
+.heart::before {
+    transform: rotate(-45deg);
+    /* 左に回転 */
+    left: 14%;
+    /* 左からの位置を指定 */
+}
+
+.heart::after {
+    transform: rotate(45deg);
+    /* 右に回転 */
+    right: 14%;
+    /* 右からの位置を指定 */
+}
+
+
+
+
+.heart__margin {
+    margin-left: 200px;
+    margin-top: -35px;
+    margin-bottom: 10px;
+}
+
+
+.heart__size {
+    width: 80%;
+    height: 80%;
+}
+
+
+
+
+/*↓ハート改造*/
+
+
+
+
+.heart1 {
+    /*width: 100px;*/
+    width: 40px;
+    /* 正方形を作る */
+    /*height: 100px;*/
+    height: 40px;
+    /* 正方形を作る */
+    position: relative;
+    /* 基準位置とする */
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+.heart1::before,
+.heart1::after {
+    content: "";
+    /* 疑似要素に必須 */
+    width: 50%;
+    /* ハートの丸い部分の大きさにかかわる */
+    height: 80%;
+    /* ハートの高さにかかわる */
+    background: #c2c2c2;
+    /* ハートの色 */
+    border-radius: 25px 25px 0 0;
+    /* ハートの半円を生成 */
+    display: block;
+    /* ブロック要素にする */
+    position: absolute;
+    /* 相対位置に指定 */
+}
+
+.heart1::before {
+    transform: rotate(-45deg);
+    /* 左に回転 */
+    left: 14%;
+    /* 左からの位置を指定 */
+}
+
+.heart1::after {
+    transform: rotate(45deg);
+    /* 右に回転 */
+    right: 14%;
+    /* 右からの位置を指定 */
+}
+
+
+
+
+.heart1__margin {
+    margin-left: 200px;
+    margin-top: -35px;
+    margin-bottom: 10px;
+}
+
+
+.heart1__size {
+    width: 80%;
+    height: 80%;
+}
+
+
+.button__none {
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+
+.attendance__alert--success {
+    padding: 10px 30px;
+    border-color: #badbcc;
+    background-color: #d1e7dd;
+    color: #0f5132;
+}
+
+.attendance__alert--danger {
+    padding: 10px 0;
+    border-color: #f5c2c7;
+    background-color: #f8d7da;
+    color: #842029;
+}
+
+.attendance__alert--danger ul {
+    margin: 0;
+}
+
+.attendance__panel {
+    margin: 0 auto;
+    width: 70%;
+}
+
+.attendance__button {
+    width: 100%;
+    text-align: center;
+}
+
+.attendance__button-submit {
+    padding: 5px;
+    width: 30%;
+    height: 50px;
+    border: none;
+    border-radius: 3px;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+}
+
+.attendance__content {
+    margin: 0 auto;
+    padding: 30px 15px;
+    max-width: 1230px;
+}
+
+.attendance-table {
+    margin: 30px auto;
+    width: 70%;
+    text-align: center;
+}
+
+.attendance-table__inner {
+    width: 100%;
+}
+
+.attendance-table__row {
+    border-bottom: 1px solid #ddd;
+}
+
+.attendance-table__header {
+    padding: 12px;
+    width: 20%;
+    font-weight: bold;
+}
+
+.attendance-table__item {
+    padding: 12px;
+    width: 20%;
+}
+
+
+
+/*ここから過去の演習のcss*/
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+a {
+    color: #707070;
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    color: #707070;
+    line-height: 1.7;
+}
+
+.flex__item {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+
+/*.container {
+    max-width: 960px;
+    margin: 0 auto;
+}*/
+
+
+
+.small-container {
+    max-width: 760px;
+    margin: 80px auto 0;
+}
+
+.common__ttl {
+    font-size: 24px;
+    font-weight: bold;
+    position: relative;
+}
+
+.common__sub-ttl {
+    font-size: 16px;
+    font-family: "Indie Flower", cursive;
+    color: #b31566;
+}
+
+
+
+/*---------------------blog--------------------- */
+#blog {
+    margin-top: 80px;
+    background: #f5f5f5;
+    padding: 40px 0;
+}
+
+.blog-wrap {
+    /*margin-top: 30px;*/
+    /*margin-bottom: 30px;*/
+}
+
+/*
+.blog-wrap__item {
+    width: 30%;
+    position: relative;
+    display: block;
+}
+*/
+
+.blog-wrap__item {
+    width: 320px;
+    position: relative;
+    display: block;
+    margin-bottom: 30px;
+
+}
+
+.blog-wrap__item-content {
+    background: #fff;
+    border-radius: 0 0 15px 15px;
+    padding: 20px;
+    margin-top: -7px;
+}
+
+.blog-wrap__item-eyecatch {
+    border-radius: 15px 15px 0 0;
+}
+
+.blog-wrap__item-cat {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #b31566;
+    color: #fff;
+    border-radius: 15px 0 0 0;
+    padding: 5px 20px;
+}
+
+.blog-wrap__item-content-tag {
+    /*font-size: 14px;*/
+
+    font-size: 15px;
+
+
+    /*margin-top: 30px;*/
+
+    margin-top: -40px;
+    margin-left: -50px;
+    color: #000;
+
+
+}
+
+.blog-wrap__item-content-tag2 {
+    /*font-size: 14px;*/
+
+    font-size: 15px;
+
+
+    /*margin-top: 30px;*/
+
+    margin-top: -40px;
+    margin-left: 10px;
+    color: #000;
+
+
+}
+
+
+
+
+.blog__link {
+    display: block;
+    margin: 30px auto 0;
+    width: 200px;
+    text-align: center;
+    padding: 15px 0;
+    background: #fff;
+    border: 2px solid #b31566;
+    border-radius: 30px;
+    color: #b31566;
+    transition: 0.4s;
+}
+
+.blog__link:hover {
+    background-color: #b31566;
+    color: #fff;
+    transition: 0.4s;
+}
+
+/*ここから下が自前*/
+
+
+
+
+
+
+
+
+.register__shadow {
+
+
+    border-radius: 10px;
+    /*text-align: center;*/
+    box-shadow: 4px 4px 2px #949494;
+
+    transition: 0.4s;
+
+    text-decoration: none;
+
+}
+
+
+.register__shadow2 {
+
+
+    border-radius: 0px 15px 0px 0px;
+    /*text-align: center;*/
+    box-shadow: 4px 4px 2px #949494;
+
+    transition: 0.4s;
+
+    text-decoration: none;
+
+}
+
+
+.blog-wrap__item-content-ttl {
+    font-size: 30px;
+    color: #000;
+    margin-top: -5px;
+}
+
+
+
+.form__button {
+    /*margin-top: 20px;*/
+    margin-top: -10px;
+
+}
+
+
+
+
+
+
+
+.blog-wrap__item {
+    width: 320px;
+    position: relative;
+    display: block;
+    margin-bottom: 30px;
+
+}
+
+.blog-wrap__item-content {
+    background: #fff;
+    border-radius: 0 0 15px 15px;
+    padding: 20px;
+    margin-top: -7px;
+}
+
+.blog-wrap__item-eyecatch {
+    border-radius: 15px 15px 0 0;
+}
+
+.blog-wrap__item-cat {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #b31566;
+    color: #fff;
+    border-radius: 15px 0 0 0;
+    padding: 5px 20px;
+}
+
+.blog-wrap__item-content-tag {
+    /*font-size: 14px;*/
+
+    font-size: 15px;
+
+
+    /*margin-top: 30px;*/
+
+    margin-top: -40px;
+    margin-left: -50px;
+    color: #000;
+
+
+}
+
+.blog-wrap__item-content-tag2 {
+    /*font-size: 14px;*/
+
+    font-size: 15px;
+
+
+    /*margin-top: 30px;*/
+
+    margin-top: -40px;
+    margin-left: 10px;
+    color: #000;
+
+
+}
+
+
+.blog-wrap__item-content-ttl {
+    font-size: 30px;
+    color: #000;
+    margin-top: -5px;
+}
+
+
+.container__move7{
+    margin-left: 1500px;
+    margin-top: -3800px;
+    
+}
+
+
+.background {
+    background: #e6e6e6;
+    /*height: 1100px;*/
+    z-index: -112;
+}
+
+.form__left{
+    margin-left: 500px;
+    margin-top: -70px;
+
+}
+
+.form__left12 {
+    margin-left: 500px;
+    margin-top: -70px;
+
+}

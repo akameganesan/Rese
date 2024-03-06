@@ -17,11 +17,14 @@ class Reservations extends Model
 
     public function reservations()
     {
-        return $this->belongsToy('App\Models\Shops');
+        //return $this->belongsToy('App\Models\Shops');
+        return $this->hasMany('App\Models\Shops');
     }
     public function res_user()
     {
-        return $this->belongsTo('App\Models\Reservations');
+        //return $this->belongsTo('App\Models\Reservations');
+        return $this->hasMany('App\Models\Reservations');
+
     }
 
     protected $fillable = [

@@ -31,6 +31,7 @@ use App\Http\Controllers\UserController;
 
 
 Route::get('/', [ShopController::class, 'index']);
+Route::post('/', [ShopController::class, 'index']);
 
 Route::post('/create', [FavoriteController::class, 'create']);
 
@@ -60,6 +61,11 @@ Route::post('/menu', [AuthController::class, 'menu']);
 
 Route::get('/create3', [FavoriteController::class, 'create3']);
 Route::post('/create3', [FavoriteController::class, 'create3']);
+
+
+//Route::get('/create3', [UserController::class, 'test']);
+//Route::post('/create3', [UserController::class, 'test']);
+
 
 
 
@@ -97,4 +103,39 @@ Route::post('/num', [UserController::class, 'num']);
 
 Route::get('/res', [UserController::class, 'res']);
 Route::post('/res', [UserController::class, 'res']);
+
+
+Route::get('/reservation', [UserController::class, 'reservation']);
+Route::post('/reservation', [UserController::class, 'reservation']);
+
+Route::get('/test', [UserController::class, 'test']);
+Route::post('test', [UserController::class, 'test']);
+
+Route::get('/reg', [UserController::class, 'reg']);
+Route::post('/reg', [UserController::class, 'reg']);
+
+
+Route::get('/done', [UserController::class, 'done']);
+Route::post('/done', [UserController::class, 'done']);
+
+
+Route::get('/mypage', [UserController::class, 'mypage']);
+Route::post('/mypage', [UserController::class, 'mypage']);
+
+
+Route::get('/delete', [UserController::class, 'delete']);
+Route::post('/delete', [UserController::class, 'delete']);
+
+
+
+Route::get('/day1', [UserController::class, 'day1']);
+Route::post('/day1', [UserController::class, 'day1']);
+
+Route::get('/time1', [UserController::class, 'time1']);
+Route::post('/time1', [UserController::class, 'time1']);
+
+Route::get('/num1', [UserController::class, 'num1']);
+Route::post('/num1', [UserController::class, 'num1']);
+
+
 

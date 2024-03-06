@@ -16,7 +16,7 @@
             @foreach($shops as $shop)
             <a class="blog-wrap__item" href="">
                 <div class="register__shadow2">
-                    <img src="{{$shop->img_url}}" alt="" class="blog-wrap__item-eyecatch">
+                   <img src="{{$shop->img_url}}" alt="" class="blog-wrap__item-eyecatch">
                 </div>
                 <div class="register__shadow">
                     <div class="blog-wrap__item-content">
@@ -43,7 +43,6 @@
                             <li class="blog-wrap__item-content-tag2">#居酒屋</li>
                             @endif
                         </ul>
-
                         <form action="/detail" type="text" name="shoID" method="post">
                             @csrf
                             <div class="flex__item2">
@@ -53,34 +52,29 @@
                                 </div>
                             </div>
                         </form>
+                        
 
-                        @if (Auth::check())
 
-                        <form action="/create3" type="text" name="shoID" method="post">
-                            @csrf
-                            <input type="hidden" name="shID1" value="{{$shop->id}}" size="10">
-                            <div class="heart__margin">
-                                <div class="button_none">
-                                    <button class="heart1" type="submit"></button>
-                                </div>
-                            </div>
-                        </form>
-
-                        @foreach($fav as $fa)
-
-                        @if($fa->shops_id == $shop->id)
-                        <form action="/remove" type="text" name="shoID" method="post">
-                            @csrf
-                            <input type="hidden" name="shID1" value="{{$shop->id}}" size="10">
-                            <div class="heart__margin">
-                                <div class="button_none">
-                                    <button class="heart" type="submit"></button>
-                                </div>
-                            </div>
-                        </form>
-                        @else
-                        @endif
-                        @endforeach
+                        @if(Auth::check())
+                            @if(empty($shop->shops_id))
+                                <form action="/create3" type="text" name="shID1" method="post">
+                                    @csrf
+                                        <input type="hidden" name="shID1" value="{{$shop->id}}" size="10">
+                                            <div class="heart1__margin">
+                                              <button class="heart1" type="submit"></button>
+                                            </div>
+                                </form>
+                            @else
+                                <form action="/remove" type="text" name="shID1" method="post">
+                                    @csrf
+                                    <input type="hidden" name="shID1" value="{{$shop->id}}" size="10">
+                                        <div class="heart1__margin">
+                                            <button class="heart" type="submit"></button>
+                                        </div>
+ 
+                                                                <!--</div>-->
+                                </form>
+                            @endif
                         @endif
                     </div>
                 </div>
@@ -89,6 +83,7 @@
         </div>
     </div>
 </div>
+
 
 
 

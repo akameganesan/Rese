@@ -98,8 +98,8 @@
     /*margin-left: 200px;*/
     margin-left: 180px;
     display: block;
-        margin: auto;
-        margin-top: 50px;
+    margin: auto;
+    margin-top: 50px;
 }
 
 .register__link {
@@ -146,7 +146,7 @@
 
 .background {
     background: #e6e6e6;
-    height: 2000px;
+    height: 1100px;
 }
 
 .service-wrap__item-content {
@@ -294,6 +294,11 @@
     box-shadow: 4px 4px 2px #949494;
 }
 
-.h2_top{
+.h2_top {
     margin-top: 100px;
+}
+
+
+.back{
+    height: 2000px;
 }
