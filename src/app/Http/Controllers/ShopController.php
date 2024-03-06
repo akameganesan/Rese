@@ -1,0 +1,150 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use App\Models\Shops;
+use App\Models\Areas;
+use App\Models\Favorites;
+use App\Models\Genres;
+use App\Models\Reservations;
+use App\Models\User;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
+
+
+
+class ShopController extends Controller
+{
+    //
+    public function index()
+    {
+       
+        $fav = Favorites::all();
+
+
+        $shops = Shops::leftJoin('favorites', 'shops.id', '=', 'favorites.shops_id')
+            ->select('shops.*', 'favorites.shops_id')
+            ->get();
+
+
+        return view('index', compact('shops', 'fav'));
+
+
+    }
+
+    public function index2()
+    {
+    
+
+
+        $shops = Shops::all();
+        //$user = Auth::id();
+        $fav = Favorites::all();
+
+        $shops = Shops::leftjoin('favorites', 'shops.id', '=', 'favorites.shops_id')->get();
+        //$shops = Favorites::join('shops', 'shops.id', '=', 'favorites.shops_id')->get();
+
+
+        return view('index', compact('shops', 'fav'));
+
+
+    }
+
+    public function area(Request $request)
+    {
+
+        $keyword = $request->area;
+        $key = $request->genre;
+        //$key = $keyword;
+        if (empty($key)) {
+            $shops = Shops::all()->where("area_id", "=", $keyword);
+            $fav = Favorites::all();
+
+
+        } else {
+
+            $shops = Shops::all()->where("genre_id", "=", $key)->where("area_id", "=", $key);
+            $fav = Favorites::all();
+
+
+        }
+
+        return view('index', compact('shops', 'keyword', 'key', 'fav'));
+    }
+
+    public function genre(Request $request)
+    {
+
+
+        $key = $request->genre;
+        //$key = $keyword;
+        $key_a = $request->area;
+
+
+        if (empty($key_a)) {
+            $shops = Shops::all()->where("genre_id", "=", $key);
+            $fav = Favorites::all();
+
+        } else {
+
+            $shops = Shops::all()->where("area_id", "=", $key_a)->where("genre_id", "=", $key);
+            $fav = Favorites::all();
+        }
+
+        return view('index', compact('shops', 'key', 'key_a', 'fav'));
+
+
+    }
+
+    public function search(Request $request)
+    {
+
+        $keyword = $request->search;
+        $key = $keyword;
+
+
+
+
+        $query = Shops::query();
+        $shops = $query->where('name', 'like', '%' . $key . '%')->get();
+
+
+
+
+
+        $fav = Favorites::all();
+
+        return view('index', compact('shops', 'keyword', 'fav'));
+
+
+    }
+
+
+    public function detail(Request $request)
+    {
+
+
+        $shopId = $request->shoID;
+
+        //shoID
+        $day = $request->day;
+        $time = $request->time;
+        $num = $request->num;
+
+        //shoID
+        $keyword = $request->shoID;
+        $shops = Shops::all()->where("id", "=", $keyword)->first();
+
+
+
+
+
+
+        return view('description', compact('keyword', 'shops', 'day', 'time', 'num'));
+
+
+    }
+
+
+}

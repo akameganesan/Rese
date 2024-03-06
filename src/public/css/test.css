@@ -1,0 +1,616 @@
+.heart {
+    /*width: 100px;*/
+    width: 40px;
+    /* 正方形を作る */
+    /*height: 100px;*/
+    height: 40px;
+    /* 正方形を作る */
+    position: relative;
+    /* 基準位置とする */
+}
+
+.heart::before,
+.heart::after {
+    content: "";
+    /* 疑似要素に必須 */
+    width: 50%;
+    /* ハートの丸い部分の大きさにかかわる */
+    height: 80%;
+    /* ハートの高さにかかわる */
+    background: #E0548E;
+    /* ハートの色 */
+    border-radius: 25px 25px 0 0;
+    /* ハートの半円を生成 */
+    display: block;
+    /* ブロック要素にする */
+    position: absolute;
+    /* 相対位置に指定 */
+}
+
+.heart::before {
+    transform: rotate(-45deg);
+    /* 左に回転 */
+    left: 14%;
+    /* 左からの位置を指定 */
+}
+
+.heart::after {
+    transform: rotate(45deg);
+    /* 右に回転 */
+    right: 14%;
+    /* 右からの位置を指定 */
+}
+
+
+
+
+.heart__margin {
+    margin-left: 200px;
+    margin-top: -35px;
+    margin-bottom: 10px;
+}
+
+
+.heart__size {
+    width: 80%;
+    height: 80%;
+}
+
+
+
+
+/*↓ハート改造*/
+
+
+
+
+.heart1 {
+    /*width: 100px;*/
+    width: 40px;
+    /* 正方形を作る */
+    /*height: 100px;*/
+    height: 40px;
+    /* 正方形を作る */
+    position: relative;
+    /* 基準位置とする */
+}
+
+.heart1::before,
+.heart1::after {
+    content: "";
+    /* 疑似要素に必須 */
+    width: 50%;
+    /* ハートの丸い部分の大きさにかかわる */
+    height: 80%;
+    /* ハートの高さにかかわる */
+    background: #c2c2c2;
+    /* ハートの色 */
+    border-radius: 25px 25px 0 0;
+    /* ハートの半円を生成 */
+    display: block;
+    /* ブロック要素にする */
+    position: absolute;
+    /* 相対位置に指定 */
+}
+
+.heart1::before {
+    transform: rotate(-45deg);
+    /* 左に回転 */
+    left: 14%;
+    /* 左からの位置を指定 */
+}
+
+.heart1::after {
+    transform: rotate(45deg);
+    /* 右に回転 */
+    right: 14%;
+    /* 右からの位置を指定 */
+}
+
+
+
+
+.heart1__margin {
+    margin-left: 200px;
+    margin-top: -35px;
+    margin-bottom: 10px;
+}
+
+
+.form__button-submit {
+    padding: 10px;
+    /*width: 40%;*/
+    width: 100px;
+    height: 40px;
+    border: none;
+    border-radius: 8px;
+    background: #264dfa;
+    color: #fff;
+    cursor: pointer;
+    /*margin-left: 200px;*/
+    margin-left: 0px;
+    font-size: 16px;
+    /*margin-top: -10px;*/
+}
+
+
+.attendance__alert--success {
+    padding: 10px 30px;
+    border-color: #badbcc;
+    background-color: #d1e7dd;
+    color: #0f5132;
+}
+
+.attendance__alert--danger {
+    padding: 10px 0;
+    border-color: #f5c2c7;
+    background-color: #f8d7da;
+    color: #842029;
+}
+
+.attendance__alert--danger ul {
+    margin: 0;
+}
+
+.attendance__panel {
+    margin: 0 auto;
+    width: 70%;
+}
+
+.attendance__button {
+    width: 100%;
+    text-align: center;
+}
+
+.attendance__button-submit {
+    padding: 5px;
+    width: 30%;
+    height: 50px;
+    border: none;
+    border-radius: 3px;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+}
+
+.attendance__content {
+    margin: 0 auto;
+    padding: 30px 15px;
+    max-width: 1230px;
+}
+
+.attendance-table {
+    margin: 30px auto;
+    width: 70%;
+    text-align: center;
+}
+
+.attendance-table__inner {
+    width: 100%;
+}
+
+.attendance-table__row {
+    border-bottom: 1px solid #ddd;
+}
+
+.attendance-table__header {
+    padding: 12px;
+    width: 20%;
+    font-weight: bold;
+}
+
+.attendance-table__item {
+    padding: 12px;
+    width: 20%;
+}
+
+
+
+/*ここから過去の演習のcss*/
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+a {
+    color: #707070;
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    color: #707070;
+    line-height: 1.7;
+}
+
+.flex__item {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.flex__item2 {
+    display: flex;
+    /*justify-content: space-between;*/
+    flex-wrap: wrap;
+    /*justify-content: left;*/
+}
+
+/*.container {
+    max-width: 960px;
+    margin: 0 auto;
+}*/
+
+.container {
+    max-width: 1350px;
+    margin: 0 auto;
+    background: #e6e6e6;
+}
+
+.small-container {
+    max-width: 760px;
+    margin: 80px auto 0;
+}
+
+.common__ttl {
+    font-size: 24px;
+    font-weight: bold;
+    position: relative;
+}
+
+.common__sub-ttl {
+    font-size: 16px;
+    font-family: "Indie Flower", cursive;
+    color: #b31566;
+}
+
+
+
+/*---------------------blog--------------------- */
+#blog {
+    margin-top: 80px;
+    background: #f5f5f5;
+    padding: 40px 0;
+}
+
+.blog-wrap {
+    /*margin-top: 30px;*/
+    /*margin-bottom: 30px;*/
+}
+
+/*
+.blog-wrap__item {
+    width: 30%;
+    position: relative;
+    display: block;
+}
+*/
+
+.blog-wrap__item {
+    width: 320px;
+    position: relative;
+    display: block;
+    margin-bottom: 30px;
+
+}
+
+.blog-wrap__item-content {
+    background: #fff;
+    border-radius: 0 0 15px 15px;
+    padding: 20px;
+    margin-top: -7px;
+}
+
+.blog-wrap__item-eyecatch {
+    border-radius: 15px 15px 0 0;
+}
+
+.blog-wrap__item-cat {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #b31566;
+    color: #fff;
+    border-radius: 15px 0 0 0;
+    padding: 5px 20px;
+}
+
+.blog-wrap__item-content-tag {
+    /*font-size: 14px;*/
+
+    font-size: 15px;
+
+
+    /*margin-top: 30px;*/
+
+    margin-top: -40px;
+    margin-left: -50px;
+    color: #000;
+
+
+}
+
+.blog-wrap__item-content-tag2 {
+    /*font-size: 14px;*/
+
+    font-size: 15px;
+
+
+    /*margin-top: 30px;*/
+
+    margin-top: -40px;
+    margin-left: 10px;
+    color: #000;
+
+
+}
+
+
+
+
+.blog__link {
+    display: block;
+    margin: 30px auto 0;
+    width: 200px;
+    text-align: center;
+    padding: 15px 0;
+    background: #fff;
+    border: 2px solid #b31566;
+    border-radius: 30px;
+    color: #b31566;
+    transition: 0.4s;
+}
+
+.blog__link:hover {
+    background-color: #b31566;
+    color: #fff;
+    transition: 0.4s;
+}
+
+/*ここから下が自前*/
+
+
+
+
+
+
+.background {
+    background: #e6e6e6;
+    /*height: 1100px;*/
+}
+
+
+.register__shadow {
+
+
+    border-radius: 10px;
+    /*text-align: center;*/
+    box-shadow: 4px 4px 2px #949494;
+
+    transition: 0.4s;
+
+    text-decoration: none;
+
+}
+
+
+.register__shadow2 {
+
+
+    border-radius: 0px 15px 0px 0px;
+    /*text-align: center;*/
+    box-shadow: 4px 4px 2px #949494;
+
+    transition: 0.4s;
+
+    text-decoration: none;
+
+}
+
+
+.blog-wrap__item-content-ttl {
+    font-size: 30px;
+    color: #000;
+    margin-top: -5px;
+}
+
+
+
+.form__button {
+    /*margin-top: 20px;*/
+    margin-top: -10px;
+
+}
+
+/*.form__button-submit {
+    padding: 10px;
+    width: 30%;
+    height: 50px;
+    border: none;
+    border-radius: 3px;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+}*/
+
+.form__button-submit {
+    padding: 10px;
+    /*width: 40%;*/
+    width: 100px;
+    height: 40px;
+    border: none;
+    border-radius: 8px;
+    background: #264dfa;
+    color: #fff;
+    cursor: pointer;
+    /*margin-left: 200px;*/
+    margin-left: 0px;
+    font-size: 16px;
+    /*margin-top: -10px;*/
+}
+
+
+
+
+.heart {
+    /*width: 100px;*/
+    width: 40px;
+    /* 正方形を作る */
+    /*height: 100px;*/
+    height: 40px;
+    /* 正方形を作る */
+    position: relative;
+    /* 基準位置とする */
+
+    border: none;
+        outline: none;
+        background: transparent;
+}
+
+.heart::before,
+.heart::after {
+    content: "";
+    /* 疑似要素に必須 */
+    width: 50%;
+    /* ハートの丸い部分の大きさにかかわる */
+    height: 80%;
+    /* ハートの高さにかかわる */
+    background: #E0548E;
+    /* ハートの色 */
+    border-radius: 25px 25px 0 0;
+    /* ハートの半円を生成 */
+    display: block;
+    /* ブロック要素にする */
+    position: absolute;
+    /* 相対位置に指定 */
+}
+
+.heart::before {
+    transform: rotate(-45deg);
+    /* 左に回転 */
+    left: 14%;
+    /* 左からの位置を指定 */
+}
+
+.heart::after {
+    transform: rotate(45deg);
+    /* 右に回転 */
+    right: 14%;
+    /* 右からの位置を指定 */
+}
+
+
+
+
+.heart__margin {
+    margin-left: 200px;
+    margin-top: -35px;
+    margin-bottom: 10px;
+}
+
+
+.heart__size {
+    width: 80%;
+    height: 80%;
+}
+
+
+
+
+/*↓ハート改造*/
+
+
+
+
+.heart1 {
+    /*width: 100px;*/
+    width: 40px;
+    /* 正方形を作る */
+    /*height: 100px;*/
+    height: 40px;
+    /* 正方形を作る */
+    position: relative;
+    /* 基準位置とする */
+    border: none;
+        outline: none;
+        background: transparent;
+}
+
+.heart1::before,
+.heart1::after {
+    content: "";
+    /* 疑似要素に必須 */
+    width: 50%;
+    /* ハートの丸い部分の大きさにかかわる */
+    height: 80%;
+    /* ハートの高さにかかわる */
+    background: #c2c2c2;
+    /* ハートの色 */
+    border-radius: 25px 25px 0 0;
+    /* ハートの半円を生成 */
+    display: block;
+    /* ブロック要素にする */
+    position: absolute;
+    /* 相対位置に指定 */
+}
+
+.heart1::before {
+    transform: rotate(-45deg);
+    /* 左に回転 */
+    left: 14%;
+    /* 左からの位置を指定 */
+}
+
+.heart1::after {
+    transform: rotate(45deg);
+    /* 右に回転 */
+    right: 14%;
+    /* 右からの位置を指定 */
+}
+
+
+
+
+.heart1__margin {
+    margin-left: 200px;
+    margin-top: -35px;
+    margin-bottom: 10px;
+}
+
+
+.heart1__size {
+    width: 80%;
+    height: 80%;
+}
+
+
+.button__none {
+     border: none;
+        outline: none;
+        background: transparent;
+}
+
+
+.transparent-button {
+    background-color: transparent;
+    /* 背景色を透明にする */
+    border: none;
+    /* 枠線を非表示にする */
+    padding: 0;
+    /* パディングをリセットする（任意） */
+    font-size: 16px;
+    /* テキストのフォントサイズを設定（任意） */
+    color: #000;
+    /* テキストの色を設定 */
+    /* 必要に応じて他のスタイルを追加 */
+}
+
+
+
+.h__size {
+    width: 50px;
+}

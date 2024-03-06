@@ -41,4 +41,16 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function users()
+    {
+        return $this->belongsTo('App\Models\reservations');
+    }
+
+    public function favorites()
+    {
+        return $this->belongsTo('App\Models\Favorites');
+    }
+
+
 }
