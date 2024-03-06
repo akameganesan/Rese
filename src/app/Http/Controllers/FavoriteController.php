@@ -36,13 +36,7 @@ class FavoriteController extends Controller
 
     public function create(Request $request)
     {
-        //$form = $request->all();
-        //return redirect('/');
 
-        // $form = $request->all();
-        //Favorites::create($form);
-
-        //$us = $request->user_id;
         $sh = $request->shID;
         $sh2 = $request->shID1;
 
@@ -100,9 +94,12 @@ class FavoriteController extends Controller
 
         ]);
 
-        $shops = Shops::all();
+        //$shops = Shops::all();
         //$user = Auth::id();
         $fav = Favorites::all();
+        $shops = Shops::leftJoin('favorites', 'shops.id', '=', 'favorites.shops_id')
+            ->select('shops.*', 'favorites.shops_id')
+            ->get();
 
 
         return view('index', compact('shops', 'fav'));
@@ -120,27 +117,7 @@ class FavoriteController extends Controller
     // 削除機能
     public function remove(Request $request)
     {
-        ////$keyword = $request->shoID->shID1;
 
-        //$shopId = $request->shID1;
-        //$form = $request->all();
-        ////Favorites::create($form);
-        //$user = Auth::id();
-
-        //Favorites::remove([
-        //"user_id" => $user,
-        //"shops_id" => $shopId,
-        //"created_at" => now(),
-        //"updated_at" => now(),
-
-        //]);
-
-
-        //$keyword = 3;
-        //$key = 5;
-
-        //$shops = $query->where('area_id', 'like', '%' . $keyword . '%')->get();
-        //$shops = Shops::all()->where("area_id", "=", $key);
 
         $keyword = $request->shID1;
         $key = $keyword;
@@ -148,21 +125,13 @@ class FavoriteController extends Controller
         //$del = Favorites::all()->where("shops_id", "=", $key)->delete();
         $del = Favorites::all()->where("shops_id", "=", $key)->first()->delete();
 
-
-        //Favorites::find($request->shID1)->delete();
-
-        // $shops = Shops::all();
-        //$user = Auth::id();
         $fav = Favorites::all();
-        $shops = Shops::all();
-
-
-
-
-
-
+        //$shops = Shops::all();
+        $shops = Shops::leftJoin('favorites', 'shops.id', '=', 'favorites.shops_id')
+            ->select('shops.*', 'favorites.shops_id')
+            ->get();
 
         return view('index', compact('shops', 'fav'));
-        //return redirect('index2', compact('keyword', 'key'));
+
     }
 }

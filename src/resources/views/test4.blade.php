@@ -6,20 +6,74 @@
 
 
 @section('content')
+<!--詳細ページ建設予定地-->
+
+<!--img class="size__icon" src="{{ asset('img/時計の無料アイコン (1).svg') }}" alt=""-->
+<!--<img class="size__icon" src="{{ asset('img/時計の無料アイコン (1).svg') }}" alt="">-->
+
+<!--
+<div class="icon__flex">
+    <div class="icon__left">
+        <img class="icon_1" src="{{ asset('img/時計無料アイコン.svg') }}" alt="">
+    </div>
+</div>
+
+<div class="icon__flex">
+    <div class="icon__left">
+        <img class="icon_1" src="{{ asset('img/カギアイコン.svg') }}" alt="">
+    </div>
+</div>
+
+
+<div class="icon__flex">
+    <div class="icon__left">
+        <img class="icon_1" src="{{ asset('img/ハートのマーク グレー.svg') }}" alt="">
+    </div>
+</div>
+
+
+<div class="icon__flex">
+    <div class="icon__left">
+        <img class="icon_1" src="{{ asset('img/検索用の虫眼鏡アイコン素材1採用.svg') }}" alt="">
+    </div>
+</div>
+
+
+<div class="icon__flex">
+    <div class="icon__left">
+        <img class="icon_1" src="{{ asset('img/ハートのマークピンク.svg') }}" alt="">
+    </div>
+</div>
+
+<div class="icon__flex">
+    <div class="icon__left">
+        <img class="icon_1" src="{{ asset('img/太いバツのアイコン.svg') }}" alt="">
+    </div>
+</div>
+
+<div class="icon__flex">
+    <div class="icon__left">
+        <img class="icon_1" src="{{ asset('img/人物アイコン.svg') }}" alt="">
+    </div>
+</div>
+-->
 
 
 
-<div class="background">
-    <div class="container">
-<div class="text__move1">{{$user->name}}さん</div>
-    <div class="title__res2">予約状況　　　　　　　　　　　　　　　　　　　　　　　　お気に入り店舗</div>
-        
-            <!--<div class="text__move">お気に入り店舗</div>-->
+
+<div class="new_container1">
+    <div class="title__res2">予約状況</div>
+        <div class="text__move1">{{$user->name}}さん</div>
+            <div class="text__move">お気に入り店舗</div>
             @php
 $ab = 0;
             @endphp
-
-
+            <div class="container__color">
+                <div class="flex__item4">
+                    <div class="background">
+                        <div class="container">
+                            <div class="flex__item4">
+                                <div class="container1">
                                     @foreach($reserv as $re)
                                         <div class="confirm">
                                             <div class="box__move">
@@ -36,7 +90,7 @@ $ab = 0;
                                                     @endphp
                                                     <div class="title__res3">予約{{$ab}}
                                                     </div>
-                                                    <form class="form__left" action="/delete" type="text" name="shoID" method="post">
+                                                    <form action="/delete" type="text" name="shoID" method="post">
                                                         @csrf
                                                         <div class="flex__item2">
                                                             <input type="hidden" name="shoID1" value="{{$re->shop_id}}" size="10">
@@ -75,23 +129,11 @@ $ab = 0;
                                             </div>
                                         </div>    
                                     @endforeach       
- 
-                                            </div>
-                                            </div>
-                                            </div>
-                                            </div>
-
-
-
-
-
-
-<div class="container__move7">
-    <div class="container7">
-        <div class="flex__item blog-wrap">
-            @foreach($shops as $shop)
-            @if(empty($shop->shops_id))
-                    @else                        
+                                    <div class="container2">             
+                                     <div class="flex__item blog-wrap">
+                                                           @foreach($shops1 as $shop)
+                    @if(empty($shop->shops_id))
+                    @else                                        
             <a class="blog-wrap__item" href="">
                 <div class="register__shadow2">
                    <img src="{{$shop->img_url}}" alt="" class="blog-wrap__item-eyecatch">
@@ -130,13 +172,13 @@ $ab = 0;
                                 </div>
                             </div>
                         </form>
+
                         
 
 
                         @if(Auth::check())
-                            @if(empty($shop->shops_id))
-                                
-                            @else
+
+
                                 <form action="/remove" type="text" name="shID1" method="post">
                                     @csrf
                                     <input type="hidden" name="shID1" value="{{$shop->id}}" size="10">
@@ -151,12 +193,22 @@ $ab = 0;
                     </div>
                 </div>
             </a>
-            @endif
             @endforeach
+                                                            </div>
+</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>        
+                                    </div>
+                                </div>        
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
-</div>
-
-
 @endsection

@@ -19,15 +19,6 @@ class UserController extends Controller
     public function mypage(Request $request)
     {
 
-
-
-        $shops = Shops::all();
-
-
-        //$fav = Favorites::all();
-        //$reserv = Reservations::all();
-
-        //$fav = Favorites::where('id', 'active')->get();
         $fav = Favorites::leftJoin('shops', 'shops.id', '=', 'favorites.shops_id')->get();
         $reserv = Reservations::leftJoin('shops', 'shops.id', '=', 'reservations.shop_id')->get();
 
@@ -40,76 +31,26 @@ class UserController extends Controller
 
         $user = User::all()->where("id", "=", $user_id)->first();
 
-        // 特定の日付を作成
-        //$date = Carbon::create($res->start_at);
+        $shops = Shops::leftJoin('favorites', 'shops.id', '=', 'favorites.shops_id')
+            ->select('shops.*', 'favorites.shops_id')
+            ->get();
 
-        // 日付のフォーマットを変更
-        //$formattedDate = $date->format('Y-m-d');
-
-
+        $fav1 = Favorites::all();
 
 
-
-        //$dateTime = $res->start_at;
-        //$date = $dateTime->format('Y-m-d'); // 日付の取得
-        //$time = $dateTime->format('H:i:s'); // 時間の取得
+        $shops1 = Shops::leftJoin('favorites', 'shops.id', '=', 'favorites.shops_id')
+            ->select('shops.*', 'favorites.shops_id')
+            ->get();
 
 
 
-
-
-
-        //$day = $res->where("id", "=", 'reservations.shop_id')->get();
-
-        //$date = $day->start_at;
-
-
-        // $time = $request->time->where("id", "=", $shop_id)->get();
-        //$shops = Shops::all()->where("id", "=", $keyword)->first();
-
-        //$formattedDateTime = $now->format('Y-m-d H:i:s');
-        //$formattedDate = $now->format('Y-m-d');
-        //$formattedTime = $now->format('H:i:s');
-
-        //$day = $Date->format('Y-m-d');
-        //$time = $Date->format('H:i');
-
-
-        return view('mypage', compact('reserv', 'fav', 'shops', 'user'));
+        return view('mypage', compact('reserv', 'fav', 'shops', 'user', 'shops1', 'fav1'));
     }
 
     public function day(Request $request)
     {
 
-        //$keyword = $request->search;
-        //$key = $keyword;
-        //$keyword = 1;
-        //$sshops = Shops::all();
-        //$shops = $query->where('area_id', 'like', '%' . $keyword . '%')->get();
-        //$shops = Shops::all()->where("genre_id", "=", $key);
-        //$shops = Shops::all()->where('name', 'like', '%' . $keyword . '%')->get();
 
-        //$shops = Shops::all();
-
-        //$fav = Favorites::all();
-
-
-
-        //$query = Shops::query();
-        //$shops = $query->where('name', 'like', '%' q. $key . '%')->get();
-
-
-
-
-
-        //$fav = Favorites::all();
-
-        //return view('menu', compact('shops', 'keyword'));
-        //return view('index', compact('shops', 'keyword', 'fav'));
-
-
-        //shoID
-        //$keyword = $request->shoID;
         $day = $request->day;
         //$shops = Shops::all()->where("id", "=", $keyword)->first();
 
@@ -127,31 +68,7 @@ class UserController extends Controller
     public function time(Request $request)
     {
 
-        //$keyword = $request->search;
-        //$key = $keyword;
-        //$keyword = 1;
-        //$sshops = Shops::all();
-        //$shops = $query->where('area_id', 'like', '%' . $keyword . '%')->get();
-        //$shops = Shops::all()->where("genre_id", "=", $key);
-        //$shops = Shops::all()->where('name', 'like', '%' . $keyword . '%')->get();
 
-        //$shops = Shops::all();
-
-        //$fav = Favorites::all();
-
-
-
-        //$query = Shops::query();
-        //$shops = $query->where('name', 'like', '%' q. $key . '%')->get();
-
-
-
-
-
-        //$fav = Favorites::all();
-
-        //return view('menu', compact('shops', 'keyword'));
-        //return view('index', compact('shops', 'keyword', 'fav'));
 
 
         //shoID
@@ -171,32 +88,6 @@ class UserController extends Controller
     public function num(Request $request)
     {
 
-        //$keyword = $request->search;
-        //$key = $keyword;
-        //$keyword = 1;
-        //$sshops = Shops::all();
-        //$shops = $query->where('area_id', 'like', '%' . $keyword . '%')->get();
-        //$shops = Shops::all()->where("genre_id", "=", $key);
-        //$shops = Shops::all()->where('name', 'like', '%' . $keyword . '%')->get();
-
-        //$shops = Shops::all();
-
-        //$fav = Favorites::all();
-
-
-
-        //$query = Shops::query();
-        //$shops = $query->where('name', 'like', '%' q. $key . '%')->get();
-
-
-
-
-
-        //$fav = Favorites::all();
-
-        //return view('menu', compact('shops', 'keyword'));
-        //return view('index', compact('shops', 'keyword', 'fav'));
-
 
         //shoID
         $num = $request->num;
@@ -207,11 +98,6 @@ class UserController extends Controller
         $shops = Shops::all();
         //$user = Auth::id();
         $fav = Favorites::all();
-
-        //$posts = DB::table('shops')
-        // ->join('User', '', '=', 'users.id')
-        //->select('posts.*', 'users.name')
-        //  ->get();
 
 
         return view('mypage', compact('num', 'shops', 'fav'));
@@ -235,15 +121,6 @@ class UserController extends Controller
         $user = Auth::id();
         $day = $request->day;
         $time = $request->time;
-        //$num = $request->num;
-        //$fav = Favorites::all();
-
-
-        //]);
-
-
-        //$user = Auth::id();
-        //$fav = Favorites::all();
 
         $user_id = Auth::id();
 
@@ -256,50 +133,16 @@ class UserController extends Controller
         $day = $request->day;
         $time = $request->time;
         $num = $request->num;
-        //$time = $request->shoID3;
-        //$num = $request->shoID4;
 
-        //$shopId = $request->shoID;
-
-        //$day = $request->day;
-
-
-        //$shopId = $request->shoID;
-//$name = $request->shoID1;
-//$day = $request->shoID2;
-//$time = $request->shoID3;
-//$num = $request->shoID4;
-
-
-
-        //shoID
-        //$time = $request->time;
-
-        //$shops = Shops::all();
         $shops = Shops::all()->where("id", "=", $shopId)->first();
 
 
-        //$fav = Favorites::all();
-
-
-        //$num = $request->num;
-
-
-
-        //$shops = Shops::all();
-
-        //$fav = Favorites::all();
-
-        //$test = compact('day', 'time', 'num', 'shops', 'fav', 'shopId');
-        //session($test);
 
 
         $a = 1;
 
-        //return view('mypage', compact('day', 'time', 'num', 'shops', 'fav', 'shopId'));
         return view('description', compact('day', 'time', 'num', 'shops', 'shopId', 'a', 'resTime'));
-        //return view('description', compact('day', 'time', 'num', 'shops', 'fav', 'shopId'), redirect('day', 'time', 'num', 'shops', 'fav', 'shopId'));
-        //return redirect('day', 'time', 'num', 'shops', 'fav', 'shopId');
+
     }
 
 
@@ -337,15 +180,6 @@ class UserController extends Controller
         $resTime = date('Y-m-d H:i:s', (int) strtotime($date . $time1));
 
 
-        //$dateWithTime = Carbon::create($day, $time);
-
-        // 日付と時間を結合してCarbonオブジェクトを作成
-        //$combinedDateTime = Carbon::createFromFormat('Y-m-d H:i', $date . ' ' . $time1);
-
-        // 任意の形式にフォーマットする場合
-        //$formattedDateTime = $combinedDateTime->format('Y-m-d H:i');
-
-        // 必要に応じてデータベースに保存するなどの処理を行います
 
 
         Favorites::create([
@@ -359,9 +193,6 @@ class UserController extends Controller
         ]);
 
 
-
-        //return view('test', compact('day', 'time', 'num', 'shops', 'fav', 'shopId', 'shopID'));
-        //return view('reservation', compact('resTime'));
         return view('description', compact('day', 'time', 'num', 'shops', 'fav'));
 
 
@@ -440,18 +271,22 @@ class UserController extends Controller
         // "updated_at" => now(),
 
         //]);
+        //$day = $request->day;
+        $tex = $request->tex;
+        $day = $request->day;
+        $time = $request->time;
+        $num = $request->num;
+
+        //$rid = $request->shID1;
 
 
-        $rid = $request->shoID1;
-
-
-        $a = 1;
+        //$a = 1;
 
 
 
         //return view('test', compact('day', 'time', 'num', 'shops', 'fav', 'shopId', 'shopID'));
         //return view('reservation', compact('resTime'));
-        return view('test', compact('a', 'rid'));
+        return view('test', compact('tex', 'day', 'time', 'num'));
         //return view('test', compact('resTime'));
 
 
@@ -461,11 +296,6 @@ class UserController extends Controller
 
     public function done(Request $request)
     {
-
-        //<input type="hidden" type="text" name="shoID1" value="{{$shops->user_id}}">
-        //        <input type="hidden" type="text" name="shoID2" value="{{$shops->id}}">
-        //       <input type="hidden" type="text" name="shoID3" value="{{$resTime}}">
-        //       <input type="hidden" type="text" name="shoID4" value="{{$num}}">
 
         $user_id = Auth::id();
         $shop_id = $request->shoID2;
@@ -494,10 +324,7 @@ class UserController extends Controller
     public function done2(Request $request)
     {
 
-        //<input type="hidden" type="text" name="shoID1" value="{{$shops->user_id}}">
-        //        <input type="hidden" type="text" name="shoID2" value="{{$shops->id}}">
-        //       <input type="hidden" type="text" name="shoID3" value="{{$resTime}}">
-        //       <input type="hidden" type="text" name="shoID4" value="{{$num}}">
+
 
         $user_id = Auth::id();
         $shop_id = $request->shoID2;
@@ -550,12 +377,6 @@ class UserController extends Controller
         $shops = Shops::all();
 
 
-        //$fav = Favorites::all();
-        //$reserv = Reservations::all();
-
-        //$fav = Favorites::where('id', 'active')->get();
-        //$fav = Favorites::leftJoin('shops', 'shops.id', '=', 'favorites.shops_id')->get();
-        //$reserv = Reservations::leftJoin('shops', 'shops.id', '=', 'reservations.shop_id')->get();
 
         $res = Reservations::leftJoin('shops', 'shops.id', '=', 'reservations.shop_id')->get();
 
@@ -564,30 +385,110 @@ class UserController extends Controller
 
 
 
-        //$keyword = $request->shoID1;
-        //$key = $keyword;
-
-
-
-
-        //$key = $keyword;
-
 
         $del = Reservations::all()->where("shop_id", "=", $rid)->first()->delete();
 
-        $reserv = Reservations::leftJoin('shops', 'shops.id', '=', 'reservations.shop_id')->get();
+        //$reserv = Reservations::leftJoin('shops', 'shops.id', '=', 'reservations.shop_id')->get();
+
+        //$fav = Favorites::leftJoin('shops', 'shops.id', '=', 'favorites.shops_id')->get();
+
+        //$user_id = Auth::id();
+
+        //$user = User::all()->where("id", "=", $user_id)->first();
+
+
+
+
+        //return view('mypage', compact('reserv', 'fav', 'shops', 'user'));
+
 
         $fav = Favorites::leftJoin('shops', 'shops.id', '=', 'favorites.shops_id')->get();
+        $reserv = Reservations::leftJoin('shops', 'shops.id', '=', 'reservations.shop_id')->get();
+
+        $res = Reservations::leftJoin('shops', 'shops.id', '=', 'reservations.shop_id')->get();
+
+        $ress = Reservations::leftJoin('shops', 'shops.id', '=', 'reservations.shop_id')->get();
+
 
         $user_id = Auth::id();
 
         $user = User::all()->where("id", "=", $user_id)->first();
 
+        $shops = Shops::leftJoin('favorites', 'shops.id', '=', 'favorites.shops_id')
+            ->select('shops.*', 'favorites.shops_id')
+            ->get();
+
+        $fav1 = Favorites::all();
+
+
+        $shops1 = Shops::leftJoin('favorites', 'shops.id', '=', 'favorites.shops_id')
+            ->select('shops.*', 'favorites.shops_id')
+            ->get();
 
 
 
-        return view('mypage', compact('reserv', 'fav', 'shops', 'user'));
+        return view('mypage', compact('reserv', 'fav', 'shops', 'user', 'shops1', 'fav1'));
+
+
         //return redirect('index2', compact('keyword', 'key'));
     }
+
+
+
+
+
+    public function day1(Request $request)
+    {
+
+        $day = $request->day;
+        //$shops = Shops::all()->where("id", "=", $keyword)->first();
+
+        //$a = new Carbon('day');
+
+        $shops = Shops::all();
+        //$user = Auth::id();
+        $fav = Favorites::all();
+
+
+        return view('description', compact('day', 'shops', 'fav'));
+        //return view('mypage');
+    }
+
+    public function time1(Request $request)
+    {
+
+
+
+        //shoID
+        $time = $request->time;
+        //$shops = Shops::all()->where("id", "=", $keyword)->first();
+
+        //$a = new Carbon('day');
+        $shops = Shops::all();
+        //$user = Auth::id();
+        $fav = Favorites::all();
+
+
+
+        return view('description', compact('time', 'shops', 'fav'));
+    }
+
+    public function num1(Request $request)
+    {
+
+
+        $num = $request->num;
+        //$shops = Shops::all()->where("id", "=", $keyword)->first();
+
+        //$a = new Carbon('day');
+
+        $shops = Shops::all();
+        //$user = Auth::id();
+        $fav = Favorites::all();
+
+
+        return view('description', compact('num', 'shops', 'fav'));
+    }
+
 
 }

@@ -9,10 +9,7 @@
     <div class="flex1">
         <div class="register__content">
             <div class="box1">
-                <!--<div class="register__shadow">
 
-        
-            <div class="register__shadow">-->
                 <div class="container">
                     <div class="container__color2">
                         <h2 class="h2_top">会員登録ありがとうございます</h2>

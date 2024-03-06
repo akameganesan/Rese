@@ -1,3 +1,139 @@
+.heart {
+    /*width: 100px;*/
+    width: 40px;
+    /* 正方形を作る */
+    /*height: 100px;*/
+    height: 40px;
+    /* 正方形を作る */
+    position: relative;
+    /* 基準位置とする */
+}
+
+.heart::before,
+.heart::after {
+    content: "";
+    /* 疑似要素に必須 */
+    width: 50%;
+    /* ハートの丸い部分の大きさにかかわる */
+    height: 80%;
+    /* ハートの高さにかかわる */
+    background: #E0548E;
+    /* ハートの色 */
+    border-radius: 25px 25px 0 0;
+    /* ハートの半円を生成 */
+    display: block;
+    /* ブロック要素にする */
+    position: absolute;
+    /* 相対位置に指定 */
+}
+
+.heart::before {
+    transform: rotate(-45deg);
+    /* 左に回転 */
+    left: 14%;
+    /* 左からの位置を指定 */
+}
+
+.heart::after {
+    transform: rotate(45deg);
+    /* 右に回転 */
+    right: 14%;
+    /* 右からの位置を指定 */
+}
+
+
+
+
+.heart__margin {
+    margin-left: 200px;
+    margin-top: -35px;
+    margin-bottom: 10px;
+}
+
+
+.heart__size {
+    width: 80%;
+    height: 80%;
+}
+
+
+
+
+/*↓ハート改造*/
+
+
+
+
+.heart1 {
+    /*width: 100px;*/
+    width: 40px;
+    /* 正方形を作る */
+    /*height: 100px;*/
+    height: 40px;
+    /* 正方形を作る */
+    position: relative;
+    /* 基準位置とする */
+}
+
+.heart1::before,
+.heart1::after {
+    content: "";
+    /* 疑似要素に必須 */
+    width: 50%;
+    /* ハートの丸い部分の大きさにかかわる */
+    height: 80%;
+    /* ハートの高さにかかわる */
+    background: #c2c2c2;
+    /* ハートの色 */
+    border-radius: 25px 25px 0 0;
+    /* ハートの半円を生成 */
+    display: block;
+    /* ブロック要素にする */
+    position: absolute;
+    /* 相対位置に指定 */
+}
+
+.heart1::before {
+    transform: rotate(-45deg);
+    /* 左に回転 */
+    left: 14%;
+    /* 左からの位置を指定 */
+}
+
+.heart1::after {
+    transform: rotate(45deg);
+    /* 右に回転 */
+    right: 14%;
+    /* 右からの位置を指定 */
+}
+
+
+
+
+.heart1__margin {
+    margin-left: 200px;
+    margin-top: -35px;
+    margin-bottom: 10px;
+}
+
+
+.form__button-submit {
+    padding: 10px;
+    /*width: 40%;*/
+    width: 100px;
+    height: 40px;
+    border: none;
+    border-radius: 8px;
+    background: #264dfa;
+    color: #fff;
+    cursor: pointer;
+    /*margin-left: 200px;*/
+    margin-left: 0px;
+    font-size: 16px;
+    /*margin-top: -10px;*/
+}
+
+
 .attendance__alert--success {
     padding: 10px 30px;
     border-color: #badbcc;
@@ -94,7 +230,7 @@ body {
 .flex__item {
     display: flex;
     justify-content: space-between;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
 }
 
 .flex__item2 {
@@ -276,7 +412,7 @@ body {
 }
 
 
-.blog-wrap__item-content-ttl{
+.blog-wrap__item-content-ttl {
     font-size: 30px;
     color: #000;
     margin-top: -5px;
@@ -329,6 +465,7 @@ body {
     /* 正方形を作る */
     position: relative;
     /* 基準位置とする */
+
     border: none;
         outline: none;
         background: transparent;
@@ -369,14 +506,14 @@ body {
 
 
 
-.heart__margin{
+.heart__margin {
     margin-left: 200px;
     margin-top: -35px;
     margin-bottom: 10px;
 }
 
 
-.heart__size{
+.heart__size {
     width: 80%;
     height: 80%;
 }
@@ -452,9 +589,9 @@ body {
 
 
 .button__none {
-    border: none;
-    outline: none;
-    background: transparent;
+     border: none;
+        outline: none;
+        background: transparent;
 }
 
 
@@ -474,6 +611,6 @@ body {
 
 
 
-.h__size{
+.h__size {
     width: 50px;
 }

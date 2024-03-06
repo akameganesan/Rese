@@ -621,8 +621,7 @@ body {
 }
 
 .box2 {
-background: rgb(42, 110, 255);
-    background-color: rgb(13, 96, 252);
+background: rgb(21, 141, 240);
     color: #ffffff;
     /*margin-right: 20px;*/
     font-size: 32px;
@@ -717,9 +716,10 @@ background: rgb(42, 110, 255);
 }
 
 .confirm1 {
-    background: rgb(13, 90, 235);
+    background: rgb(21, 141, 240);
     color: white;
     font-size: 30px;
+    padding-top: 30px;
 }
 
 
@@ -810,5 +810,22 @@ background: rgb(42, 110, 255);
         font-size: 40px;
             margin-left: 40px;
 
+
+}
+
+.h__size{
+    font-size: 20px;
+    margin-left: 50px;
+
+}
+
+.h__size_s {
+   margin-top: -20px;
+
+}
+
+.h__size_w {
+    margin-top: 0px;
+    margin-bottom: 0px;
 
 }

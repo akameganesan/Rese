@@ -386,3 +386,11 @@
     transition: 0.4s;
     position: relative;*/
 }
+
+.a__size{
+    font-size: 40px;
+    height: 60px;
+    background: #3492d1;
+    color: #ffffff;
+
+}

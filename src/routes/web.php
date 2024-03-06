@@ -63,6 +63,11 @@ Route::get('/create3', [FavoriteController::class, 'create3']);
 Route::post('/create3', [FavoriteController::class, 'create3']);
 
 
+//Route::get('/create3', [UserController::class, 'test']);
+//Route::post('/create3', [UserController::class, 'test']);
+
+
+
 
 Route::post('/add', [FavoriteController::class, 'create']);
 //Route::get('/', [FavoriteController::class, 'index']);
@@ -120,6 +125,17 @@ Route::post('/mypage', [UserController::class, 'mypage']);
 
 Route::get('/delete', [UserController::class, 'delete']);
 Route::post('/delete', [UserController::class, 'delete']);
+
+
+
+Route::get('/day1', [UserController::class, 'day1']);
+Route::post('/day1', [UserController::class, 'day1']);
+
+Route::get('/time1', [UserController::class, 'time1']);
+Route::post('/time1', [UserController::class, 'time1']);
+
+Route::get('/num1', [UserController::class, 'num1']);
+Route::post('/num1', [UserController::class, 'num1']);
 
 
 
