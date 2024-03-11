@@ -13,6 +13,9 @@ use Illuminate\Support\Facades\DB;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Auth;
 
+
+
+
 class UserController extends Controller
 {
     //
@@ -20,83 +23,72 @@ class UserController extends Controller
     {
 
         $fav = Favorites::leftJoin('shops', 'shops.id', '=', 'favorites.shops_id')->get();
-        $reserv = Reservations::leftJoin('shops', 'shops.id', '=', 'reservations.shop_id')->get();
+
+
+        $keyword = Auth::id();
+
+
+        //$reserv = Reservations::leftJoin('shops', 'shops.id', '=', 'reservations.shop_id')->get();
+        $reserv = Reservations::leftJoin('shops', 'shops.id', '=', 'reservations.shop_id')->where("user_id", "=", $keyword)->get();
+
+
+
+
 
         $res = Reservations::leftJoin('shops', 'shops.id', '=', 'reservations.shop_id')->get();
-
         $ress = Reservations::leftJoin('shops', 'shops.id', '=', 'reservations.shop_id')->get();
-
-
         $user_id = Auth::id();
+        //$user = Auth::id();//
 
         $user = User::all()->where("id", "=", $user_id)->first();
 
-        $shops = Shops::leftJoin('favorites', 'shops.id', '=', 'favorites.shops_id')
-            ->select('shops.*', 'favorites.shops_id')
-            ->get();
+        //$shops = Shops::leftJoin('favorites', 'shops.id', '=', 'favorites.shops_id')->select('shops.*', 'favorites.shops_id')->get();
+
+        $shops = Shops::leftJoin('favorites', 'shops.id', '=', 'favorites.shops_id')->where("user_id", "=", $keyword)->get();
+
+
+
+
+
+
+
 
         $fav1 = Favorites::all();
-
-
         $shops1 = Shops::leftJoin('favorites', 'shops.id', '=', 'favorites.shops_id')
             ->select('shops.*', 'favorites.shops_id')
             ->get();
 
-
-
-        return view('mypage', compact('reserv', 'fav', 'shops', 'user', 'shops1', 'fav1'));
+        return view('mypage', compact('reserv', 'fav', 'shops', 'user', 'shops1', 'fav1', ));
     }
 
     public function day(Request $request)
     {
 
-
         $day = $request->day;
-        //$shops = Shops::all()->where("id", "=", $keyword)->first();
 
-        //$a = new Carbon('day');
 
         $shops = Shops::all();
-        //$user = Auth::id();
+
         $fav = Favorites::all();
 
 
         return view('mypage', compact('day', 'shops', 'fav'));
-        //return view('mypage');
+
     }
 
     public function time(Request $request)
     {
-
-
-
-
-        //shoID
         $time = $request->time;
-        //$shops = Shops::all()->where("id", "=", $keyword)->first();
-
-        //$a = new Carbon('day');
         $shops = Shops::all();
-        //$user = Auth::id();
         $fav = Favorites::all();
-
-
 
         return view('mypage', compact('time', 'shops', 'fav'));
     }
 
     public function num(Request $request)
     {
-
-
-        //shoID
         $num = $request->num;
-        //$shops = Shops::all()->where("id", "=", $keyword)->first();
-
-        //$a = new Carbon('day');
-
         $shops = Shops::all();
-        //$user = Auth::id();
         $fav = Favorites::all();
 
 
@@ -106,18 +98,9 @@ class UserController extends Controller
 
     public function res(Request $request)
     {
-
         $shop_id = $request->shoID;
-        //$day = $request->day;
-        //$time1 = $request->time;
         $num = $request->num;
-        //$num = $request->num;
-
         $shops = Shops::all()->where("id", "=", $shop_id)->first();
-
-
-
-        //$shops = Shops::all();
         $user = Auth::id();
         $day = $request->day;
         $time = $request->time;
@@ -136,9 +119,6 @@ class UserController extends Controller
 
         $shops = Shops::all()->where("id", "=", $shopId)->first();
 
-
-
-
         $a = 1;
 
         return view('description', compact('day', 'time', 'num', 'shops', 'shopId', 'a', 'resTime'));
@@ -147,7 +127,7 @@ class UserController extends Controller
 
 
 
-    public function reservation(Request $request)
+    public function reservation(ReservationsRequest $request)
     {
         $shop_id = $request->shoID;
         $day = $request->day;
@@ -156,20 +136,12 @@ class UserController extends Controller
 
         $shops = Shops::all()->where("id", "=", $shop_id)->first();
         $fav = Favorites::all();
-
-
-        //$shops = Shops::all();
-        //$user = Auth::id();
         $day = $request->day;
         $time = $request->time;
         $num = $request->num;
         $fav = Favorites::all();
 
 
-        //]);
-
-
-        //$user = Auth::id();
         $fav = Favorites::all();
 
         $user_id = Auth::id();
@@ -178,9 +150,6 @@ class UserController extends Controller
         $time1 = $time;   // 時間
 
         $resTime = date('Y-m-d H:i:s', (int) strtotime($date . $time1));
-
-
-
 
         Favorites::create([
             "user_id" => $user_id,
@@ -200,7 +169,7 @@ class UserController extends Controller
 
 
 
-    public function test(Request $request)
+    public function test($request)
     {
         //$session = $request->session()->all();
         //$year = 2024;
@@ -368,12 +337,6 @@ class UserController extends Controller
         $rid = $request->shoID1;
 
 
-
-
-
-
-        //////////////////////////////////////
-
         $shops = Shops::all();
 
 
@@ -382,24 +345,9 @@ class UserController extends Controller
 
         $ress = Reservations::leftJoin('shops', 'shops.id', '=', 'reservations.shop_id')->get();
 
-
-
-
-
         $del = Reservations::all()->where("shop_id", "=", $rid)->first()->delete();
 
-        //$reserv = Reservations::leftJoin('shops', 'shops.id', '=', 'reservations.shop_id')->get();
 
-        //$fav = Favorites::leftJoin('shops', 'shops.id', '=', 'favorites.shops_id')->get();
-
-        //$user_id = Auth::id();
-
-        //$user = User::all()->where("id", "=", $user_id)->first();
-
-
-
-
-        //return view('mypage', compact('reserv', 'fav', 'shops', 'user'));
 
 
         $fav = Favorites::leftJoin('shops', 'shops.id', '=', 'favorites.shops_id')->get();
@@ -408,7 +356,6 @@ class UserController extends Controller
         $res = Reservations::leftJoin('shops', 'shops.id', '=', 'reservations.shop_id')->get();
 
         $ress = Reservations::leftJoin('shops', 'shops.id', '=', 'reservations.shop_id')->get();
-
 
         $user_id = Auth::id();
 
@@ -489,6 +436,34 @@ class UserController extends Controller
 
         return view('description', compact('num', 'shops', 'fav'));
     }
+
+    public function timetest2(Request $request)
+    {
+
+        if (empty($request->day)) {
+            $day = 1;
+        } else {
+            $day = $request->day;
+        }
+
+        $time = $request->time;
+
+        if (empty($request->time)) {
+            $time = 1;
+        } else {
+            $day = $request->day;
+        }
+
+
+
+
+
+
+
+        return view('timetest2', compact('day', 'time'));
+    }
+
+
 
 
 }

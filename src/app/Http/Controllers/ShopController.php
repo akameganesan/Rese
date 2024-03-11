@@ -14,28 +14,36 @@ use Illuminate\Support\Facades\Auth;
 
 
 
+
+
 class ShopController extends Controller
 {
     //
     public function index()
     {
-       
+
         $fav = Favorites::all();
 
+        $keyword = Auth::id();
 
         $shops = Shops::leftJoin('favorites', 'shops.id', '=', 'favorites.shops_id')
-            ->select('shops.*', 'favorites.shops_id')
-            ->get();
+            ->select('shops.*', 'favorites.shops_id', 'favorites.user_id')->get();
+        //->where("user_id", "=", $keyword)->get();
 
 
-        return view('index', compact('shops', 'fav'));
+        $ssshops = Shops::leftJoin('favorites', 'shops.id', '=', 'favorites.shops_id')->where("user_id", "=", $keyword)->get();
+
+
+
+
+        return view('index', compact('shops', 'fav', 'ssshops', 'keyword'));
 
 
     }
 
     public function index2()
     {
-    
+
 
 
         $shops = Shops::all();
@@ -68,7 +76,11 @@ class ShopController extends Controller
             $fav = Favorites::all();
 
 
+
         }
+
+
+
 
         return view('index', compact('shops', 'keyword', 'key', 'fav'));
     }

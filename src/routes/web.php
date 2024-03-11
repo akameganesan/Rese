@@ -84,8 +84,7 @@ Route::get('/remove', [FavoriteController::class, 'remove']);
 Route::post('/remove', [FavoriteController::class, 'remove']);
 
 
-Route::get('/index2', [ShopController::class, 'index2']);
-Route::post('/index2', [ShopController::class, 'index2']);
+
 
 
 Route::get('/detail', [ShopController::class, 'detail']);
@@ -126,16 +125,11 @@ Route::post('/mypage', [UserController::class, 'mypage']);
 Route::get('/delete', [UserController::class, 'delete']);
 Route::post('/delete', [UserController::class, 'delete']);
 
+Route::get('/test15', [UserController::class, 'timetest2']);
+Route::post('/test15', [UserController::class, 'timetest2']);
 
 
-Route::get('/day1', [UserController::class, 'day1']);
-Route::post('/day1', [UserController::class, 'day1']);
 
-Route::get('/time1', [UserController::class, 'time1']);
-Route::post('/time1', [UserController::class, 'time1']);
-
-Route::get('/num1', [UserController::class, 'num1']);
-Route::post('/num1', [UserController::class, 'num1']);
 
 
 

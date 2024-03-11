@@ -440,7 +440,7 @@ body {
 
 .heart1__margin {
     margin-left: 200px;
-    margin-top: -35px;
+    margin-top: -55px;
     margin-bottom: 10px;
 }
 
@@ -475,5 +475,10 @@ body {
 
 
 .h__size{
+    width: 50px;
+}
+
+
+.h__move {
     width: 50px;
 }

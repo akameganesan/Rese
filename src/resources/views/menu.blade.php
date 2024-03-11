@@ -37,7 +37,7 @@
         <div class="p__atsumi"></div>
         <a class="a__size3" href="/">HOME</a>
         <a class="a__size4" href="/register">Registration</a>
-        <div class="p__atsumi3"></div>
+        <!--<div class="p__atsumi3"></div>-->
         <a class="a__size2" href="/login">Login</a>
         @endif
     </main>

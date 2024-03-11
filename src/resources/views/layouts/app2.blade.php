@@ -12,6 +12,8 @@
 </head>
 
 <body>
+
+
     <header class="header">
         <div class="header__inner">
             <div class="header-utilities">
@@ -29,14 +31,12 @@
                                         <ul class="gnavi__lists">
                                             <div calss="pulldown__shadow">
                                                 <li class="gnavi__list">
-                                                    <a href="#">All areas</a>
+                                                       <a href="#">All areas</a>
                                                     <ul class="dropdown__lists">
                                                         <!--<li class="dropdown__list"><a href="#" value="1">東京都</a>-->
-                                                        
-                                                            
+                                                            <!--<a href="#">All areas</a>-->
                                                             <li>  <a class="a_size" href="/">All areas</a>
                                                             </li>
-                                                        
                                                         <form action="area" type="number" name="area" method="post">
                                                             @csrf
                                                              @if(empty($key))
@@ -88,7 +88,6 @@
 
                                                 </li>
                                             </div>
-
                                             <li class="gnavi__list">
                                                 <a href="#">All genres</a>
                                                 <ul class="dropdown__lists">

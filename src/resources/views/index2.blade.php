@@ -7,6 +7,12 @@
 @section('content')
 
 
+@php
+$key = Auth::id();
+echo $key;
+@endphp
+
+
 
 
 <div class="background">
@@ -54,48 +60,56 @@
                         </form>
                         
 
+                 
+                    
 
-                        @if(Auth::check())
-                            @if(empty($shop->shops_id))
-                                <form action="/create3" type="text" name="shID1" method="post">
-                                    @csrf
+                      
+                            
+                                    
+                           
+                            @if(Auth::check())                           
+                                @if(empty($shop->shops_id))                               
+                                    <form action="/create3" type="text" name="shID1" method="post">
+                                        @csrf
                                         <input type="hidden" name="shID1" value="{{$shop->id}}" size="10">
                                             <div class="heart1__margin">
-                                              <button class="heart1" type="submit"></button>
+                                                <button class="heart1" type="submit"></button>
                                             </div>
-                                </form>
-                            @else
-                                <form action="/remove" type="text" name="shID1" method="post">
-                                    @csrf
-                                    <input type="hidden" name="shID1" value="{{$shop->id}}" size="10">
+                                    </form>                                   
+                                @else
+                                    <form action="/remove" type="text" name="shID1" method="post">
+                                        @csrf
+                                        <input type="hidden" name="shID1" value="{{$shop->id}}" size="10">
                                         <div class="heart1__margin">
                                             <button class="heart" type="submit"></button>
-                                        </div>
- 
-                                                                <!--</div>-->
-                                </form>
+                                        </div>                                                                <!--</div>-->
+                                    </form>                                  
+                                @endif
                             @endif
-                        @endif
+                     
+                      
+
                     </div>
                 </div>
             </a>
             @endforeach
+
+
+
+
+
+
+
+
+
+
+
+
         </div>
     </div>
 </div>
 
 
 
-
-
-
-
-
-
-
-
-<div class="h__size">
-<img src="img/ハートのマークピンク.svg" alt="" class="blog-wrap__item-eyecatch">
-</div>
 
 @endsection

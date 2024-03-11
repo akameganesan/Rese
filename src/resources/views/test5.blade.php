@@ -36,9 +36,20 @@
                                                     <a href="#">All areas</a>
                                                    
                                                     <ul class="dropdown__lists">
-                                                        <!--a href="#">All areas</!--a>-->
+                                                        @if(enmty($vic))
                                                         
+                                                        <a href="#">All areas</a>
                                                         
+                                                        @elseif
+                                                        
+                                                        <a href="#">{{$vic}}</a>
+
+                                                        @elseif
+
+                                                        
+                                                        @endif
+
+
                                                         <!--<li class="dropdown__list"><a href="#" value="1">東京都</a>-->
                                                         
                                                             <!--<a href="#">All areas</a>-->

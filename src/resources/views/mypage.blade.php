@@ -6,7 +6,9 @@
 
 
 @section('content')
-
+@php
+$key= Auth::id();
+@endphp
 
 
 <div class="background">
@@ -18,48 +20,45 @@
             @php
 $ab = 0;
             @endphp
-
-
-                                    @foreach($reserv as $re)
-                                        <div class="confirm">
-                                            <div class="box__move">
-                                                <div class="box">
-                                                    <div class="icon__flex">
-                                                        <div class="icon__left">
-                                                            <img class="size__icon" src="{{ asset('img/時計の無料アイコン (1).svg') }}"
+            @foreach($reserv as $re)
+                <div class="confirm">
+                    <div class="box__move">
+                        <div class="box">
+                            <div class="icon__flex">
+                                <div class="icon__left">
+                                    <img class="size__icon" src="{{ asset('img/時計の無料アイコン (1).svg') }}"
                                                     alt="">
-                                                        </div>
-                                                    </div>
-                                                    @php
+                                </div>
+                            </div>
+                                @php
     $ab += 1;
     //echo $ab;
-                                                    @endphp
-                                                    <div class="title__res3">予約{{$ab}}
-                                                    </div>
-                                                    <form class="form__left" action="/delete" type="text" name="shoID" method="post">
-                                                        @csrf
-                                                        <div class="flex__item2">
-                                                            <input type="hidden" name="shoID1" value="{{$re->shop_id}}" size="10">
-                                                            <div class="form__button">
-                                                                <button class="form__button-submit5" type="submit"><img
-                                                            class="size__icon" src="{{ asset('img/太いバツのアイコン2.svg') }}"
+                                @endphp
+                            <div class="title__res3">予約{{$ab}}</div>
+                                <form class="form__left" action="/delete" type="text" name="shoID" method="post">
+                                    @csrf
+                                        <div class="flex__item2">
+                                        <input type="hidden" name="shoID1" value="{{$re->shop_id}}" size="10">
+                                        <div class="form__button">
+                                            <button class="form__button-submit5" type="submit"><img
+                                            class="size__icon" src="{{ asset('img/太いバツのアイコン2.svg') }}"
                                                             alt=""></button>
-                                                            </div>
-                                                        </div>
-                                                    </form>
-                                                    @if(empty($re->name))
-                                                     @else
-                                                        <h2>Shop　　　　{{$re->name}}</h2>
-                                                    @endif
-                                                    @if(empty($re->start_at))
-                                                            <h2>Date </h2>
-                                                    @else
-                                                    @php
+                                        </div>
+                                        </div>
+                                    </form>
+                                    @if(empty($re->name))
+                                    @else
+                                        <h2>Shop　　　　{{$re->name}}</h2>
+                                    @endif
+                                    @if(empty($re->start_at))
+                                        <h2>Date </h2>
+                                    @else
+                                    @php
         $date = \Carbon\Carbon::create($re->start_at);
         $formattedDate = $date->format('Y-m-d');
         $formattedTime = $date->format('H:i');
-                                                    @endphp
-                                                        <h2>Date　　　　{{$formattedDate}}</h2>
+                                    @endphp
+                                        <h2>Date　　　　{{$formattedDate}}</h2>
                                                     @endif
                                                     @if(empty($re->start_at))
                                                         <h2>Time </h2>
@@ -74,13 +73,12 @@ $ab = 0;
                                                 </div>
                                             </div>
                                         </div>    
-                                    @endforeach       
- 
-                                            </div>
-                                            </div>
-                                            </div>
-                                            </div>
-
+                                    @endforeach
+                                 </div>
+                            </div>    
+                        </div>
+                    </div>
+                </div>
 
 
 
@@ -130,9 +128,6 @@ $ab = 0;
                                 </div>
                             </div>
                         </form>
-                        
-
-
                         @if(Auth::check())
                             @if(empty($shop->shops_id))
                                 
@@ -143,8 +138,6 @@ $ab = 0;
                                         <div class="heart1__margin">
                                             <button class="heart" type="submit"></button>
                                         </div>
- 
-                                                                <!--</div>-->
                                 </form>
                             @endif
                         @endif
@@ -157,6 +150,7 @@ $ab = 0;
     </div>
 </div>
 </div>
+
 
 
 @endsection
