@@ -12,14 +12,6 @@ use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 
 
-
-
-
-
-
-
-
-
 class FavoriteController extends Controller
 {
     //
@@ -34,12 +26,7 @@ class FavoriteController extends Controller
         ]);
 
         //$fav = Favorites::all();
-
-
         return view('index', compact('Item'));
-
-
-
 
     }
 
@@ -107,7 +94,7 @@ class FavoriteController extends Controller
         //$user = Auth::id();
         $fav = Favorites::all();
         $shops = Shops::leftJoin('favorites', 'shops.id', '=', 'favorites.shops_id')
-            ->select('shops.*', 'favorites.shops_id')
+            ->select('shops.*', 'favorites.shops_id', 'favorites.user_id')
             ->get();
 
 
@@ -137,7 +124,7 @@ class FavoriteController extends Controller
         $fav = Favorites::all();
         //$shops = Shops::all();
         $shops = Shops::leftJoin('favorites', 'shops.id', '=', 'favorites.shops_id')
-            ->select('shops.*', 'favorites.shops_id')
+            ->select('shops.*', 'favorites.shops_id', 'favorites.user_id')
             ->get();
 
         return view('index', compact('shops', 'fav'));

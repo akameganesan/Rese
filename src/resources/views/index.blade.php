@@ -5,18 +5,14 @@
 @endsection
 
 @section('content')
-
-
-
-
-
+@php
+$key = Auth::id();
+@endphp
 
 <div class="background">
-
     <div class="container">
         <div class="flex__item blog-wrap">
-            @foreach($shops as $shop)
-            
+            @foreach($shops as $shop)            
             <a class="blog-wrap__item" href="">
                 <div class="register__shadow2">
                    <img src="{{$shop->img_url}}" alt="" class="blog-wrap__item-eyecatch">
@@ -33,7 +29,6 @@
                             @elseif($shop->area_id == 3)
                             <li class="blog-wrap__item-content-tag">#福岡県</li>
                             @endif
-
                             @if($shop->genre_id == 1)
                             <li class="blog-wrap__item-content-tag2">#寿司</li>
                             @elseif($shop->genre_id == 2)
@@ -55,67 +50,39 @@
                                 </div>
                             </div>
                         </form>
-                        
-
-                 @if(Auth::check())
-                            
-                                    
-                           
-                                @if(empty($shop->shops_id))
-                               
-                        
-                                   
-                               
-                                    <form action="/create3" type="text" name="shID1" method="post">
-                                        @csrf
-                                        <input type="hidden" name="shID1" value="{{$shop->id}}" size="10">
-                                            <div class="heart1__margin">
-                                                <button class="heart1" type="submit"></button>
-                                            </div>
-                                    </form>
-                                   
-                                @else
-
-                                    @if($keyword == $shop->user_id)
+                        @if(Auth::check())
+                            @if(empty($shop->shops_id))
+                                <form action="/create3" type="text" name="shID1" method="post">
+                                    @csrf
+                                    <input type="hidden" name="shID1" value="{{$shop->id}}" size="10">
+                                    <div class="heart1__margin">
+                                        <button class="heart1" type="submit"></button>
+                                    </div>
+                                </form>
+                            @else
+                                @if($key == $shop->user_id)
                                     <form action="/remove" type="text" name="shID1" method="post">
                                         @csrf
                                         <input type="hidden" name="shID1" value="{{$shop->id}}" size="10">
-                                            <div class="heart1__margin">
-                                                <button class="heart" type="submit"></button>
-                                            </div>
-                                                                <!--</div>-->
+                                        <div class="heart1__margin">
+                                            <button class="heart" type="submit"></button>
+                                        </div>                                                                <!--</div>-->
                                     </form>  
-                                    @else
-                                     <form action="/create3" type="text" name="shID1" method="post">
+                                @else
+                                    <form action="/create3" type="text" name="shID1" method="post">
                                         @csrf
                                         <input type="hidden" name="shID1" value="{{$shop->id}}" size="10">
-                                            <div class="heart1__margin">
-                                                <button class="heart1" type="submit"></button>
-                                            </div>
+                                        <div class="heart1__margin">
+                                            <button class="heart1" type="submit"></button>
+                                        </div>
                                     </form>
-                                  
-                                    @endif
-                                  
                                 @endif
-
+                            @endif
                         @endif
-
-
-
                     </div>
                 </div>
             </a>
-
-
             @endforeach
-
-
-
-
-
-
-
-
         </div>
     </div>
 </div>
