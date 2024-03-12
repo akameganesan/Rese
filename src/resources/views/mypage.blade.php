@@ -10,7 +10,6 @@
 $key = Auth::id();
 @endphp
 
-
 <div class="flex-container">
     <div class="background__zenntai">
         <div class="text__move1">{{$user->name}}さん</div>
