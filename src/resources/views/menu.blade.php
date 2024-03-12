@@ -27,7 +27,7 @@
         <a class="a__size3" href="/">HOME</a>
         <form class="a__size10" action="/logout" method="post">
             @csrf
-            <!--<a class="a__size" href="/login">Logout</a>-->
+
             <button class="transparent-button" type="submit">Logout</button>
         </form>
         <div class="p__atsumi1"></div>
@@ -37,7 +37,7 @@
         <div class="p__atsumi"></div>
         <a class="a__size3" href="/">HOME</a>
         <a class="a__size4" href="/register">Registration</a>
-        <!--<div class="p__atsumi3"></div>-->
+
         <a class="a__size2" href="/login">Login</a>
         @endif
     </main>

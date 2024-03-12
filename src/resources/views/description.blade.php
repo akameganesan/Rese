@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-<!--詳細ページ建設予定地-->
+
 <div class="flex__item4">
     <div class="container1">
         <div class="header__inner">
@@ -22,7 +22,6 @@
             </div>
         </div>
         <div class="img__size1">
-            <!--<img src="{{$shops->img_url}}" alt="" class="blog-wrap__item-eyecatch">-->
             <img src="{{$shops->img_url}}" alt="">
         </div>
         <ul class="flex__item3">

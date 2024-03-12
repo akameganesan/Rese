@@ -1,77 +1,3 @@
-.attendance__alert--success {
-    padding: 10px 30px;
-    border-color: #badbcc;
-    background-color: #d1e7dd;
-    color: #0f5132;
-}
-
-.attendance__alert--danger {
-    padding: 10px 0;
-    border-color: #f5c2c7;
-    background-color: #f8d7da;
-    color: #842029;
-}
-
-.attendance__alert--danger ul {
-    margin: 0;
-}
-
-.attendance__panel {
-    margin: 0 auto;
-    width: 70%;
-}
-
-.attendance__button {
-    width: 100%;
-    text-align: center;
-}
-
-.attendance__button-submit {
-    padding: 5px;
-    width: 30%;
-    height: 50px;
-    border: none;
-    border-radius: 3px;
-    background: #000;
-    color: #fff;
-    cursor: pointer;
-}
-
-.attendance__content {
-    margin: 0 auto;
-    padding: 30px 15px;
-    max-width: 1230px;
-}
-
-.attendance-table {
-    margin: 30px auto;
-    width: 70%;
-    text-align: center;
-}
-
-.attendance-table__inner {
-    width: 100%;
-}
-
-.attendance-table__row {
-    border-bottom: 1px solid #ddd;
-}
-
-.attendance-table__header {
-    padding: 12px;
-    width: 20%;
-    font-weight: bold;
-}
-
-.attendance-table__item {
-    padding: 12px;
-    width: 20%;
-}
-
-
-
-/*ここから過去の演習のcss*/
-
 img {
     width: 100%;
     height: auto;
@@ -94,20 +20,13 @@ body {
 .flex__item {
     display: flex;
     justify-content: space-between;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
 }
 
 .flex__item2 {
     display: flex;
-    /*justify-content: space-between;*/
     flex-wrap: wrap;
-    /*justify-content: left;*/
 }
-
-/*.container {
-    max-width: 960px;
-    margin: 0 auto;
-}*/
 
 .container {
     max-width: 1350px;
@@ -115,26 +34,6 @@ body {
     background: #e6e6e6;
 }
 
-.small-container {
-    max-width: 760px;
-    margin: 80px auto 0;
-}
-
-.common__ttl {
-    font-size: 24px;
-    font-weight: bold;
-    position: relative;
-}
-
-.common__sub-ttl {
-    font-size: 16px;
-    font-family: "Indie Flower", cursive;
-    color: #b31566;
-}
-
-
-
-/*---------------------blog--------------------- */
 #blog {
     margin-top: 80px;
     background: #f5f5f5;
@@ -145,14 +44,6 @@ body {
     /*margin-top: 30px;*/
     /*margin-bottom: 30px;*/
 }
-
-/*
-.blog-wrap__item {
-    width: 30%;
-    position: relative;
-    display: block;
-}
-*/
 
 .blog-wrap__item {
     width: 320px;
@@ -184,36 +75,18 @@ body {
 }
 
 .blog-wrap__item-content-tag {
-    /*font-size: 14px;*/
-
     font-size: 15px;
-
-
-    /*margin-top: 30px;*/
-
     margin-top: -40px;
     margin-left: -50px;
     color: #000;
-
-
 }
 
 .blog-wrap__item-content-tag2 {
-    /*font-size: 14px;*/
-
     font-size: 15px;
-
-
-    /*margin-top: 30px;*/
-
     margin-top: -40px;
     margin-left: 10px;
     color: #000;
-
-
 }
-
-
 
 
 .blog__link {
@@ -237,11 +110,6 @@ body {
 
 /*ここから下が自前*/
 
-
-
-
-
-
 .background {
     background: #e6e6e6;
     /*height: 1100px;*/
@@ -249,30 +117,19 @@ body {
 
 
 .register__shadow {
-
-
     border-radius: 10px;
     /*text-align: center;*/
     box-shadow: 4px 4px 2px #949494;
-
     transition: 0.4s;
-
     text-decoration: none;
-
 }
 
 
 .register__shadow2 {
-
-
-    border-radius: 0px 15px 0px 0px;
-    /*text-align: center;*/
+    border-radius: 0px 15px 0px 0px;   
     box-shadow: 4px 4px 2px #949494;
-
     transition: 0.4s;
-
     text-decoration: none;
-
 }
 
 
@@ -285,21 +142,8 @@ body {
 
 
 .form__button {
-    /*margin-top: 20px;*/
     margin-top: -10px;
-
 }
-
-/*.form__button-submit {
-    padding: 10px;
-    width: 30%;
-    height: 50px;
-    border: none;
-    border-radius: 3px;
-    background: #000;
-    color: #fff;
-    cursor: pointer;
-}*/
 
 .form__button-submit {
     padding: 10px;
@@ -317,9 +161,6 @@ body {
     /*margin-top: -10px;*/
 }
 
-
-
-
 .heart {
     /*width: 100px;*/
     width: 40px;
@@ -330,8 +171,8 @@ body {
     position: relative;
     /* 基準位置とする */
     border: none;
-        outline: none;
-        background: transparent;
+    outline: none;
+    background: transparent;
 }
 
 .heart::before,
@@ -366,41 +207,29 @@ body {
     /* 右からの位置を指定 */
 }
 
-
-
-
 .heart__margin{
     margin-left: 200px;
     margin-top: -35px;
     margin-bottom: 10px;
 }
 
-
 .heart__size{
     width: 80%;
     height: 80%;
 }
 
-
-
-
 /*↓ハート改造*/
 
-
-
-
 .heart1 {
-    /*width: 100px;*/
     width: 40px;
     /* 正方形を作る */
-    /*height: 100px;*/
     height: 40px;
     /* 正方形を作る */
     position: relative;
     /* 基準位置とする */
     border: none;
-        outline: none;
-        background: transparent;
+    outline: none;
+    background: transparent;
 }
 
 .heart1::before,
@@ -435,28 +264,22 @@ body {
     /* 右からの位置を指定 */
 }
 
-
-
-
 .heart1__margin {
     margin-left: 200px;
     margin-top: -55px;
     margin-bottom: 10px;
 }
 
-
 .heart1__size {
     width: 80%;
     height: 80%;
 }
-
 
 .button__none {
     border: none;
     outline: none;
     background: transparent;
 }
-
 
 .transparent-button {
     background-color: transparent;
@@ -472,12 +295,9 @@ body {
     /* 必要に応じて他のスタイルを追加 */
 }
 
-
-
 .h__size{
     width: 50px;
 }
-
 
 .h__move {
     width: 50px;

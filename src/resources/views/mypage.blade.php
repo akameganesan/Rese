@@ -11,13 +11,14 @@ $key = Auth::id();
 @endphp
 
 
-<div class="background">
-    <div class="container">
+<div class="flex-container">
+    <div class="background__zenntai">
         <div class="text__move1">{{$user->name}}さん</div>
         <div class="title__res2">予約状況　　　　　　　　　　　　　　　　　　　　　　　　お気に入り店舗</div>
         @php
 $ab = 0;
         @endphp
+        <div class="confirm">
         @foreach($reserv as $re)
             <div class="confirm">
                 <div class="box__move">
@@ -32,17 +33,21 @@ $ab = 0;
     $ab += 1;
                         @endphp
                         <div class="title__res3">予約{{$ab}}</div>
+                        <div Class="z__index">
                             <form class="form__left" action="/delete" type="text" name="shoID" method="post">
                                 @csrf
                                 <div class="flex__item2">
                                     <input type="hidden" name="shoID1" value="{{$re->shop_id}}" size="10">
+                                    <div class="z__index">
                                     <div class="form__button">
                                         <button class="form__button-submit5" type="submit"><img
                                             class="size__icon" src="{{ asset('img/太いバツのアイコン2.svg') }}"
                                                             alt=""></button>
                                     </div>
+</div>
                                 </div>
                             </form>
+                        </div>
                             @if(empty($re->name))
                             @else
                                 <h2>Shop　　　　{{$re->name}}</h2>
@@ -71,9 +76,11 @@ $ab = 0;
                     </div>
                 </div> 
             </div>  
-        @endforeach      
+        @endforeach
+</div>      
     </div>
 </div>
+
 <div class="container__move7">
     <div class="container7">
         <div class="flex__item blog-wrap">

@@ -2,7 +2,6 @@
   font-size: 40px;
 margin-left: 525px;
 text-decoration: none;
-/*text-align: center;*/
 color: #368cfc;
 margin-top: 15px;
   
@@ -12,47 +11,34 @@ margin-top: 15px;
     font-size: 40px;
     margin-left: 525px;
     text-decoration: none;
-    /*text-align: center;*/
     color: #368cfc;
     margin-top: 15px;
 
 }
 
 .a__size2 {
-
     font-size: 40px;
     margin-left: 1050px;
     text-decoration: none;
     margin-top: 700px;
-color: #368cfc;
+    color: #368cfc;
 
 }
 
-
 .a__size3 {
-    /*margin-top: -100px;*/
     font-size: 40px;
     margin-left: 1050px;
     text-decoration: none;
     color: #368cfc;
     bottom: 200px;
-
-
 }
 
-
 .p__atsumi {
-    /*margin-top: -100px;*/
    height: 200px;
-
-
 }
 
 .p__atsumi1 {
-    /*margin-top: -100px;*/
     height: 25px;
-
-
 }
 
 
@@ -61,26 +47,22 @@ color: #368cfc;
     height: 50px;
     display: block;
     padding: 8px 0 8px;
-    /*margin: 0 auto;*/
     background: linear-gradient(90deg, #1a7dfd, #3060fd);
-    border-radius: 10px;
-    /*text-align: center;*/
+    border-radius: 10px; 
     box-shadow: 4px 4px 2px #b4b4b4;
     color: #fff;
     font-size: 40px;
-    /*border-bottom: 3px solid #840052;*/
     transition: 0.4s;
-    /*position: relative;*/
     text-decoration: none;
     margin-left: 400px;
     text-align: center;
-        /* テキストを水平方向に中央に配置 */
-        display: flex;
-        /* Flexboxを使用して要素を中央に配置 */
-        justify-content: center;
-        /* 水平方向に中央に配置 */
-        align-items: center;
-        /* 垂直方向に中央に配置 */
+    /* テキストを水平方向に中央に配置 */
+    display: flex;
+    /* Flexboxを使用して要素を中央に配置 */
+    justify-content: center;
+    /* 水平方向に中央に配置 */
+    align-items: center;
+    /* 垂直方向に中央に配置 */
 }
 
 
@@ -97,11 +79,10 @@ color: #368cfc;
     /* テキストの色を設定 */
     /* 必要に応じて他のスタイルを追加 */
     font-size: 40px;
-        margin-left: 525px;
-        text-decoration: none;
-        /*text-align: center;*/
-        color: #368cfc;
-        margin-top: 15px;
+    margin-left: 525px;
+    text-decoration: none;    
+    color: #368cfc;
+    margin-top: 15px;
 }
 
 
@@ -109,55 +90,37 @@ color: #368cfc;
     font-size: 40px;
     margin-left: 1000px;
     text-decoration: none;
-    /*text-align: center;*/
     color: #368cfc;
     margin-top: 100px;
-
 }
 
 .a__size5 {
-
     font-size: 40px;
     margin-left: 1050px;
     text-decoration: none;
     margin-top: 700px;
     color: #368cfc;
-
 }
 
-
 .a__size6 {
-    /*margin-top: -100px;*/
     font-size: 40px;
     margin-left: 1050px;
     text-decoration: none;
     color: #368cfc;
     bottom: 200px;
-
-
 }
 
-
 .p__atsumi2 {
-    /*margin-top: -100px;*/
     height: 200px;
-
-
 }
 
 .p__atsumi3 {
-    /*margin-top: -100px;*/
     height: 25px;
-
-
 }
 
-
 .heart1 {
-    /*width: 100px;*/
     width: 40px;
     /* 正方形を作る */
-    /*height: 100px;*/
     height: 40px;
     /* 正方形を作る */
     position: relative;
@@ -196,21 +159,16 @@ color: #368cfc;
     /* 右からの位置を指定 */
 }
 
-
-
-
 .heart1__margin {
     margin-left: 200px;
     margin-top: -35px;
     margin-bottom: 10px;
 }
 
-
 .heart1__size {
     width: 80%;
     height: 80%;
 }
-
 
 .button__none {
     border: none;
@@ -218,12 +176,9 @@ color: #368cfc;
     background: transparent;
 }
 
-
 .heart {
-    /*width: 100px;*/
     width: 40px;
     /* 正方形を作る */
-    /*height: 100px;*/
     height: 40px;
     /* 正方形を作る */
     position: relative;
@@ -262,22 +217,16 @@ color: #368cfc;
     /* 右からの位置を指定 */
 }
 
-
-
-
 .heart__margin {
     margin-left: 200px;
     margin-top: -35px;
     margin-bottom: 10px;
 }
 
-
 .heart__size {
     width: 80%;
     height: 80%;
 }
-
-
 
 .transparent-button2 {
     background-color: transparent;

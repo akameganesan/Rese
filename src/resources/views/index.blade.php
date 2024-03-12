@@ -52,7 +52,7 @@ $key = Auth::id();
                         </form>
                         @if(Auth::check())
                             @if(empty($shop->shops_id))
-                                <form action="/create3" type="text" name="shID1" method="post">
+                                <form action="/create" type="text" name="shID1" method="post">
                                     @csrf
                                     <input type="hidden" name="shID1" value="{{$shop->id}}" size="10">
                                     <div class="heart1__margin">
@@ -66,10 +66,10 @@ $key = Auth::id();
                                         <input type="hidden" name="shID1" value="{{$shop->id}}" size="10">
                                         <div class="heart1__margin">
                                             <button class="heart" type="submit"></button>
-                                        </div>                                                                <!--</div>-->
+                                        </div>                                                                
                                     </form>  
                                 @else
-                                    <form action="/create3" type="text" name="shID1" method="post">
+                                    <form action="/create" type="text" name="shID1" method="post">
                                         @csrf
                                         <input type="hidden" name="shID1" value="{{$shop->id}}" size="10">
                                         <div class="heart1__margin">

@@ -17,24 +17,12 @@ use App\Http\Controllers\UserController;
 |
 */
 
-//Route::get('/', function () {
-//    return view('welcome');
-//});
-
-
-//Route::get('/', [AuthController::class, 'index']);
-
-
-//Route::middleware('auth')->group(function () {
-//    Route::get('/', [AuthController::class, 'index']);
-//});
-
 
 Route::get('/', [ShopController::class, 'index']);
 Route::post('/', [ShopController::class, 'index']);
 
+Route::get('/create', [FavoriteController::class, 'create']);
 Route::post('/create', [FavoriteController::class, 'create']);
-
 
 Route::get('/menu', [AuthController::class, 'menu']);
 Route::post('/menu', [AuthController::class, 'menu']);
@@ -42,36 +30,16 @@ Route::post('/menu', [AuthController::class, 'menu']);
 Route::get('/registered', [AuthController::class, 'registered']);
 Route::post('/registered', [AuthController::class, 'registered']);
 
-
-
 Route::get('/register', [AuthController::class, 'register']);
-//Route::post('/register', [AuthController::class, 'register']);
+;
 
 Route::get('/login', [AuthController::class, 'login']);
-//Route::post('/login', [AuthController::class, 'login']);
-
 
 Route::get('/menu', [AuthController::class, 'menu']);
 Route::post('/menu', [AuthController::class, 'menu']);
 
-//Route::get('/index', [ShopController::class, 'index']);
-//Route::post('/index', [ShopController::class, 'index']);
-
-
-
-Route::get('/create3', [FavoriteController::class, 'create3']);
-Route::post('/create3', [FavoriteController::class, 'create3']);
-
-
-//Route::get('/create3', [UserController::class, 'test']);
-//Route::post('/create3', [UserController::class, 'test']);
-
-
-
 
 Route::post('/add', [FavoriteController::class, 'create']);
-//Route::get('/', [FavoriteController::class, 'index']);
-
 
 Route::post('/area', [ShopController::class, 'area']);
 
@@ -79,17 +47,11 @@ Route::post('/genre', [ShopController::class, 'genre']);
 
 Route::post('/search', [ShopController::class, 'search']);
 
-
 Route::get('/remove', [FavoriteController::class, 'remove']);
 Route::post('/remove', [FavoriteController::class, 'remove']);
 
-
-
-
-
 Route::get('/detail', [ShopController::class, 'detail']);
 Route::post('/detail', [ShopController::class, 'detail']);
-
 
 Route::get('/day', [UserController::class, 'day']);
 Route::post('/day', [UserController::class, 'day']);
@@ -103,31 +65,20 @@ Route::post('/num', [UserController::class, 'num']);
 Route::get('/res', [UserController::class, 'res']);
 Route::post('/res', [UserController::class, 'res']);
 
-
 Route::get('/reservation', [UserController::class, 'reservation']);
 Route::post('/reservation', [UserController::class, 'reservation']);
-
-Route::get('/test', [UserController::class, 'test']);
-Route::post('test', [UserController::class, 'test']);
 
 Route::get('/reg', [UserController::class, 'reg']);
 Route::post('/reg', [UserController::class, 'reg']);
 
-
 Route::get('/done', [UserController::class, 'done']);
 Route::post('/done', [UserController::class, 'done']);
-
 
 Route::get('/mypage', [UserController::class, 'mypage']);
 Route::post('/mypage', [UserController::class, 'mypage']);
 
-
 Route::get('/delete', [UserController::class, 'delete']);
 Route::post('/delete', [UserController::class, 'delete']);
-
-Route::get('/test15', [UserController::class, 'timetest2']);
-Route::post('/test15', [UserController::class, 'timetest2']);
-
 
 
 

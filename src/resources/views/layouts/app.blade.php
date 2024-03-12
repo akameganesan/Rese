@@ -19,9 +19,7 @@
                 <a class="header__logo" href="/menu">
                     Rese
                 </a>
-
                 @if (Auth::check())
-
                 @endif
                 </ul>
                 </nav>
